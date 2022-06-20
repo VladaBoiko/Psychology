@@ -1,0 +1,42 @@
+@mixin text($font-family: 'Montserrat', $a: 400, $b: 22px, $c: 35px) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $a;
+  font-size: $b;
+  line-height: calc($c / $b);
+}
+
+@mixin font($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: calc($lh / $fs);
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition() {
+  transition: transform 250ms var(--cubic), color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+@mixin mobile {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1475px) {
+    @content;
+  }
+}

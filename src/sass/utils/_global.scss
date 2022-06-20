@@ -1,0 +1,12 @@
+// Скидання стилів
+@import './value';
+@import './reset';
+
+// Міксин
+
+@import '../vendors/mixin';
+
+// footer and header
+
+@import '../pages/header';
+@import '../pages/footer';
