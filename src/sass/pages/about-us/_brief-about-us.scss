@@ -1,0 +1,43 @@
+.brief-about-us {
+  padding-top: 175px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 270px;
+    height: 566px;
+    background-color: var(--background);
+    border: 1px solid #000;
+  }
+  // .brief-about-us__container
+  &__container {
+  }
+  // .brief-about-us__title
+  &__title {
+    margin-bottom: 40px;
+  }
+  // .brief-about-us__image
+  &__image {
+    // position: relative;
+    max-width: 335px;
+    // height: 303px;
+    border-radius: 400px 400px 0px 0px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    // & img {
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   height: 100%;
+    //   width: 100%;
+    // }
+  }
+  // .brief-about-us__text
+  &__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

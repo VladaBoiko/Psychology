@@ -1,0 +1,181 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --accent-background: #f79781;
+  --accent-text: #536779;
+  --text: #264158;
+  --background: #f9fafb;
+  --color-icon: #d3dde6;
+  --black: #000000;
+  --white: #ffffff;
+  --main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient: radial-gradient(
+      62.25% 62.25% at 50% 50%,
+      rgba(83, 103, 121, 0.2) 0%,
+      rgba(211, 221, 230, 0.174) 100%
+    ),
+    #98c5eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: "Montserrat";
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.is-open {
+  opacity: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1470px) {
+  .container {
+    width: 1280px;
+  }
+}
+.about-us-title {
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--text);
+}
+@media screen and (min-width: 1470px) {
+  .about-us-title {
+    font-size: 60;
+    line-height: 0.9166666667;
+  }
+}
+
+.about-us-text {
+  font-style: normal;
+  font-size: 16;
+  line-height: 1.375;
+  color: var(--accent-text);
+}
+@media screen and (min-width: 768px) {
+  .about-us-text {
+    font-size: 18;
+    line-height: 1.3333333333;
+  }
+}
+@media screen and (min-width: 1470px) {
+  .about-us-text {
+    font-size: 20;
+    line-height: 1.9;
+  }
+}
+
+.brief-about-us {
+  padding-top: 175px;
+  position: relative;
+}
+.brief-about-us::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 270px;
+  height: 566px;
+  background-color: var(--background);
+  border: 1px solid #000;
+}
+.brief-about-us__title {
+  margin-bottom: 40px;
+}
+.brief-about-us__image {
+  max-width: 335px;
+  border-radius: 400px 400px 0px 0px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.brief-about-us__text:not(:last-child) {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=about-us.css.map */

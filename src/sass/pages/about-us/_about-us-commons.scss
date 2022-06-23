@@ -1,0 +1,26 @@
+.about-us-title {
+  @include text('Cormorant', 700, 25, 30);
+  text-transform: uppercase;
+  color: var(--text);
+
+  //   @include tablet {
+  //     @include font(null, 30, 36);
+  //   }
+
+  @include desktop {
+    @include font(null, 60, 55);
+  }
+}
+
+.about-us-text {
+  @include text(null, null, 16, 22);
+  color: var(--accent-text);
+
+  @include tablet {
+    @include font(null, 18, 24);
+  }
+
+  @include desktop {
+    @include font(null, 20, 38);
+  }
+}

@@ -1,0 +1,118 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --accent-background: #f79781;
+  --accent-text: #536779;
+  --text: #264158;
+  --background: #f9fafb;
+  --color-icon: #d3dde6;
+  --black: #000000;
+  --white: #ffffff;
+  --main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient: radial-gradient(
+      62.25% 62.25% at 50% 50%,
+      rgba(83, 103, 121, 0.2) 0%,
+      rgba(211, 221, 230, 0.174) 100%
+    ),
+    #98c5eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: "Montserrat";
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.is-open {
+  opacity: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1470px) {
+  .container {
+    width: 1280px;
+  }
+}/*# sourceMappingURL=seminars.css.map */
