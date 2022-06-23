@@ -1,43 +1,102 @@
 .brief-about-us {
   padding-top: 175px;
-  position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    display: block;
-    left: 0;
-    top: 0;
-    width: 270px;
-    height: 566px;
-    background-color: var(--background);
-    border: 1px solid #000;
+  @include desktop {
+    padding-top: 430px;
   }
+
   // .brief-about-us__container
   &__container {
+    position: relative;
+    @include desktop {
+      width: 1455px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      display: block;
+      top: -175px;
+      width: 270px;
+      height: 566px;
+      background-color: var(--background);
+
+      @media screen and (max-width: 374px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 1469px) {
+        left: 0;
+      }
+
+      @include tablet {
+        width: 35%;
+      }
+
+      @include desktop {
+        height: 1060px;
+        width: 70%;
+        top: -430px;
+        right: 0;
+      }
+    }
+  }
+  &__content {
+    @include desktop {
+      max-width: 735px;
+      margin-left: auto;
+      margin-right: 95px;
+    }
   }
   // .brief-about-us__title
   &__title {
     margin-bottom: 40px;
+    @include desktop {
+      margin-bottom: 50px;
+    }
   }
   // .brief-about-us__image
   &__image {
-    // position: relative;
-    max-width: 335px;
-    // height: 303px;
-    border-radius: 400px 400px 0px 0px;
     overflow: hidden;
-    margin-bottom: 25px;
-    // & img {
-    //   position: absolute;
-    //   left: 0;
-    //   top: 0;
-    //   height: 100%;
-    //   width: 100%;
-    // }
+    @media screen and (max-width: 1469px) {
+      max-width: 335px;
+      margin-bottom: 25px;
+      border-radius: 400px 400px 0px 0px;
+    }
+    @include desktop {
+      position: absolute;
+      top: -80px;
+      left: 0;
+      border-radius: 400px 0px 0px 0px;
+      width: 542px;
+    }
   }
   // .brief-about-us__text
+  &__text {
+    position: relative;
+    padding-left: 29px;
+    @include desktop {
+      padding-left: 60px;
+    }
+    &--marked::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      display: block;
+      width: 21px;
+      height: 3px;
+      background-color: var(--color-icon);
+      @include desktop {
+        width: 45px;
+        top: 18px;
+      }
+    }
+  }
+
   &__text:not(:last-child) {
     margin-bottom: 20px;
+    @include desktop {
+      margin-bottom: 40px;
+    }
   }
 }

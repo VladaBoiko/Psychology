@@ -125,8 +125,16 @@ section {
   text-transform: uppercase;
   color: var(--text);
 }
+@media screen and (min-width: 768px) {
+  .about-us-title {
+    font-style: normal;
+    font-size: 30;
+    line-height: 1.2;
+  }
+}
 @media screen and (min-width: 1470px) {
   .about-us-title {
+    font-style: normal;
     font-size: 60;
     line-height: 0.9166666667;
   }
@@ -140,12 +148,14 @@ section {
 }
 @media screen and (min-width: 768px) {
   .about-us-text {
+    font-style: normal;
     font-size: 18;
     line-height: 1.3333333333;
   }
 }
 @media screen and (min-width: 1470px) {
   .about-us-text {
+    font-style: normal;
     font-size: 20;
     line-height: 1.9;
   }
@@ -153,29 +163,117 @@ section {
 
 .brief-about-us {
   padding-top: 175px;
+}
+@media screen and (min-width: 1470px) {
+  .brief-about-us {
+    padding-top: 430px;
+  }
+}
+.brief-about-us__container {
   position: relative;
 }
-.brief-about-us::before {
+@media screen and (min-width: 1470px) {
+  .brief-about-us__container {
+    width: 1455px;
+  }
+}
+.brief-about-us__container::before {
   content: "";
   position: absolute;
   z-index: -1;
   display: block;
-  left: 0;
-  top: 0;
+  top: -175px;
   width: 270px;
   height: 566px;
   background-color: var(--background);
-  border: 1px solid #000;
+}
+@media screen and (max-width: 374px) {
+  .brief-about-us__container::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 1469px) {
+  .brief-about-us__container::before {
+    left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .brief-about-us__container::before {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 1470px) {
+  .brief-about-us__container::before {
+    height: 1060px;
+    width: 70%;
+    top: -430px;
+    right: 0;
+  }
+}
+@media screen and (min-width: 1470px) {
+  .brief-about-us__content {
+    max-width: 735px;
+    margin-left: auto;
+    margin-right: 95px;
+  }
 }
 .brief-about-us__title {
   margin-bottom: 40px;
 }
+@media screen and (min-width: 1470px) {
+  .brief-about-us__title {
+    margin-bottom: 50px;
+  }
+}
 .brief-about-us__image {
-  max-width: 335px;
-  border-radius: 400px 400px 0px 0px;
   overflow: hidden;
-  margin-bottom: 25px;
+}
+@media screen and (max-width: 1469px) {
+  .brief-about-us__image {
+    max-width: 335px;
+    margin-bottom: 25px;
+    border-radius: 400px 400px 0px 0px;
+  }
+}
+@media screen and (min-width: 1470px) {
+  .brief-about-us__image {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    border-radius: 400px 0px 0px 0px;
+    width: 542px;
+  }
+}
+.brief-about-us__text {
+  position: relative;
+  padding-left: 29px;
+}
+@media screen and (min-width: 1470px) {
+  .brief-about-us__text {
+    padding-left: 60px;
+  }
+}
+.brief-about-us__text--marked::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  display: block;
+  width: 21px;
+  height: 3px;
+  background-color: var(--color-icon);
+}
+@media screen and (min-width: 1470px) {
+  .brief-about-us__text--marked::before {
+    width: 45px;
+    top: 18px;
+  }
 }
 .brief-about-us__text:not(:last-child) {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1470px) {
+  .brief-about-us__text:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }/*# sourceMappingURL=about-us.css.map */

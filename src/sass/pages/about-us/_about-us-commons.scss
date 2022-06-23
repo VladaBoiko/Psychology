@@ -3,12 +3,12 @@
   text-transform: uppercase;
   color: var(--text);
 
-  //   @include tablet {
-  //     @include font(null, 30, 36);
-  //   }
+  @include tablet {
+    @include text(null, null, 30, 36);
+  }
 
   @include desktop {
-    @include font(null, 60, 55);
+    @include text(null, null, 60, 55);
   }
 }
 
@@ -17,10 +17,10 @@
   color: var(--accent-text);
 
   @include tablet {
-    @include font(null, 18, 24);
+    @include text(null, null, 18, 24);
   }
 
   @include desktop {
-    @include font(null, 20, 38);
+    @include text(null, null, 20, 38);
   }
 }
