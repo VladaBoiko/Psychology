@@ -1,102 +1,101 @@
-// .seminars {
-//     padding: 80px 0;
+.seminars {
+  padding: 80px 0;
+}
+.seminars-list {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seminars-item {
+  max-width: 332px;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.seminars-card {
+  background-color: #f9fafb;
+  padding: 20px 16px 36px 27px;
+}
+// for text-wrap:
+// .sem-text-box {
+// mob:
+//     max-width: 350px;
+//     desk:
+//     max-width: 485px;
 // }
-// .seminars-list {
-//     width: inherit;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
+.seminars-top-text {
+  @include font(null, 14px, calc(55px / 14px));
+  text-transform: uppercase;
+  color: var(--accent-text);
 
-// .seminars-item {
-//     max-width: 332px;
-//     margin-bottom: 30px;
-//     &:last-child {
-//         margin-bottom: 0;
-//     }
-// }
-// .seminars-card {
-//     background-color: #F9FAFB;
-//     padding: 20px 16px 36px 27px;
-// }
-// // for text-wrap:
-// // .sem-text-box {
-//     // mob:
-// //     max-width: 350px;
-// //     desk:
-// //     max-width: 485px;
-// // }
-// .seminars-top-text {
-//     @include font (null, 14px, calc(55px / 14px));
-//     text-transform: uppercase;
-//     color: var(--accent-text);
+  margin-bottom: -10px;
+}
+.seminars-top-title {
+  max-width: 287px;
 
-//     margin-bottom: -10px;
-// }
-// .seminars-top-title {
-//     max-width: 287px;
+  font-family: 'Cormorant';
+  @include font(null, 18px, calc(22px / 18px));
+  text-transform: uppercase;
+  color: var(--text);
 
-//     font-family: 'Cormorant';
-//     @include font (null, 18px, calc(22px / 18px));
-//     text-transform: uppercase;
-//     color: var(--text);
+  margin-bottom: 26px;
+}
+.seminars-text {
+  display: flex;
+  align-items: start;
 
-//     margin-bottom: 26px;
-// }
-// .seminars-text {
-//     display: flex;
-//     align-items: start;
+  margin-bottom: 2px;
 
-//     margin-bottom: 2px;
+  @include font(null, 16px, calc(20px / 16px));
+  color: var(--accent-text);
+  &::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-icon);
 
-//     @include font (null, 16px, calc(20px / 16px));
-//     color: var(--accent-text);
-//     &::before {
-//         content: '';
-//         display: block;
-//         width: 20px;
-//         height: 2px;
-//         background-color: var(--color-icon);
+    margin-top: 10px;
+    margin-right: 7px;
 
-//         margin-top: 10px;
-//         margin-right: 7px;
+    flex-shrink: 0;
+  }
+}
 
-//         flex-shrink: 0;
-//     }
-// }
+.seminars-price-list {
+  display: flex;
+  width: 120px;
+  align-items: baseline;
 
-// .seminars-price-list {
-//     display: flex;
-//     width: 120px;
-//     align-items: baseline;
+  margin-left: auto;
+  margin-right: 18px;
 
-//     margin-left: auto;
-//     margin-right: 18px;
+  margin-bottom: 28px;
+}
+.seminars-price-text {
+  @include font(700, 18px, calc(22px / 18px));
+  color: var(--accent-text);
+  margin-right: 5px;
+}
 
-//     margin-bottom: 28px;
+.seminars-price-count {
+  font-family: 'Arsenal';
+  @include font(700, 30px, calc(38px / 30px));
+  color: var(--accent-text);
+}
+.seminars-button {
+  min-width: 247px;
+  height: 84px;
 
-// }
-// .seminars-price-text {
-//     @include font (700, 18px, calc(22px / 18px));
-//     color: var(--accent-text);
-//     margin-right: 5px;
-// }
+  @include font(700, 16px, calc(55px / 16px));
+  text-transform: uppercase;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: var(--accent-background);
 
-// .seminars-price-count {
-//     font-family: 'Arsenal';
-//     @include font (700, 30px, calc(38px / 30px));
-//     color: var(--accent-text);
-// }
-// .seminars-button {
-//     min-width: 247px;
-//     height: 84px;
-
-//     @include font (700, 16px, calc(55px / 16px));
-//     text-transform: uppercase;
-//     font-family: inherit;
-//     color: #ffffff;
-//     background-color: var(--accent-background);
-
-//     border-radius: 150px;
-//     box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
-// }
+  border-radius: 150px;
+  box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+}
