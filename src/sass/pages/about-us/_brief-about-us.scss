@@ -72,25 +72,6 @@
   }
   // .brief-about-us__text
   &__text {
-    position: relative;
-    padding-left: 29px;
-    @include desktop {
-      padding-left: 60px;
-    }
-    &--marked::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 10px;
-      display: block;
-      width: 21px;
-      height: 3px;
-      background-color: var(--color-icon);
-      @include desktop {
-        width: 45px;
-        top: 18px;
-      }
-    }
   }
 
   &__text:not(:last-child) {
