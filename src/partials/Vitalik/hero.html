@@ -1,19 +1,32 @@
 <section class="hero" id="hero">
   <div class="container">
     <div class="hero-box">
-      <h1 class="hero__header">
-        <span class="hero__header--text">Онлайн центр</span> <br />
-        практичної психології<br />
-        <span class="hero__header--color">Меланії Горошенко</span>
-      </h1>
-      <p class="hero__motto">Твій психолог завжди поруч, де б ти не був.</p>
-      <p class="hero__prompting">
-        <span class="hero__prompting--selection">Знижено ціну</span> на перше
-        заняття:
-      </p>
-      <div class="hero__price-box">
-        <p class="hero__price">300&#8372;</p>
-        <p class="hero__price--discount">600&#8372;</p>
+      <div class="grid-position__hero">
+        <h1 class="hero__header">
+          <span class="hero__header--text">Онлайн центр</span> <br />
+          практичної психології<br />
+          <span class="hero__header--color">Меланії Горошенко</span>
+        </h1>
+        <p class="hero__motto">Твій психолог завжди поруч, де б ти не був.</p>
+        <button class="button button__hero two" type="button">
+          Записатися
+        </button>
+        <div class="arrow-box">
+          <div class="arrow">
+            <div class="curve"></div>
+            <div class="point"></div>
+          </div>
+        </div>
+        <div class="hero-contaoner__price">
+          <p class="hero__prompting">
+            <span class="hero__prompting--selection">Знижено ціну</span> на
+            перше заняття:
+          </p>
+          <div class="hero__price-box">
+            <p class="hero__price">300&#8372;</p>
+            <p class="hero__price--discount">600&#8372;</p>
+          </div>
+        </div>
       </div>
       <picture>
         <source
@@ -31,7 +44,7 @@
             ./images/hero/hands-mobail-570.png 2x
           "
           type="image/png"
-          media="(min-width: 1470px)"
+          media="(max-width: 1469.9px)"
         />
 
         <source
@@ -40,7 +53,7 @@
             ./images/hero/webp/hands-desctope-1084.webp 2x
           "
           type="image/webp"
-          media="(max-width: 1469.9px)"
+          media="(min-width: 1470px)"
         />
 
         <source
@@ -60,7 +73,7 @@
           loading="lazy"
         />
       </picture>
-      <button class="button button__hero" type="button">Записатися</button>
+      <button class="button button__hero one" type="button">Записатися</button>
     </div>
   </div>
 </section>
