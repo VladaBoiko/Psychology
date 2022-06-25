@@ -1,7 +1,13 @@
 .specialists {
   padding-top: 80px;
+  padding-bottom: 80px;
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   @include desktop {
     padding-top: 117px;
+    padding-bottom: 150px;
   }
   // .specialists__container
   &__container {
@@ -16,6 +22,12 @@
   }
   // .specialists__item
   &__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      @include desktop {
+        margin-bottom: 40px;
+      }
+    }
   }
 }
 .specialist {
@@ -23,7 +35,9 @@
   @include desktop {
     display: flex;
   }
-
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
   // .specialist__foto
   &__foto {
     // width: 332px;
@@ -33,6 +47,12 @@
       flex-basis: 516px;
       flex-shrink: 0;
     }
+  }
+  &:nth-child(2n-1) &__foto {
+  }
+  &:nth-child(2n) &__foto {
+    // transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: scale(-1, 1);
   }
   &__content {
     background-color: var(--background);
@@ -46,6 +66,9 @@
     @include text(null, null, 14, 35);
     text-transform: uppercase;
     color: var(--accent-text);
+    @include tablet {
+      @include text(null, null, 20, 50);
+    }
     @include desktop {
       display: none;
     }
@@ -56,6 +79,10 @@
     text-transform: uppercase;
     color: var(--text);
     margin-bottom: 25px;
+    @include tablet {
+      @include text(null, null, 24, 28);
+      margin-bottom: 40px;
+    }
     @include desktop {
       @include text(null, null, 30, 32);
       margin-bottom: 50px;
@@ -113,6 +140,12 @@
   &__icon {
     fill: var(--color-icon);
     margin-bottom: 5px;
+    @include tablet {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+
     @include desktop {
       width: 50px;
       height: 50px;
