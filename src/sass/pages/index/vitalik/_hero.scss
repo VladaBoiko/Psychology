@@ -160,12 +160,6 @@ body {
   }
 }
 
-// .hero__photo {
-//   position: absolute;
-//   right: -65px;
-//   bottom: 132px;
-// }
-
 .hero__photo {
   width: 335px;
 
@@ -179,7 +173,7 @@ body {
     width: 542px;
     grid-column: 1;
     grid-row: 1;
-    margin-bottom: auto;
+    border-radius: 400px 0px 0px 0px;
   }
 }
 
@@ -194,6 +188,7 @@ body {
   color: var(--white);
 
   @include desktop {
+    position: relative;
     padding: 22px 65px;
     @include text('Montserrat', 700, 30px, 55px);
   }
@@ -218,6 +213,55 @@ body {
   }
 }
 
+.arrow-box {
+  position: absolute;
+  left: 943px;
+  top: 507px;
+}
+
+.arrow {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  transform: rotate(130deg);
+}
+
+.arrow .curve {
+  border: 2px solid var(--accent-background);
+  border-color: transparent transparent transparent var(--accent-background);
+  height: 198px;
+  width: 1200px;
+  border-radius: 230px 0 0 150px;
+}
+
+.arrow .point {
+  position: absolute;
+  right: inherit;
+  right: 67px;
+  bottom: 183px;
+}
+
+.arrow .point:before,
+.arrow .point:after {
+  content: '';
+  border: 1px solid var(--accent-background);
+  height: 25px;
+
+  position: absolute;
+}
+
+.arrow .point:before {
+  top: 8px;
+  left: -11px;
+  transform: rotate(85deg);
+}
+
+.arrow .point:after {
+  top: 18px;
+  left: 1px;
+  transform: rotate(191deg);
+}
+
 @media screen and (min-width: 400px) and (max-width: 1469.9px) {
   .hero .container {
     width: 370px;
@@ -225,7 +269,8 @@ body {
 }
 
 @media screen and (max-width: 1469.9px) {
-  .two {
+  .two,
+  .arrow-box {
     display: none;
   }
 }
