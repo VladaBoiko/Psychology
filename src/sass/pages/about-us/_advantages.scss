@@ -25,7 +25,6 @@
       @include text('Montserrat', null, 30, 37);
       color: var(--accent-background);
       @include desktop {
-        margin-right: 15px;
         @include text(null, null, 110, 55);
       }
     }
