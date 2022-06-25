@@ -1,0 +1,66 @@
+.about-us-title {
+  @include text('Cormorant', 700, 25, 30);
+  text-transform: uppercase;
+  color: var(--text);
+
+  @include tablet {
+    @include text(null, null, 30, 36);
+  }
+
+  @include desktop {
+    @include text(null, null, 60, 55);
+  }
+}
+
+.about-us-text {
+  position: relative;
+  padding-left: 29px;
+
+  @include text(null, null, 16, 22);
+  color: var(--accent-text);
+
+  @include tablet {
+    @include text(null, null, 18, 24);
+  }
+
+  @include desktop {
+    @include text(null, null, 20, 38);
+    padding-left: 60px;
+  }
+  &--marked::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    display: block;
+    width: 21px;
+    height: 3px;
+    background-color: var(--color-icon);
+    @include desktop {
+      width: 45px;
+      top: 18px;
+    }
+  }
+}
+
+.about-us__button {
+  padding: 0 33px;
+  box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  border-radius: 150px;
+  @include text(null, 700, 16, 50);
+  align-items: center;
+  text-transform: uppercase;
+  &--accent {
+    background-color: var(--button-bgcolor-accent);
+    color: var(--white);
+  }
+  @include desktop {
+    padding: 22px 68px;
+    @include text(null, null, 30, 55);
+  }
+  transition: background-color var(--main-transition);
+  &:hover,
+  &:focus {
+    background-color: var(--button-bgcolor-accent-hover);
+  }
+}

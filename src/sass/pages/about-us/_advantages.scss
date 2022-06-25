@@ -1,0 +1,100 @@
+.advantages {
+  padding-top: 80px;
+  @include tablet {
+    padding-top: 100px;
+  }
+  @include desktop {
+    padding-top: 140px;
+  }
+  // .advantages__container
+  &__container {
+    @include desktop {
+      width: 1455px;
+    }
+  }
+  // .advantages__title
+  &__title {
+    margin-bottom: 40px;
+    @include desktop {
+      margin-bottom: 80px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 92px;
+    }
+    & span:first-child {
+      @include text('Montserrat', null, 30, 37);
+      color: var(--accent-background);
+      @include desktop {
+        @include text(null, null, 110, 55);
+      }
+    }
+    & span:last-child {
+      @media screen and (max-width: 375px) {
+        display: block;
+      }
+    }
+  }
+  // .advantages__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    @include tablet {
+      gap: 25px;
+    }
+    @include desktop {
+      gap: 40px;
+    }
+  }
+  // .advantages__item
+  &__item {
+    position: relative;
+    @include flexCenter;
+    align-items: center;
+    width: 307px;
+    height: 147px;
+    background-color: var(--background);
+    @include tablet {
+      width: 356px;
+      height: 190px;
+    }
+
+    @include desktop {
+      padding: 38px 110px 0px;
+      width: 445px;
+      height: 242px;
+    }
+  }
+  // .advantages__icon
+  &__icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    top: 20px;
+    fill: var(--accent-text);
+    @include tablet {
+      width: 60px;
+      height: 60px;
+    }
+    @include desktop {
+      width: 80px;
+      height: 80px;
+      left: 30px;
+      top: 30px;
+    }
+  }
+  // .advantages__text
+  &__text {
+    text-align: center;
+    @include text('Cormorant', 700, 18, 38);
+    color: var(--accent-text);
+    @include tablet {
+      @include text(null, null, 22, 38);
+    }
+    @include desktop {
+      @include text(null, null, 30, 38);
+    }
+  }
+}
