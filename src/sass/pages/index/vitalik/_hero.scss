@@ -1,0 +1,117 @@
+.hero {
+  overflow: hidden;
+}
+
+.hero-box {
+  padding: 80px 0 40px 0;
+}
+
+.hero__header {
+  @include text('Cormorant', 700, 25px, 30px);
+  text-transform: uppercase;
+  color: var(--text);
+
+  &--text {
+    display: inline-block;
+    margin-bottom: 10px;
+    @include text('Montserrat', 400, 14px, 55px);
+    line-height: normal;
+
+    color: var(--accent-text);
+  }
+
+  &--color {
+    color: var(--accent-background);
+  }
+}
+
+.hero__motto {
+  display: flex;
+  margin-top: 25px;
+  @include text('Montserrat', 400, 14px, 20px);
+  width: 212px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-icon);
+
+    margin-top: 10px;
+    margin-right: 7px;
+
+    flex-shrink: 0;
+  }
+}
+
+.hero__prompting {
+  margin-top: 25px;
+  @include text('Montserrat', 400, 14px, 17px);
+
+  &--selection {
+    display: block;
+    font-weight: 700;
+  }
+}
+
+.hero__price-box {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.hero__price {
+  @include text('Arsenal', 700, 35px, 44px);
+  color: var(--accent-background);
+}
+
+.hero__price--discount {
+  position: relative;
+  @include text('Arsenal', 700, 15px, 19px);
+  color: var(--price-number-gray);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    bottom: 9px;
+    width: 39px;
+    height: 1px;
+    transform: rotate(169.56deg);
+    background-color: var(--accent-background);
+  }
+}
+
+// .hero__photo {
+//   position: absolute;
+//   right: -65px;
+//   bottom: 132px;
+// }
+
+.hero__photo {
+  position: relative;
+  right: -65px;
+  bottom: 89px;
+  width: 335px;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 61px;
+  box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  border-radius: 150px;
+  @include text('Montserrat', 700, 16px, 55px);
+  background-color: var(--accent-background);
+  color: var(--white);
+
+  &__hero {
+    margin-top: -64px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .hero .container {
+    width: 370px;
+  }
+}
