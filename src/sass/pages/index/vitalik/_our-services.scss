@@ -1,5 +1,6 @@
 .recommendation-box {
   padding: 70px 0 40px 0;
+  position: relative;
 }
 
 .recommendation__header {
@@ -60,8 +61,20 @@
   grid-column: 1;
   grid-row: 1;
 }
+.list-recommendation__box {
+  margin-top: 25px;
+  @include tablet {
+    margin: auto 0;
+  }
+  @include desktop {
+    margin-top: 61px;
+  }
+}
 
 .list-recommendation__elements {
+  &:not(:hover) .list-recommendation__photo {
+    filter: grayscale(100%);
+  }
   @include tablet {
     display: grid;
     grid-template-columns: minmax(200, 372) 1fr;
@@ -71,14 +84,11 @@
       grid-template-columns: 1fr minmax(200, 372);
     }
   }
-
-  @include desktop {
-  }
 }
 
 .list-recommendation__header {
   margin: 0 auto;
-  margin-top: 25px;
+
   width: 220px;
   @include text('Montserrat', 700, 18px, 22px);
   text-align: center;
@@ -89,7 +99,6 @@
     width: auto;
   }
   @include desktop {
-    margin-top: 61px;
     @include text(null, null, 30px, 55px);
   }
 }
@@ -103,9 +112,10 @@
   color: var(--accent-text);
 
   @include tablet {
-    width: 526px;
+    width: 400px;
   }
   @include desktop {
+    width: 526px;
     @include text(null, null, 22px, 35px);
   }
 
@@ -163,4 +173,72 @@
   @include desktop {
     margin-top: 45px;
   }
+}
+
+.arrow-box {
+  position: absolute;
+  left: 260px;
+  top: 2200px;
+
+  @include tablet {
+    left: 500px;
+    top: 1500px;
+  }
+
+  @include desktop {
+    left: 850px;
+    top: 1956px;
+  }
+}
+
+.arrow {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  transform: rotate(160deg);
+}
+
+.arrow .curve {
+  border: 2px solid var(--accent-background);
+  border-color: transparent transparent transparent var(--accent-background);
+  height: 96px;
+  width: 1200px;
+  border-radius: 230px 0 0 150px;
+
+  @include tablet {
+    height: 200px;
+  }
+}
+
+.arrow .point {
+  position: absolute;
+  right: inherit;
+  right: 86px;
+  bottom: 98px;
+  @include tablet {
+    right: 68px;
+    bottom: 184px;
+  }
+}
+
+.arrow .point:before,
+.arrow .point:after {
+  content: '';
+  border: 1px solid var(--accent-background);
+  height: 25px;
+  background-color: var(--accent-background);
+
+  position: absolute;
+}
+
+.arrow .point:before {
+  top: 8px;
+  left: -11px;
+  transform: rotate(85deg);
+}
+
+.arrow .point:after {
+  top: 18px;
+  left: 1px;
+  transform: rotate(191deg);
 }
