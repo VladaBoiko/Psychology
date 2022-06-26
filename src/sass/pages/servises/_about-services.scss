@@ -1,14 +1,4 @@
 
-// .about-services{
-//     padding-top: 80px;
-//     padding-bottom: 63px;
-    
-//     @include desktop{
-//         padding-top: 195px;
-//         padding-bottom: 86px;
-//         padding-left: 119px;
-//     }
-// }
 .about-services{
     position: relative;
 }
@@ -17,7 +7,7 @@
     top: -95px;
     left: -103px;
     width: 100%;
-    height: 100%;
+    height: 538px;
     z-index: -1;
     background-color: var(--background);
 
@@ -31,6 +21,7 @@
 .about-services__container{
     padding-top: 80px;
     padding-bottom: 63px;
+    max-width: 745px;
 }
 .about-services__title{
     @include text('Cormorant', 700, 25px, 30px);
@@ -42,7 +33,7 @@
         margin-bottom: 50px;
     }
 }
-.about-services__text{
+.services__text{
     position: relative;
     padding-left: 29px;
     @include text('Montserrat', 400, 16px, 22px);
@@ -50,10 +41,11 @@
     
     @include desktop{
     @include text('Montserrat', 400, 20px, 38px);
-    padding-left: 53px;
+    padding-left: 60px;
     }
     
-    &::before{
+}
+.services__text__line::before{
     content: '';
     position: absolute;
     left: 0px;
@@ -69,4 +61,3 @@
         top: 20px;
       }
     }
-}

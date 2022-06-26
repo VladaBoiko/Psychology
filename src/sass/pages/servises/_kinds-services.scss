@@ -1,0 +1,75 @@
+.kinds-services__container{
+    padding-top: 80px;
+    padding-bottom: 78px;
+}
+.services__title__container{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    width: 100%;
+    position: relative;
+}
+.services__title{
+    @include text('Montserrat', 700, 18px, 24px);
+    color: var(--text);
+    margin: 0 auto;
+    max-width: 150px;
+    
+  
+}
+.services__title__block{
+    position: absolute;
+    bottom: 30px;
+    left: 110px;
+    width: 100%;
+    height: 60px;
+    background-color: var(--background);
+    z-index: -1;
+}
+.services__list{
+    counter-reset: my-counter;
+}
+.services__title::before{
+    content: counter(my-counter, decimal-leading-zero)'';
+    counter-increment: my-counter;
+    color: var(--color-icon);
+    @include text('Montserrat', 700, 70px, 55px);
+    text-transform: uppercase;
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+}
+.services-price{
+    padding-top: 33px;
+    padding-bottom: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.services-price-text{
+    @include text('Montserrat', 700, 16px, 20px);
+    color: var(--accent-text);
+    margin-right: 20px;
+}
+.services-price-total{
+    @include text('Arsenal', 400, 16px, 20px);
+    color: var(--accent-text);
+    text-align: center;
+    margin-right: 4px;
+   
+}
+.services-price-money{
+    @include text('Arsenal', 500, 30px, 38px);
+    color: var(--accent-text);
+}
+.services-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 3px 62px;
+    @include text('Montserrat', 700, 16px, 55px);
+    color: var(--white);
+    text-transform: uppercase;
+    background: var(--accent-background);
+    box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+    border-radius: 150px;
+    margin-bottom: 40px;
+}
