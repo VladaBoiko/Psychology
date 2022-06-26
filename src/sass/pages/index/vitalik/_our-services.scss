@@ -1,0 +1,166 @@
+.recommendation-box {
+  padding: 70px 0 40px 0;
+}
+
+.recommendation__header {
+  width: 50%;
+  @include text('Cormorant', 700, 25px, 30px);
+  text-transform: uppercase;
+  color: var(--text);
+
+  @include tablet {
+    width: auto;
+    @include text('Cormorant', 700, 43px, 43px);
+  }
+  @include desktop {
+    @include text('Cormorant', 700, 60px, 55px);
+  }
+}
+
+.list-recommendation {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include tablet {
+    margin-top: 60px;
+    gap: 0;
+  }
+
+  @include desktop {
+    margin-top: 80px;
+  }
+}
+
+.list-recommendation__photo {
+  max-width: 200px;
+  border-radius: 0px 400px 400px 0px;
+  @include tablet {
+    max-width: 292px;
+    border-radius: 400px 0px 0px 0px;
+  }
+
+  @include desktop {
+    max-width: 372px;
+  }
+
+  .list-recommendation__elements:nth-child(2n) & {
+    margin-left: auto;
+    border-radius: 400px 0px 0px 400px;
+    @include tablet {
+      border-radius: 0px 400px 0px 0px;
+      grid-column: 2/3;
+      grid-row: 1;
+    }
+  }
+}
+
+.list-recommendation__elements:nth-child(2n) .list-recommendation__box {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.list-recommendation__elements {
+  @include tablet {
+    display: grid;
+    grid-template-columns: minmax(200, 372) 1fr;
+    gap: 50px;
+
+    &:nth-child(2n) {
+      grid-template-columns: 1fr minmax(200, 372);
+    }
+  }
+
+  @include desktop {
+  }
+}
+
+.list-recommendation__header {
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 220px;
+  @include text('Montserrat', 700, 18px, 22px);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-text);
+
+  @include tablet {
+    width: auto;
+  }
+  @include desktop {
+    margin-top: 61px;
+    @include text(null, null, 30px, 55px);
+  }
+}
+
+.list-recommendation__text {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 305px;
+  @include text('Montserrat', 400, 16px, 20px);
+  color: var(--accent-text);
+
+  @include tablet {
+    width: 526px;
+  }
+  @include desktop {
+    @include text(null, null, 22px, 35px);
+  }
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-icon);
+    flex-shrink: 0;
+    margin-top: 15px;
+    margin-right: 7px;
+    display: block;
+
+    @include tablet {
+      width: 32px;
+    }
+
+    @include desktop {
+      width: 45px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.recommendation__prompting-text {
+  margin: 0 auto;
+  margin-top: 55px;
+  max-width: 335px;
+  padding: 42px 0;
+  @include text('Montserrat', 700, 16px, 20px);
+  text-align: center;
+  color: var(--text);
+  background-color: var(--background);
+
+  @include tablet {
+    margin-top: 88px;
+    max-width: 683px;
+  }
+
+  @include desktop {
+    margin-top: 120px;
+    padding: 46px 0;
+    max-width: 1030px;
+    @include text(null, null, 27px, 37px);
+  }
+}
+
+.button-recommendation {
+  margin-top: 25px;
+
+  @include tablet {
+    margin-top: 35px;
+  }
+
+  @include desktop {
+    margin-top: 45px;
+  }
+}
