@@ -1,0 +1,72 @@
+
+// .about-services{
+//     padding-top: 80px;
+//     padding-bottom: 63px;
+    
+//     @include desktop{
+//         padding-top: 195px;
+//         padding-bottom: 86px;
+//         padding-left: 119px;
+//     }
+// }
+.about-services{
+    position: relative;
+}
+.color-block{
+    position: absolute;
+    top: -95px;
+    left: -103px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--background);
+
+    @include desktop{
+            width: 1019px;
+            height: 786px;
+            top: 0%;
+            left: 0%;
+    }
+}
+.about-services__container{
+    padding-top: 80px;
+    padding-bottom: 63px;
+}
+.about-services__title{
+    @include text('Cormorant', 700, 25px, 30px);
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 30px;
+    @include desktop{
+        @include text('Cormorant', 700, 60px, 55px );
+        margin-bottom: 50px;
+    }
+}
+.about-services__text{
+    position: relative;
+    padding-left: 29px;
+    @include text('Montserrat', 400, 16px, 22px);
+    color: var(--accent-text);
+    
+    @include desktop{
+    @include text('Montserrat', 400, 20px, 38px);
+    padding-left: 53px;
+    }
+    
+    &::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    display: block;
+    width: 21px;
+    height: 2px;
+    background-color: var(--color-icon);
+
+    @include desktop {
+        width: 45px;
+        height: 3px;
+        top: 20px;
+      }
+    }
+}
