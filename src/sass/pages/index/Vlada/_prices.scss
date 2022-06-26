@@ -1,6 +1,7 @@
 @import '../../../node_modules/swiper/swiper-bundle.min.css';
 .price {
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 .price-title {
   @include text($font-family: 'Cormorant', $a: 700, $b: 25px, $c: 30px);
@@ -17,6 +18,8 @@
 .price-slid {
   background-color: var(--background);
   padding: 31px 23px 33px 28px;
+  min-height: 505px;
+  margin-bottom: 25px;
 }
 .slid-title {
   @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
@@ -84,6 +87,7 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
   width: 243px;
   height: 67px;
   background-color: var(--accent-background);
@@ -93,10 +97,11 @@
   box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
   border-radius: 150px;
 }
-// .price-pagination {
-//   display: block;
-//   bottom: 0;
-// }
+.price-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .swiper-pagination-bullet {
   background: radial-gradient(
       50% 50% at 50% 50%,
@@ -107,6 +112,9 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
 }
 .swiper-pagination-bullet-active {
   width: 20px;
