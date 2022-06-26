@@ -1,0 +1,114 @@
+@import '../../../node_modules/swiper/swiper-bundle.min.css';
+.price {
+  padding-top: 80px;
+}
+.price-title {
+  @include text($font-family: 'Cormorant', $a: 700, $b: 25px, $c: 30px);
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+
+// .price-swiper {
+// }
+// .price-swiper__wrap {
+//   display: flex;
+// }
+.price-slid {
+  background-color: var(--background);
+  padding: 31px 23px 33px 28px;
+}
+.slid-title {
+  @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
+  text-transform: uppercase;
+  color: var(--accent-text);
+  margin-bottom: 25px;
+  &__design--first {
+    display: block;
+  }
+  &__design--second {
+    display: block;
+    color: var(--color-icon);
+  }
+}
+// .slid-text {
+// }
+.slid-text__item {
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &:last-child {
+    margin-bottom: 4px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/index-down/agree.svg);
+    margin-right: 10px;
+  }
+}
+.slid-text__text {
+  @include text($font-family: 'Montserrat', $a: 400, $b: 18px, $c: 22px);
+  color: var(--accent-text);
+}
+.prices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.price-figure {
+  @include text($font-family: 'Arsenal', $a: 700, $b: 40px, $c: 50px);
+  color: var(--accent-background);
+  margin-bottom: 15px;
+  &__first {
+    color: var(--accent-text);
+  }
+  &.single {
+    text-align: right;
+  }
+}
+.line {
+  @include text($font-family: 'Montserrat', $a: 700, $b: 20px, $c: 24px);
+  color: var(--accent-text);
+}
+.price-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 243px;
+  height: 67px;
+  background-color: var(--accent-background);
+  @include text($font-family: 'Montserrat', $a: 700, $b: 16px, $c: 55px);
+  color: var(--white);
+
+  box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  border-radius: 150px;
+}
+// .price-pagination {
+//   display: block;
+//   bottom: 0;
+// }
+.swiper-pagination-bullet {
+  background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(247, 151, 129, 0.2) 0%,
+      rgba(242, 218, 213, 0) 100%
+    ),
+    #f79781;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.swiper-pagination-bullet-active {
+  width: 20px;
+  height: 20px;
+}
