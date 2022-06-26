@@ -2,6 +2,7 @@
 .price {
   padding-top: 80px;
   padding-bottom: 80px;
+  overflow: hidden;
 }
 .price-title {
   @include text($font-family: 'Cormorant', $a: 700, $b: 25px, $c: 30px);
@@ -12,14 +13,15 @@
 
 // .price-swiper {
 // }
-// .price-swiper__wrap {
-//   display: flex;
-// }
+.price-swiper__wrap {
+  display: flex;
+}
 .price-slid {
   background-color: var(--background);
   padding: 31px 23px 33px 28px;
   min-height: 505px;
   margin-bottom: 25px;
+  width: 100%;
 }
 .slid-title {
   @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
@@ -34,6 +36,9 @@
     color: var(--color-icon);
   }
 }
+// .price-slid.swiper-slide {
+//   width: 100%;
+// }
 // .slid-text {
 // }
 .slid-text__item {
@@ -75,11 +80,14 @@
   }
   &.single {
     text-align: right;
+    margin-top: 35px;
+    margin-bottom: 35px;
   }
 }
 .line {
   @include text($font-family: 'Montserrat', $a: 700, $b: 20px, $c: 24px);
   color: var(--accent-text);
+  margin-bottom: 15px;
 }
 .price-button {
   display: flex;

@@ -4,4 +4,10 @@ const swiper = new Swiper('.price-swiper', {
     el: '.price-pagination',
     clickable: true,
   },
+  keyboard: {
+    enabled: true,
+    onlyOnViewport: true,
+    padeUpDown: true,
+  },
+  spaceBetween: 30,
 });
