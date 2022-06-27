@@ -1,6 +1,11 @@
 .kinds-services__container{
     padding-top: 80px;
     padding-bottom: 78px;
+    
+    @include desctop{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
 }
 .services__title__container{
     padding-top: 50px;
@@ -23,7 +28,12 @@
     width: 100%;
     height: 60px;
     background-color: var(--background);
-    z-index: -1;
+    z-index: -1; 
+    @include desctop{
+        width: 500px
+        height: 100px;
+
+    }
 }
 .services__list{
     counter-reset: my-counter;
