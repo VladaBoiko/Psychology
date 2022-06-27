@@ -16,10 +16,10 @@
         margin: 0 auto;
         max-width: 150px;
     }
-   
-    @include tablet{
+    @media screen and (max-width:1469px){
         max-width: 170px;
     }
+   
 
 }
 .services__title{
@@ -44,7 +44,7 @@
     @include tablet{
         display: flex;
         flex-direction: column;
-        // margin-right: 90px;
+        
         padding-left: 90px;
     }
         @include desktop{
@@ -56,7 +56,7 @@
     }
     &-reverse{
         @include tablet{
-            // margin-left: 90px;
+            
             margin-right: 0;
         }
         @include desktop{
@@ -85,7 +85,7 @@
         width: 300px;
      }
     @include desktop{
-        
+        width: 500px;
         height: 100px;
         left: 21px;
 
