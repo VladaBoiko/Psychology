@@ -14,9 +14,11 @@
     position: relative;
     @media screen and (max-width:767px){
         margin: 0 auto;
-    }
-    @media screen and (max-width:767px){
         max-width: 150px;
+    }
+   
+    @include tablet{
+        max-width: 170px;
     }
 
 }
@@ -38,6 +40,13 @@
 }
 .services-card{
     position: relative;
+
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        // margin-right: 90px;
+        padding-left: 90px;
+    }
         @include desktop{
             margin-right: 180px;
             display: flex;
@@ -46,6 +55,10 @@
             
     }
     &-reverse{
+        @include tablet{
+            // margin-left: 90px;
+            margin-right: 0;
+        }
         @include desktop{
                 margin-left: 180px;
                 margin-right: 0;
@@ -54,7 +67,11 @@
 
 }
 
-
+.services-img{
+    @include tablet{
+     width: 600px;   
+    }
+}
 .services__title__block{
     position: absolute;
     bottom: 30px;
@@ -63,8 +80,12 @@
     height: 60px;
     background-color: var(--background);
     z-index: -1; 
+   
+    @include tablet{
+        width: 300px;
+     }
     @include desktop{
-        width: 500px;
+        
         height: 100px;
         left: 21px;
 
@@ -86,6 +107,9 @@
             margin-bottom: 75px;
         }
     }
+    @include tablet{
+        display: flex;
+    }
     @include desktop{
         display: flex;
         
@@ -103,6 +127,9 @@
     text-transform: uppercase;
     position: absolute;
     top: 50px;
+    @include tablet{
+        left: 0px;
+    }
    
     @include desktop {
         @include text('Montserrat', 700, 110px, 55px);

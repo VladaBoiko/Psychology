@@ -1,7 +1,12 @@
-
-.about-services{
-    position: relative;
+.services-header{
+    height: 95px;
+    // background-color: bisque;
+    z-index: -2;
+    @include desktop{
+        height: 235px;
+    }
 }
+
 .color-block{
     position: absolute;
     top: -95px;
@@ -11,17 +16,26 @@
     z-index: -1;
     background-color: var(--background);
 
+    @include tablet{
+        width: 600px;
+    }
+
     @include desktop{
             width: 1019px;
             height: 786px;
             top: 0%;
-            left: 0%;
+            left: 234px;
     }
 }
 .about-services__container{
     padding-top: 80px;
     padding-bottom: 63px;
     max-width: 745px;
+    @include tablet{
+        padding-top: 135px;
+        padding-bottom: 70px;
+        max-width: 550px;
+    }
         @include desktop{
             padding-top: 193px;
             padding-bottom: 86px;
