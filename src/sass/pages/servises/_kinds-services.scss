@@ -2,7 +2,7 @@
     padding-top: 80px;
     padding-bottom: 78px;
     
-    @include desctop{
+    @include desktop{
         padding-top: 150px;
         padding-bottom: 150px;
     }
@@ -29,14 +29,22 @@
     height: 60px;
     background-color: var(--background);
     z-index: -1; 
-    @include desctop{
-        width: 500px
+    @include desktop{
+        width: 500px;
         height: 100px;
 
     }
 }
 .services__list{
     counter-reset: my-counter;
+}
+.services-item{
+    @include desktop{
+        display: flex;
+    }
+}
+services-img{
+    max-width: 560px;
 }
 .services__title::before{
     content: counter(my-counter, decimal-leading-zero)'';
