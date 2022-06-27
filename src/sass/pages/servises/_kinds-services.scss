@@ -10,66 +10,82 @@
 .services__title__container{
     padding-top: 50px;
     padding-bottom: 30px;
-    width: 100%;
+   
     position: relative;
-    
-    // @include desktop{
-    //     padding-bottom: 50px;
-        
-    // }
+    @media screen and (max-width:767px){
+        margin: 0 auto;
+    }
+    @media screen and (max-width:767px){
+        max-width: 150px;
+    }
+
 }
 .services__title{
     @include text('Montserrat', 700, 18px, 24px);
     color: var(--text);
-    margin: 0 auto;
-    @media screen and (max-width:767px){
-        max-width: 150px;
-    }
+    margin: 6 auto;
+  
+    
     @include desktop{
         @include text('Montserrat', 700, 30px, 55px);
-        padding-left: 163px;
+        margin-top: 17px;
+        margin-bottom: 28px;
        
     }
    
     
   
 }
-.services__title-one{
-    padding-left: 142px;
-}
 .services-card{
-    @include desktop{
-        margin-right: 185px;
-        
+    position: relative;
+        @include desktop{
+            margin-right: 180px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 141px;
+            
     }
     &-reverse{
-        margin-left: 180px;
-        margin-right: 0;
-    }
+        @include desktop{
+                margin-left: 180px;
+                margin-right: 0;
+        }
+            }
+
 }
+
+
 .services__title__block{
     position: absolute;
     bottom: 30px;
-    left: 110px;
-    width: 100%;
+    left: 15px;
+    width: 500px;
     height: 60px;
-    background-color: var(--background);
+    background-color: gray;
     z-index: -1; 
     @include desktop{
         width: 500px;
         height: 100px;
+        left: 21px;
 
     }
 }
 .services__text{
     @include desktop{
         max-width: 560px;
+       
     }
 }
 .services__list{
     counter-reset: my-counter;
 }
 .services__item{
+    &:not(:last-child){
+        margin-bottom: 40px;
+        @include desktop {
+            margin-bottom: 75px;
+        }
+    }
     @include desktop{
         display: flex;
         
@@ -79,42 +95,59 @@
     flex-direction: row-reverse;
 }
 
-.services__title::before{
+.services-card::before{
     content: counter(my-counter, decimal-leading-zero)'';
     counter-increment: my-counter;
     color: var(--color-icon);
     @include text('Montserrat', 700, 70px, 55px);
     text-transform: uppercase;
     position: absolute;
-    left: 0px;
-    bottom: 30px;
+    top: 50px;
+   
     @include desktop {
         @include text('Montserrat', 700, 110px, 55px);
+        top: 70px;
+       left: 0px;
         
     }
 }
+
 .services-price{
-    padding-top: 33px;
-    padding-bottom: 31px;
+    padding-top: 25px;
+    padding-bottom: 28px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include desktop {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 .services-price-text{
     @include text('Montserrat', 700, 16px, 20px);
     color: var(--accent-text);
-    margin-right: 20px;
+    margin-right: 15px;
+    @include desktop{
+        @include text('Montserrat', 700, 20px, 24px);
+    }
 }
 .services-price-total{
     @include text('Arsenal', 400, 16px, 20px);
     color: var(--accent-text);
-    text-align: center;
-    margin-right: 4px;
    
+    margin-right: 4px;
+    @include desktop{
+        @include text('Arsenal', 400, 20px, 25px);
+    }
 }
 .services-price-money{
     @include text('Arsenal', 500, 30px, 38px);
     color: var(--accent-text);
+    text-transform: uppercase;
+    @include desktop{
+        @include text('Arsenal', 700, 60px, 75px);
+    }
 }
 .services-btn{
     display: block;
@@ -126,5 +159,9 @@
     background: var(--accent-background);
     box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
     border-radius: 150px;
-    margin-bottom: 40px;
+    @include desktop{
+        @include text('Montserrat', 700, 30px, 55px);
+        padding: 22px 65px;
+    }
+    
 }
