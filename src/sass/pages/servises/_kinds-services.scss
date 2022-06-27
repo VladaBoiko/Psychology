@@ -61,7 +61,7 @@
     left: 15px;
     width: 500px;
     height: 60px;
-    background-color: gray;
+    background-color: var(--background);
     z-index: -1; 
     @include desktop{
         width: 500px;
