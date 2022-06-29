@@ -1,0 +1,167 @@
+.why-box {
+  padding: 40px 0;
+
+  @include desktop {
+    padding: 75px 0;
+  }
+}
+
+.why__header {
+  @include text('Cormorant', 700, 25px, 30px);
+  text-transform: uppercase;
+  color: var(--text);
+  @include desktop {
+    @include text(null, null, 60px, 55px);
+  }
+}
+
+.why__wraper {
+  width: 100%;
+  margin-top: 40px;
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr minmax(337px, auto);
+    gap: 20px;
+  }
+}
+
+.why__photo {
+  width: 337px;
+  margin: 0 auto;
+  @include tablet {
+    margin: 0;
+    border-radius: 0px 400px 0px 0px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  @include desktop {
+    width: 475px;
+  }
+}
+
+.why__wraper-list {
+  margin-top: 25px;
+  @include tablet {
+    margin: 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  @include desktop {
+    padding-top: 48px;
+  }
+}
+
+.why-list {
+  margin-bottom: 25px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+
+.why-list__elements {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  &::before {
+    content: '';
+    background-image: url(../../images/why/group.svg);
+    width: 33px;
+    height: 35px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  &:not(:first-child) {
+    margin-top: 25px;
+
+    @include desktop {
+      margin-top: 40px;
+    }
+  }
+}
+
+.why-list__text {
+  @include text('Montserrat', 400, 18px, 22px);
+  color: var(--accent-text);
+
+  @include desktop {
+    @include text(null, null, 30px, 38px);
+  }
+
+  &--strong {
+    font-weight: 700;
+  }
+}
+
+.why__link {
+  position: relative;
+  @include text('Montserrat', 700, 20px, 38px);
+  text-decoration-line: underline;
+  color: var(--text);
+
+  @include desktop {
+    @include text(null, 400, 30px, 38px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: -66px;
+    background-image: url(../../images/why/arrow.svg);
+    display: block;
+    width: 46px;
+    height: 16px;
+  }
+}
+
+.why-war {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 334px;
+  background-color: var(--background);
+
+  @include tablet {
+    width: 100%;
+    display: flex;
+  }
+
+  @include desktop {
+    margin-top: 152px;
+  }
+}
+
+.why-war__photo {
+  @include desktop {
+    width: 531px;
+  }
+}
+
+.why-war__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 26px 31px 16px;
+
+  @include desktop {
+    padding: 81px 166px 80px 79px;
+  }
+}
+
+.why-war__text {
+  display: block;
+  @include text('Montserrat', 400, 16px, 22px);
+  color: var(--text);
+
+  @include desktop {
+    @include text(null, null, 27px, 37px);
+  }
+
+  &--strong {
+    font-weight: 700;
+  }
+}
