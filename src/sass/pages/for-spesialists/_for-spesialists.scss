@@ -1,0 +1,308 @@
+.psychologists .container {
+  padding-top: 175px;
+  padding-bottom: 80px;
+  position: relative;
+  outline: 1px solid red;
+
+  // @include tablet {
+  //   padding-top: 250px;
+  //   padding-bottom: 100px;
+  // }
+
+  @include desktop {
+    padding-top: 387px;
+    padding-bottom: 150px;
+  }
+}
+
+.psychologists__wrap {
+  margin-bottom: 40px;
+
+  // @include tablet {
+  //   display: flex;
+  //   flex-direction: row-reverse;
+  //   justify-content: start;
+  //   margin-bottom: 80px;
+  //   padding-right: 20px;
+  // }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    padding-right: 100px;
+    margin-bottom: 143px;
+  }
+}
+
+.psychologists__top {
+  position: relative;
+  z-index: 1;
+
+  // @include tablet {
+  //   width: 647px;
+  //   padding-top: 30px;
+  // }
+}
+
+.psychologists__title {
+  @include text('Cormorant', null, 25px, 30px);
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 30px;
+
+  // @include tablet {
+  //   margin-bottom: 40px;
+  // }
+
+  @include desktop {
+    @include text('Cormorant', null, 60px, 55px);
+    margin-bottom: 60px;
+  }
+}
+
+.psychologists__list {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.psychologists__item {
+  @include font(null, 16px, calc(22px / 16px));
+  color: var(--accent-text);
+  display: flex;
+
+  // @include tablet {
+  //   font-size: 12px;
+  // }
+
+  @include desktop {
+    @include font(null, 20px, calc(38px / 20px));
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
+    @include desktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 21px;
+    height: 2px;
+    margin-top: 10px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    background-color: var(--color-icon);
+
+    @include desktop {
+      width: 40px;
+      height: 3px;
+      margin-right: 13px;
+      margin-top: 22px;
+    }
+  }
+}
+
+.psychologists__picture {
+  overflow: hidden;
+  max-width: 335px;
+  max-height: 368px;
+  border-radius: 400px 400px 0px 0px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  // @include tablet {
+  //   position: relative;
+  //   z-index: 1;
+  //   flex-shrink: 0;
+  //   border-radius: 200px 0px 0px 0px;
+  //   margin-right: 40px;
+  // }
+
+  @include desktop {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 614px;
+    max-width: 614px;
+    height: 651px;
+    max-height: 651px;
+    border-radius: 400px 0px 0px 0px;
+    margin-right: 80px;
+  }
+}
+
+.psychologists__subtitle {
+  @include text('Cormorant', 700, 25px, 30px);
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 25px;
+
+  // @include tablet {
+  //   color: var(--accent-text);
+  //   text-align: center;
+  //   margin-bottom: 50px;
+  // }
+
+  @include desktop {
+    @include text('Cormorant', 700, 60px, 35px);
+    color: var(--accent-text);
+    margin-bottom: 75px;
+    text-align: start;
+  }
+}
+
+.psychologists__form {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.psychologists__input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  height: 80px;
+  @include font(700, 16px, calc(55px / 16px));
+  color: var(--text);
+
+  border: 1px solid #99c1e2;
+  border-radius: 150px;
+  outline: none;
+  transition: border var(--main-transition);
+
+  &::placeholder {
+    color: var(--color-icon);
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-background);
+  }
+
+  &:not(:last-child) {
+    @include desktop {
+      margin-right: 40px;
+    }
+  }
+
+  // @include tablet {
+  //   width: 320px;
+  //   font-size: 14px;
+  //   padding-left: 60px;
+  //   margin-bottom: 0;
+  //   height: 60px;
+  // }
+
+  @include desktop {
+    width: 320px;
+    height: 80px;
+    font-size: 14px;
+    @include font(700, 18px, calc(55px / 18px));
+    margin-right: 40px;
+    margin-bottom: 0;
+    padding-left: 60px;
+  }
+}
+
+.psychologists__inputwrap {
+  // @include tablet {
+  //   display: flex;
+  //   justify-content: space-evenly;
+  //   margin-bottom: 40px;
+  // }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.psychologists__btn {
+  @include text('Montserrat', 700, 16px, 55px);
+  @include flexCenter;
+  height: 80px;
+  text-transform: uppercase;
+  color: var(--white);
+
+  background: var(--gradient);
+  border-radius: 150px;
+
+  transition: background-color var(--main-transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-background);
+  }
+
+  // @media screen and (min-width: 768px) and (max-width: 1469px) {
+  //   width: 320px;
+  //   height: 60px;
+  //   font-size: 14px;
+  //   align-self: center;
+  // }
+
+  @include desktop {
+    width: 320px;
+    font-size: 18px;
+  }
+}
+
+.psychologists__background {
+  position: absolute;
+  top: 0px;
+  right: 112px;
+  width: 100vw;
+  height: 660px;
+  background-color: var(--background);
+  // background-color: aqua;
+
+  // @media screen and (max-width: 280px) {
+  //   height: 745px;
+  // }
+
+  // @media screen and (min-width: 281px) and (max-width: 290px) {
+  //   height: 700px;
+  // }
+
+  @media screen and (min-width: 325px) {
+    height: 615px;
+  }
+
+  @media screen and (min-width: 356px) {
+    height: 570px;
+  }
+
+  @media screen and (min-width: 385px) {
+    height: 525px;
+  }
+
+  @media screen and (min-width: 455px) and (max-width: 767px) {
+    height: 485px;
+  }
+
+  //  @include tablet {
+  //     width: 500;
+  //     height: 650px;
+  //     right: 15px;
+  //   }
+
+  @include desktop {
+    width: 1020px;
+    height: 1100px;
+    right: 15px;
+  }
+}
