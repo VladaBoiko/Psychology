@@ -1,0 +1,387 @@
+header {
+  border-bottom: 1px solid var(--color-icon);
+  background-color: var(--white);
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 95px;
+  position: relative;
+}
+
+.header-container {
+  z-index: 4;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  @media screen and (min-width: 1470px) {
+    padding-bottom: 0;
+    padding-top: 28px;
+  }
+}
+.logo-address-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.address-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrap {
+  display: none;
+  @media screen and (min-width: 1470px) {
+    margin-left: auto;
+    display: flex;
+  }
+}
+
+.header-button {
+  background-color: var(--white);
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  margin-left: auto;
+  @media screen and (min-width: 1470px) {
+    display: none;
+  }
+}
+
+.header-button .icon-close {
+  display: none;
+}
+
+.header-button.is-opn .icon-close {
+  display: block;
+}
+
+.header-button.is-opn .icon-burger {
+  display: none;
+}
+
+svg .icon-close {
+  width: 20px;
+  height: 20px;
+}
+
+.header-nav {
+  display: none;
+  @media screen and (min-width: 1470px) {
+    margin-top: 50px;
+    display: block;
+  }
+}
+
+.address-list-desk {
+  display: none;
+  @media screen and (min-width: 1470px) {
+    display: flex;
+    margin-right: 25px;
+    align-items: center;
+  }
+}
+
+.button-call {
+  display: none;
+  padding: 5px 31px;
+  border-radius: 150px;
+  @include text('Montserrat', 700, 16px, 55px);
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: #98c5eb;
+  margin-left: auto;
+  @media screen and (min-width: 1470px) {
+    display: inline-block;
+    @include text('Montserrat', 700, 18px, 55px);
+    padding: 12px 28px;
+  }
+}
+
+.address-list {
+  margin-bottom: 30px;
+  @media screen and (min-width: 1470px) {
+    margin-bottom: 0;
+  }
+}
+
+.nav-item-link {
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 42px;
+}
+
+.desk-nav {
+  display: none;
+  @media screen and (min-width: 1470px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.nav-item {
+  color: var(--text);
+  @include text('Montserrat', 400, 22px, 27px);
+}
+
+.nav-item + .nav-item {
+  margin-left: 60px;
+}
+
+.nav-item-link-current {
+  position: relative;
+}
+
+.nav-item-link-current::after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-background);
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+}
+/*---------------------------- Мобильное меню ---------------------*/
+
+.mob-menu {
+  z-index: 1;
+  position: absolute;
+  transform: translateX(100%);
+  top: 101%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: var(--white);
+  &.is-opn {
+    display: block;
+  }
+  transition: var(--main-transition);
+}
+
+.mob-menu.is-opn {
+  transform: translateX(0);
+}
+
+.mob-container {
+  padding: 40px 32px 25px 32px;
+  overflow-y: auto;
+}
+
+.mob-menu-header {
+  display: flex;
+  border-bottom: 1px solid var(--color-icon);
+}
+
+.mob-nav-item {
+  position: relative;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  @include text('Montserrat', 400, 18px, 22px);
+  color: var(--text);
+  @media screen and (min-width: 1470px) {
+    @include text('Montserrat', 400, 18px, 55px);
+  }
+}
+
+.mob-nav-item + .mob-nav-item {
+  margin-top: 25px;
+}
+
+.mob-nav-item--last {
+  @include text('Montserrat', 700, 18px, 22px);
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 1470px) {
+    @include text('Montserrat', 700, 22px, 27px);
+    align-items: flex-start;
+  }
+}
+
+.header-mob-link {
+  transform: translateX(0px);
+  transition: var(--main-transition);
+}
+
+.header-mob-link-last {
+  margin-right: 15px;
+}
+
+.mob-nav-item:hover .header-mob-link {
+  transform: translateX(46px);
+}
+
+.header-mob-link::before {
+  content: '';
+  width: 31px;
+  height: 1px;
+  background-color: var(--accent-background);
+  top: 50%;
+  margin-right: 15px;
+  display: inline-flex;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-46px);
+  transition: opacity var(--main-transition), visibility var(--main-transition);
+}
+
+.mob-nav-item:hover .header-mob-link::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mob-nav {
+  margin-bottom: 55px;
+}
+
+.address-item {
+  display: flex;
+  font-style: normal;
+  @media screen and (min-width: 1470px) {
+    @include text('Montserrat', 400, 22px, 35px);
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+    @media screen and (min-width: 1470px) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+}
+
+.adress-contacts-link {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  & p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    background-color: var(--color-icon);
+    border-radius: 4px;
+    margin-right: 5px;
+    @media screen and (min-width: 1470px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.icon-location {
+  margin-right: 5px;
+  width: 23;
+  height: 28;
+  @media screen and (min-width: 1470px) {
+    width: 35;
+    height: 40;
+  }
+}
+
+.icon-phone {
+  width: 10.5;
+  height: 10.7;
+  @media screen and (min-width: 1470px) {
+    width: 19;
+    height: 23;
+  }
+}
+
+.icon-Logo-mob {
+  width: 185;
+  height: 62;
+  @media screen and (min-width: 1470px) {
+    width: 276;
+    height: 93;
+  }
+}
+
+.button-mob-call {
+  display: flex;
+  margin: 0 auto;
+  padding: 5px 31px;
+  border-radius: 150px;
+  @include text('Montserrat', 700, 16px, 55px);
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: #98c5eb;
+  margin-left: auto;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/*----------------------------------MODAL ----------------------------------------------*/
+.backdrop {
+  display: block;
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--price-number-gray);
+}
+
+.modal {
+  padding: 65px 28px 80px 28px;
+  width: 100vw;
+  min-height: 66vh;
+  background-color: var(--white);
+}
+
+.modal-close {
+  width: 35px;
+  height: 35px;
+  background-color: var(--accent-text);
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-first-text {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  @include text('Cormorant', 700, 25px, 26px);
+  color: var(--text);
+}
+.modal-second-text {
+  @include text('Montserrat', 400, 16px, 16px);
+  color: var(--accent-text);
+  margin-bottom: 25px;
+}
+
+.modal-input {
+  outline: none;
+  border-radius: 150px;
+  border: 1px solid var(--border-color);
+  height: 67px;
+  width: 260px;
+  padding: 25px 30px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  @include text('Montserrat', 400, 14px, 16px);
+  color: var(--color-icon);
+}
+
+.comment-area {
+  display: block;
+  resize: none;
+}
+.modal-field + .modal-field {
+  margin-top: 10px;
+}
+
+form {
+  text-align: center;
+}
