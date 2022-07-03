@@ -1,0 +1,127 @@
+<a href="" class="our-team-social-item__link">
+    <svg class="our-team-social-item__icons" width="20" height="20">
+        <use href="./images/icons.svg#icon-twitter"></use>
+    </svg>
+</a>
+
+<picture class="hero-ice-cream__img">
+    <source srcset="
+              ./images/hero/ice-cream-desctop-fon-244-min.png 1x,
+              ./images/hero/ice-cream-desctop-fon-488-min.png 2x
+            " type="image/png" media="(min-width: 1000px)" />
+    <source srcset="
+              ./images/hero/ice-cream-tablet-fon-143-min.png 1x,
+              ./images/hero/ice-cream-tablet-fon-286-min.png 2x
+            " type="image/png" media="(min-width: 768px)" />
+    <source srcset="
+              ./images/hero/ice-cream-mobail-fon-171-min.png 1x,
+              ./images/hero/ice-cream-mobail-fon-342-min.png 2x
+            " media="(min-width: 768px)" />
+
+    <img srcset="
+              ./images/hero/ice-cream-desctop-fon-244-min.png 1x,
+              ./images/hero/ice-cream-desctop-fon-488-min.png 2x
+            " src="./images/hero/ice-cream-desctop-fon-244-min.png" alt="milk" />
+</picture>
+
+<link rel="shortcut icon" href="./images/how-its-made/cup/cup-three-44.png" type="image/x-icon">
+
+        <img srcset="
+                      ./images/hero/ice-cream-desctop-fon-244-min.png 1x,
+                      ./images/hero/ice-cream-desctop-fon-488-min.png 2x
+                    " src="./images/hero/ice-cream-desctop-fon-244-min.png" alt="milk" />
+
+        @media screen and (max-width: 767px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/mhero_mobile1x-min.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/mhero_mobile2x-min.jpg);
+        }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/thero1x-min.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/thero2x-min.jpg);
+        }
+        }
+        @media screen and (min-width: 1200px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/dhero1x-min.jpg);
+        padding-top: 200px;
+        height: 600px;
+        max-width: 1600px;
+        text-align: center;
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/dhero2x-min.jpg);
+        }
+        }
+
+.vscode
+settings.json
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css"
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveServer.settings.port": 1235,
+    "liveSassCompile.settings.autoprefix": null
+}
+
+&:hover,
+    &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    } 
+
+    &::after{
+        display: inline-block;
+        position: absolute;
+        left: 100%;
+        transform: translateX(10px);
+        content: '';
+   
+        width: 1px;
+        height: 22px;
+        border-radius: 2px;
+        background-color: #C4C4C4;  
+   }
+
+
+
+    @media screen and(min-width: 460px) and (max-width: 767px) {
+    width: 171px;
+    left: 70px;
+    }

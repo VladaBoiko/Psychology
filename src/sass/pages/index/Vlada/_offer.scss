@@ -1,0 +1,169 @@
+.offer-section {
+  overflow: hidden;
+  padding-top: 80px;
+  @include tablet {
+    padding-top: 150px;
+  }
+}
+.offer-cont {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.offer-title {
+  @include text($font-family: 'Cormorant', $a: 700, $b: 25px, $c: 30px);
+  color: var(--text);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  @include tablet {
+    @include text($font-family: 'Cormorant', $a: 700, $b: 40px, $c: 45px);
+  }
+  @include desktop {
+    @include text($font-family: 'Cormorant', $a: 700, $b: 60px, $c: 55px);
+    margin-bottom: 69px;
+  }
+}
+.target {
+  @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
+  color: var(--accent-text);
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  @include tablet {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 23px, $c: 37px);
+  }
+  @include desktop {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 30px, $c: 37px);
+    margin-bottom: 50px;
+  }
+}
+.target-text {
+  @include text($font-family: 'Montserrat', $a: 400, $b: 18px, $c: 22px);
+  color: var(--accent-text);
+  margin-bottom: 15px;
+  max-width: 299px;
+  @include tablet {
+    max-width: 380px;
+  }
+  @include desktop-small {
+    max-width: 450px;
+  }
+  @include desktop {
+    @include text($font-family: 'Montserrat', $a: 400, $b: 22px, $c: 35px);
+    margin-bottom: 30px;
+    max-width: 681px;
+  }
+}
+.change-list {
+  margin-bottom: 25px;
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+.change-item {
+  display: flex;
+  align-items: center;
+  &::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/index-down/agree.svg);
+    margin-right: 10px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+    @include desktop {
+      margin-bottom: 25px;
+    }
+  }
+}
+.change-item-text {
+  @include text($font-family: 'Montserrat', $a: 400, $b: 18px, $c: 22px);
+  color: var(--accent-text);
+  max-width: 238px;
+  @include tablet {
+    min-width: 300px;
+    @include text($font-family: 'Montserrat', $a: 400, $b: 20px, $c: 24px);
+  }
+  @include desktop-small {
+    max-width: 450px;
+  }
+}
+.change-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 243px;
+  height: 67px;
+  margin-bottom: 42px;
+  background-color: var(--accent-background);
+  @include text($font-family: 'Montserrat', $a: 700, $b: 16px, $c: 55px);
+  color: var(--white);
+  text-transform: uppercase;
+  box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  border-radius: 150px;
+  transition: all var(--main-transition);
+
+  &:hover {
+    background-color: #e6775e;
+  }
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 30px, $c: 55px);
+    width: 400px;
+    height: 98px;
+    margin-bottom: 16px;
+  }
+  &::after {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/index-down/offer-arrow.svg);
+    margin-right: 10px;
+    @include desktop {
+      background-image: url(../../images/index-down/arrowoffer.svg);
+      left: 110%;
+      width: 100px;
+    }
+  }
+}
+.transformation-price {
+  @include text($font-family: 'Montserrat', $a: 400, $b: 18px, $c: 22px);
+  color: var(--accent-text);
+  text-align: center;
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 400, $b: 20px, $c: 24px);
+    text-align: right;
+  }
+}
+.trans-count {
+  @include text($font-family: 'Arsenal', $a: 700, $b: 40px, $c: 50px);
+  color: var(--accent-background);
+  margin-left: 10px;
+  @include desktop-small {
+    @include text($font-family: 'Arsenal', $a: 700, $b: 60px, $c: 75px);
+    margin-left: 20px;
+  }
+}
+.offer-image {
+  display: block;
+  border-radius: 0px 0px 400px 0px;
+  margin-top: 51px;
+  @include tablet {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  img {
+    max-width: 522px;
+  }
+}

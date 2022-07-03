@@ -1,11 +1,9 @@
 @import '../../../node_modules/swiper/swiper-bundle.min.css';
 .price {
   padding-top: 80px;
-  padding-bottom: 80px;
   overflow: hidden;
   @include desktop {
     padding-top: 94px;
-    padding-bottom: 150px;
   }
 }
 .price .container {
@@ -37,8 +35,6 @@
   }
   @include desktop {
     padding: 70px 37px 41px 36px;
-    // min-width: 517px;
-    // max-width: 518px;
     height: 730px;
     min-width: 440px;
     max-width: 441px;
@@ -144,6 +140,11 @@
   transition: all var(--main-transition);
   &:hover {
     background-color: #e6775e;
+  }
+  @include desktop {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 25px, $c: 55px);
+    width: 270px;
+    height: 70px;
   }
 }
 .price-pagination {

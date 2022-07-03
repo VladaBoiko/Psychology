@@ -9,9 +9,6 @@ const swiper = new Swiper('.price-swiper', {
     onlyOnViewport: true,
     padeUpDown: true,
   },
-  mousewheel: {
-    sensitivity: 1,
-  },
   spaceBetween: 30,
   autoplay: {
     delay: 2000,
