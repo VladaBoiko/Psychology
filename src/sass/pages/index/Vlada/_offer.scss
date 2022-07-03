@@ -158,12 +158,25 @@
   display: block;
   border-radius: 0px 0px 400px 0px;
   margin-top: 51px;
+  img {
+    max-width: 328px;
+  }
   @include tablet {
     margin-left: auto;
-    margin-top: auto;
+    margin-top: 70px;
     margin-bottom: auto;
+    img {
+      max-width: 522px;
+    }
   }
-  img {
-    max-width: 522px;
+  @include desktop-small {
+    img {
+      max-width: 500px;
+    }
+  }
+  @include desktop {
+    img {
+      width: 522px;
+    }
   }
 }
