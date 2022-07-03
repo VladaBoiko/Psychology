@@ -166,12 +166,12 @@
     margin-top: 70px;
     margin-bottom: auto;
     img {
-      max-width: 522px;
+      max-width: 340px;
     }
   }
   @include desktop-small {
     img {
-      max-width: 500px;
+      max-width: 350px;
     }
   }
   @include desktop {
