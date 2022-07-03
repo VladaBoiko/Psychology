@@ -33,7 +33,6 @@ const swiper = new Swiper('.price-swiper', {
     1469: {
       slidesPerView: 3,
       slidesPerGroup: 1,
-      slidesPerGroup: 3,
       autoplay: false,
       spaceBetween: 50,
       speed: 2000,
