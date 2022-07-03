@@ -95,9 +95,16 @@ section {
     width: 499px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 1000px;
   }
 }
 
