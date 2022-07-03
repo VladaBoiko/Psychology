@@ -92,9 +92,12 @@
     }
 }
 .services__text{
+    @include text('Montserrat', 400, 16px, 22px);
+
+    
     @include desktop{
         max-width: 560px;
-       
+        @include text('Montserrat', 400, 20px, 38px);
     }
 }
 .services__list{
@@ -127,6 +130,7 @@
     text-transform: uppercase;
     position: absolute;
     top: 50px;
+    
     @include tablet{
         left: 0px;
     }
