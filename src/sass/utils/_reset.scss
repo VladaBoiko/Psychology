@@ -101,6 +101,12 @@ section {
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 1000px;
+  }
+}
+
 @media screen and (min-width: 1470px) {
   .container {
     width: 1470px;
