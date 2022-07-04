@@ -1,3 +1,6 @@
+.kinds-services{
+    overflow:hidden;
+}
 .kinds-services__container{
     padding-top: 80px;
     padding-bottom: 78px;
@@ -12,26 +15,32 @@
     padding-bottom: 30px;
    
     position: relative;
+    
+    @include desktop{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
     @media screen and (max-width:767px){
         margin: 0 auto;
         max-width: 150px;
     }
-    @media screen and (max-width:1469px){
-        max-width: 170px;
-    }
+ 
    
 
 }
 .services__title{
     @include text('Montserrat', 700, 18px, 24px);
     color: var(--text);
-    margin: 6 auto;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 15px;
   
     
     @include desktop{
         @include text('Montserrat', 700, 30px, 55px);
         margin-top: 17px;
         margin-bottom: 28px;
+        margin-left: 23px;
        
     }
    
@@ -87,7 +96,8 @@
     @include desktop{
         width: 500px;
         height: 100px;
-        left: 21px;
+        left: 44px;
+        bottom: 15px;
 
     }
 }
