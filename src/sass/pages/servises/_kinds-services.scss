@@ -2,7 +2,7 @@
     overflow:hidden;
 }
 .kinds-services__container{
-    padding-top: 80px;
+    padding-top: 143px;
     padding-bottom: 78px;
     
     @include desktop{
@@ -13,16 +13,12 @@
 .services__title__container{
     padding-top: 50px;
     padding-bottom: 30px;
-   
     position: relative;
     
-    @include desktop{
-        padding-top: 150px;
-        padding-bottom: 150px;
-    }
+   
     @media screen and (max-width:767px){
-        margin: 0 auto;
-        max-width: 150px;
+             max-width: 150px;
+             padding-left: 107px;
     }
  
    
@@ -33,14 +29,17 @@
     color: var(--text);
     margin-top: 6px;
     margin-bottom: 6px;
-    margin-left: 15px;
-  
     
+  
+    @include tablet{
+        @include text('Montserrat', 700, 23px, 24px);
+        margin-left: 15px;
+    }
     @include desktop{
         @include text('Montserrat', 700, 30px, 55px);
         margin-top: 17px;
         margin-bottom: 28px;
-        margin-left: 23px;
+       
        
     }
    
@@ -53,19 +52,19 @@
     @include tablet{
         display: flex;
         flex-direction: column;
-        
+        margin-right: 70px;
         padding-left: 90px;
     }
         @include desktop{
             margin-right: 180px;
             display: flex;
             flex-direction: column;
-            padding-left: 141px;
+            padding-left: 161px;
             
     }
     &-reverse{
         @include tablet{
-            
+            margin-left: 70px;
             margin-right: 0;
         }
         @include desktop{
@@ -84,7 +83,7 @@
 .services__title__block{
     position: absolute;
     bottom: 30px;
-    left: 15px;
+    left: 122px;
     width: 500px;
     height: 60px;
     background-color: var(--background);
@@ -96,20 +95,42 @@
     @include desktop{
         width: 500px;
         height: 100px;
-        left: 44px;
-        bottom: 15px;
+        left: 35px;
+        bottom: 35px;
 
     }
 }
-.services__text{
+.kinds-services__text{
+    position: relative;
+    padding-left: 29px;
     @include text('Montserrat', 400, 16px, 22px);
-
-    
+    color: var(--accent-text);
+    max-width: 345px;
+    @include tablet{
+        max-width: 500px;
+    }
     @include desktop{
-        max-width: 560px;
+        max-width: 600px;
+        padding-left: 45px;
         @include text('Montserrat', 400, 20px, 38px);
     }
 }
+.kinds-services__text::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    display: block;
+    width: 21px;
+    height: 2px;
+    background-color: var(--color-icon);
+
+    @include desktop {
+        width: 34px;
+        height: 3px;
+        top: 20px;
+      }
+    }
 .services__list{
     counter-reset: my-counter;
 }
@@ -155,7 +176,7 @@
 
 .services-price{
     padding-top: 25px;
-    padding-bottom: 28px;
+    padding-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: flex-end;

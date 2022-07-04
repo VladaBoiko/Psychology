@@ -1,15 +1,16 @@
 .services-header{
     height: 95px;
-    // background-color: bisque;
     z-index: -2;
     @include desktop{
         height: 235px;
     }
 }
-
+.about-services{
+    position: relative;
+}
 .color-block{
     position: absolute;
-    top: -95px;
+    top: -190px;
     left: -103px;
     width: 100%;
     height: 538px;
@@ -21,10 +22,10 @@
     }
 
     @include desktop{
-            width: 1019px;
-            height: 786px;
-            top: 0%;
-            left: 234px;
+        top: -249px;
+        width: 1019px;
+        height: 786px;
+        left: 234px;
     }
 }
 .about-services__container{
@@ -34,12 +35,14 @@
     @include tablet{
         padding-top: 135px;
         padding-bottom: 70px;
+        
         max-width: 550px;
     }
         @include desktop{
             padding-top: 193px;
             padding-bottom: 86px;
-            max-width: 735px;
+            padding-left: 119px;
+            max-width: 860px;
         }
 }
 .about-services__title{
@@ -47,9 +50,13 @@
     text-transform: uppercase;
     color: var(--text);
     margin-bottom: 30px;
+    @include tablet{
+        @include text('Cormorant', 700, 40px, 30px);
+    }
     @include desktop{
         @include text('Cormorant', 700, 60px, 55px );
         margin-bottom: 50px;
+        
     }
 }
 .services__text{
@@ -58,7 +65,7 @@
     @include text('Montserrat', 400, 16px, 22px);
     color: var(--accent-text);
     
-    @include desktop{
+    @include tablet{
     @include text('Montserrat', 400, 20px, 38px);
     padding-left: 60px;
     }
@@ -74,7 +81,7 @@
     height: 2px;
     background-color: var(--color-icon);
 
-    @include desktop {
+    @include tablet {
         width: 45px;
         height: 3px;
         top: 20px;
