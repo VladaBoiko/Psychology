@@ -17,6 +17,18 @@
   .swiper-wrapper .swiper-slide {
     background-color: var(--background);
     max-width: 294px;
+
+    @include desktop {
+      max-width: 467px;
+      &:first-child,
+      &:first-child .spesialists__photo {
+        border-radius: 400px 0px 0px 0px;
+      }
+      &:last-child,
+      &:last-child .spesialists__photo {
+        border-radius: 0px 400px 0px 0px;
+      }
+    }
   }
 }
 
@@ -31,6 +43,10 @@
 
 .spesialists__photo {
   width: 298px;
+
+  @include desktop {
+    width: 463px;
+  }
 }
 
 .spesialists__wrapper-card {
@@ -41,6 +57,10 @@
   @include text('Montserrat', 400, 14px, 55px);
   text-transform: uppercase;
   color: var(--accent-text);
+
+  @include desktop {
+    line-height: 2.5;
+  }
 }
 
 .spesialists__name {
