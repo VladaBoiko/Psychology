@@ -45,10 +45,17 @@
     text-transform: uppercase;
     @include text($font-family: 'Montserrat', $a: 700, $b: 70px, $c: 55px);
     color: var(--color-icon);
-    top: 28px;
-    left: 32px;
+  }
+  &:nth-child(2n - 1)::before {
+    top: -28px;
+    left: -32px;
+  }
+  &:nth-child(2n)::before {
+    top: -28px;
+    right: -32px;
   }
 }
+
 .consult-item-title {
   @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
   margin-bottom: 25px;
