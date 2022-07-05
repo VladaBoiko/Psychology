@@ -2,12 +2,11 @@
   padding-top: 175px;
   padding-bottom: 80px;
   position: relative;
-  outline: 1px solid red;
 
-  // @include tablet {
-  //   padding-top: 250px;
-  //   padding-bottom: 100px;
-  // }
+  @include tablet {
+    padding-top: 250px;
+    padding-bottom: 100px;
+  }
 
   @include desktop {
     padding-top: 387px;
@@ -18,18 +17,20 @@
 .psychologists__wrap {
   margin-bottom: 40px;
 
-  // @include tablet {
-  //   display: flex;
-  //   flex-direction: row-reverse;
-  //   justify-content: start;
-  //   margin-bottom: 80px;
-  //   padding-right: 20px;
-  // }
-
-  @include desktop {
+  @include tablet {
     display: flex;
     flex-direction: row-reverse;
     justify-content: start;
+    margin-bottom: 80px;
+    padding-right: 20px;
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1469px) {
+    padding-right: 60px;
+    justify-content: center;
+  }
+
+  @include desktop {
     padding-right: 100px;
     margin-bottom: 143px;
   }
@@ -39,10 +40,15 @@
   position: relative;
   z-index: 1;
 
-  // @include tablet {
-  //   width: 647px;
-  //   padding-top: 30px;
-  // }
+  @include tablet {
+    width: 647px;
+    padding-top: 30px;
+  }
+
+  @media screen and (min-width: 1000px) and (max-width: 1469px) {
+    max-width: 750px;
+    width: 100%;
+  }
 }
 
 .psychologists__title {
@@ -51,9 +57,14 @@
   color: var(--text);
   margin-bottom: 30px;
 
-  // @include tablet {
-  //   margin-bottom: 40px;
-  // }
+  @include tablet {
+    margin-bottom: 40px;
+    font-size: 34px;
+  }
+
+  @include desktop-small {
+    font-size: 40px;
+  }
 
   @include desktop {
     @include text('Cormorant', null, 60px, 55px);
@@ -72,12 +83,16 @@
   color: var(--accent-text);
   display: flex;
 
-  // @include tablet {
-  //   font-size: 12px;
-  // }
+  @include tablet {
+    font-size: 12px;
+  }
+
+  @include desktop-small {
+    @include font(null, 14px, calc(38px / 20px));
+  }
 
   @include desktop {
-    @include font(null, 20px, calc(38px / 20px));
+    font-size: 20px;
   }
 
   &:not(:last-child) {
@@ -119,18 +134,23 @@
     margin-left: auto;
   }
 
-  // @include tablet {
-  //   position: relative;
-  //   z-index: 1;
-  //   flex-shrink: 0;
-  //   border-radius: 200px 0px 0px 0px;
-  //   margin-right: 40px;
-  // }
-
-  @include desktop {
+  @include tablet {
     position: relative;
     z-index: 1;
     flex-shrink: 0;
+    border-radius: 200px 0px 0px 0px;
+    margin-right: 40px;
+  }
+
+  @include desktop-small {
+    width: 455px;
+    max-width: 455px;
+    height: 485px;
+    max-height: 485px;
+    border-radius: 300px 0px 0px 0px;
+  }
+
+  @include desktop {
     width: 614px;
     max-width: 614px;
     height: 651px;
@@ -146,17 +166,19 @@
   color: var(--text);
   margin-bottom: 25px;
 
-  // @include tablet {
-  //   color: var(--accent-text);
-  //   text-align: center;
-  //   margin-bottom: 50px;
-  // }
+  @include tablet {
+    color: var(--accent-text);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  @include desktop-small {
+    @include text('Cormorant', 700, 40px, 35px);
+    margin-bottom: 75px;
+  }
 
   @include desktop {
-    @include text('Cormorant', 700, 60px, 35px);
-    color: var(--accent-text);
-    margin-bottom: 75px;
-    text-align: start;
+    font-size: 60px;
   }
 }
 
@@ -164,8 +186,10 @@
   display: flex;
   flex-direction: column;
 
-  @include desktop {
+  @include desktop-small {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -190,7 +214,8 @@
 
   &:hover,
   &:focus {
-    border: 1px solid var(--accent-background);
+    border: 1px solid #366187;
+    box-shadow: 3px 3px 5px #6a372c29;
   }
 
   &:not(:last-child) {
@@ -199,35 +224,38 @@
     }
   }
 
-  // @include tablet {
-  //   width: 320px;
-  //   font-size: 14px;
-  //   padding-left: 60px;
-  //   margin-bottom: 0;
-  //   height: 60px;
-  // }
+  @include tablet {
+    width: 320px;
+    height: 60px;
+    font-size: 14px;
+    padding-left: 60px;
+    margin-bottom: 0;
+  }
+
+  @include desktop-small {
+    width: 250px;
+    height: 80px;
+    font-size: 16px;
+    padding-left: 40px;
+    margin-right: 40px;
+  }
 
   @include desktop {
     width: 320px;
-    height: 80px;
-    font-size: 14px;
     @include font(700, 18px, calc(55px / 18px));
-    margin-right: 40px;
-    margin-bottom: 0;
     padding-left: 60px;
   }
 }
 
 .psychologists__inputwrap {
-  // @include tablet {
-  //   display: flex;
-  //   justify-content: space-evenly;
-  //   margin-bottom: 40px;
-  // }
-
-  @include desktop {
+  @include tablet {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+
+  @include desktop-small {
+    margin-bottom: 0;
   }
 }
 
@@ -241,19 +269,26 @@
   background: var(--gradient);
   border-radius: 150px;
 
-  transition: background-color var(--main-transition);
+  transition: background-color var(--main-transition),
+    box-shadow var(--main-transition);
 
   &:hover,
   &:focus {
-    background-color: var(--accent-background);
+    box-shadow: 3px 3px 5px #6a372c29;
+    background-color: #366187;
   }
 
-  // @media screen and (min-width: 768px) and (max-width: 1469px) {
-  //   width: 320px;
-  //   height: 60px;
-  //   font-size: 14px;
-  //   align-self: center;
-  // }
+  @include tablet {
+    width: 320px;
+    height: 60px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  @include desktop-small {
+    width: 250px;
+    height: 80px;
+  }
 
   @include desktop {
     width: 320px;
@@ -268,15 +303,6 @@
   width: 100vw;
   height: 660px;
   background-color: var(--background);
-  // background-color: aqua;
-
-  // @media screen and (max-width: 280px) {
-  //   height: 745px;
-  // }
-
-  // @media screen and (min-width: 281px) and (max-width: 290px) {
-  //   height: 700px;
-  // }
 
   @media screen and (min-width: 325px) {
     height: 615px;
@@ -294,15 +320,19 @@
     height: 485px;
   }
 
-  //  @include tablet {
-  //     width: 500;
-  //     height: 650px;
-  //     right: 15px;
-  //   }
+  @include tablet {
+    width: 500px;
+    height: 650px;
+    right: 15px;
+  }
+
+  @include desktop-small {
+    width: 650px;
+    height: 770px;
+  }
 
   @include desktop {
     width: 1020px;
     height: 1100px;
-    right: 15px;
   }
 }
