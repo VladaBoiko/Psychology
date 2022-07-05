@@ -109,7 +109,7 @@
   transition: all var(--main-transition);
 
   &:hover {
-    background-color: #e6775e;
+    background-color: var(--button-bgcolor-accent-hover);
   }
   @include desktop-small {
     @include text($font-family: 'Montserrat', $a: 700, $b: 30px, $c: 55px);
