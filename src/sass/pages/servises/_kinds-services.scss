@@ -157,6 +157,7 @@
     content: counter(my-counter, decimal-leading-zero)'';
     counter-increment: my-counter;
     color: var(--color-icon);
+   
     @include text('Montserrat', 700, 70px, 55px);
     text-transform: uppercase;
     position: absolute;
