@@ -215,6 +215,7 @@
   &:hover,
   &:focus {
     border: 1px solid #366187;
+    box-shadow: 3px 3px 5px #6a372c29;
   }
 
   &:not(:last-child) {
@@ -268,10 +269,12 @@
   background: var(--gradient);
   border-radius: 150px;
 
-  transition: background-color var(--main-transition);
+  transition: background-color var(--main-transition),
+    box-shadow var(--main-transition);
 
   &:hover,
   &:focus {
+    box-shadow: 3px 3px 5px #6a372c29;
     background-color: #366187;
   }
 
