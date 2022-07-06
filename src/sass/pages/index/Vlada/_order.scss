@@ -54,6 +54,31 @@
     top: -28px;
     right: -32px;
   }
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 60px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    // @include desktop {
+    //   background-image: url(../../images/index-down/arrowoffer.svg);
+    //   left: 110%;
+    //   width: 100px;
+    // }
+  }
+  &:not(:last-child):nth-child(2n-1)::after {
+    bottom: -55px;
+    left: -55px;
+    background-image: url(../../images/index-down/Arrow-mobile-left.svg);
+  }
+  &:not(:last-child):nth-child(2n)::after {
+    background-image: url(../../images/index-down/Arrow-mobile-right.svg);
+    bottom: -55px;
+    right: -55px;
+  }
 }
 
 .consult-item-title {
