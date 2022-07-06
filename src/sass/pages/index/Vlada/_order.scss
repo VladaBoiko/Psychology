@@ -20,6 +20,10 @@
 }
 .consult-list {
   counter-reset: my-counter;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .consult-item {
   position: relative;
@@ -28,16 +32,45 @@
   display: block;
   width: 305px;
   padding: 44px 18px 23px;
+
   &:nth-child(2n - 1) {
     margin-left: auto;
+    @include tablet {
+      margin-right: auto;
+    }
   }
   &:nth-child(2n) {
     margin-right: auto;
+    @include tablet {
+      margin-left: auto;
+    }
   }
   &:not(:last-child) {
-    margin-bottom: 58px;
+    @media screen and (max-width: 767.9) {
+      margin-bottom: 58px;
+    }
   }
-
+  &:nth-child(-n + 2) {
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+  @include desktop-small {
+    width: 400px;
+    &:nth-child(3) {
+      order: 4;
+    }
+    &:nth-child(2) {
+      margin-bottom: 90px;
+      margin-top: 80px;
+    }
+    &:nth-child(4) {
+      margin-top: 50px;
+    }
+    &:nth-child(1) {
+      margin-bottom: 120px;
+    }
+  }
   &::before {
     content: counter(my-counter, decimal-leading-zero) '';
     counter-increment: my-counter;
@@ -49,10 +82,18 @@
   &:nth-child(2n - 1)::before {
     top: -28px;
     left: -32px;
+    @include tablet {
+      left: -50%;
+      right: 0;
+    }
   }
   &:nth-child(2n)::before {
     top: -28px;
     right: -32px;
+    @include tablet {
+      left: -50%;
+      right: 0;
+    }
   }
   &::after {
     position: absolute;
@@ -63,21 +104,51 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    // @include desktop {
-    //   background-image: url(../../images/index-down/arrowoffer.svg);
-    //   left: 110%;
-    //   width: 100px;
-    // }
+    @media screen and (min-width: 768) and (max-width: 999.9) {
+      display: none;
+    }
+    @include desktop-small {
+      display: block;
+      width: 100px;
+      height: 50px;
+    }
   }
+  &:first-child::after {
+    @include desktop-small {
+      background-image: url(../../images/index-down/Arrow-big-right.svg);
+    }
+  }
+  // &:nth-child(2) {
+  //   margin-bottom: 90px;
+  //   margin-top: 80px;
+  // }
+  // &:nth-child(4) {
+  //   margin-top: 50px;
+  // }
+  // &:nth-child(1) {
+  //   margin-bottom: 120px;
+  // }
   &:not(:last-child):nth-child(2n-1)::after {
     bottom: -55px;
     left: -55px;
     background-image: url(../../images/index-down/Arrow-mobile-left.svg);
+    @media screen and (min-width: 768) and (max-width: 999.9) {
+      display: none;
+    }
+    @include desktop-small {
+      display: block;
+    }
   }
   &:not(:last-child):nth-child(2n)::after {
     background-image: url(../../images/index-down/Arrow-mobile-right.svg);
     bottom: -55px;
     right: -55px;
+    @media screen and (min-width: 768) and (max-width: 999.9) {
+      display: none;
+    }
+    @include desktop-small {
+      display: block;
+    }
   }
 }
 
@@ -117,9 +188,14 @@
   margin-left: auto;
   margin-right: auto;
   @include text($font-family: 'Montserrat', $a: 700, $b: 16px, $c: 27px);
+  transition: all var(--main-transition);
 
   @include desktop-small {
-    @include text($font-family: 'Montserrat', $a: 700, $b: 30px, $c: 55px);
-    padding: 32px 80px;
+    @include text($font-family: 'Montserrat', $a: 700, $b: 25px, $c: 25px);
+    padding: 32px 60px;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--button-bgcolor-accent-hover);
   }
 }

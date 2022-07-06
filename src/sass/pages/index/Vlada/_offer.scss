@@ -108,7 +108,8 @@
   border-radius: 150px;
   transition: all var(--main-transition);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--button-bgcolor-accent-hover);
   }
   @include desktop-small {
