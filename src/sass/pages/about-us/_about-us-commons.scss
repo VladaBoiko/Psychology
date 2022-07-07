@@ -4,10 +4,10 @@
   color: var(--text);
 
   @include tablet {
-    @include text(null, null, 30, 36);
+    @include text(null, null, 40, 44);
   }
 
-  @include desktop {
+  @include desktop-small {
     @include text(null, null, 60, 55);
   }
 }
@@ -20,13 +20,14 @@
   color: var(--accent-text);
 
   @include tablet {
-    @include text(null, null, 18, 24);
-  }
-
-  @include desktop {
     @include text(null, null, 20, 38);
     padding-left: 60px;
   }
+
+  @include desktop-small {
+    @include text(null, null, 20, 38);
+  }
+
   &--marked::before {
     content: '';
     position: absolute;
@@ -36,7 +37,8 @@
     width: 21px;
     height: 3px;
     background-color: var(--color-icon);
-    @include desktop {
+
+    @include tablet {
       width: 45px;
       top: 18px;
     }
@@ -50,15 +52,19 @@
   @include text(null, 700, 16, 50);
   align-items: center;
   text-transform: uppercase;
+
   &--accent {
     background-color: var(--button-bgcolor-accent);
     color: var(--white);
   }
-  @include desktop {
+
+  @include desktop-small {
     padding: 22px 68px;
     @include text(null, null, 30, 55);
   }
+
   transition: background-color var(--main-transition);
+
   &:hover,
   &:focus {
     background-color: var(--button-bgcolor-accent-hover);
