@@ -157,6 +157,7 @@
     content: counter(my-counter, decimal-leading-zero)'';
     counter-increment: my-counter;
     color: var(--color-icon);
+   
     @include text('Montserrat', 700, 70px, 55px);
     text-transform: uppercase;
     position: absolute;
@@ -221,9 +222,15 @@
     background: var(--accent-background);
     box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
     border-radius: 150px;
+    transition: all var(--main-transition);
     @include desktop{
         @include text('Montserrat', 700, 30px, 55px);
         padding: 22px 65px;
     }
     
+
+  &:hover {
+    background-color: var(--button-bgcolor-accent-hover);
+  }
 }
+
