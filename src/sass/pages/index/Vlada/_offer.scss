@@ -177,7 +177,7 @@
   }
   @include desktop {
     img {
-      width: 522px;
+      max-width: 522px;
     }
   }
 }

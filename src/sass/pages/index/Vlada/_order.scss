@@ -46,7 +46,7 @@
     }
   }
   &:not(:last-child) {
-    @media screen and (max-width: 767.9) {
+    @media screen and (max-width: 767.9px) {
       margin-bottom: 58px;
     }
   }
@@ -70,6 +70,9 @@
     &:nth-child(1) {
       margin-bottom: 120px;
     }
+  }
+  @include desktop-small {
+    width: 600px;
   }
   &::before {
     content: counter(my-counter, decimal-leading-zero) '';
@@ -104,39 +107,20 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    @media screen and (min-width: 768) and (max-width: 999.9) {
+    @include tablet {
       display: none;
     }
     @include desktop-small {
       display: block;
-      width: 100px;
-      height: 50px;
     }
   }
-  &:first-child::after {
-    @include desktop-small {
-      background-image: url(../../images/index-down/Arrow-big-right.svg);
-    }
-  }
-  // &:nth-child(2) {
-  //   margin-bottom: 90px;
-  //   margin-top: 80px;
-  // }
-  // &:nth-child(4) {
-  //   margin-top: 50px;
-  // }
-  // &:nth-child(1) {
-  //   margin-bottom: 120px;
-  // }
+
   &:not(:last-child):nth-child(2n-1)::after {
     bottom: -55px;
     left: -55px;
     background-image: url(../../images/index-down/Arrow-mobile-left.svg);
     @media screen and (min-width: 768) and (max-width: 999.9) {
       display: none;
-    }
-    @include desktop-small {
-      display: block;
     }
   }
   &:not(:last-child):nth-child(2n)::after {
@@ -146,8 +130,33 @@
     @media screen and (min-width: 768) and (max-width: 999.9) {
       display: none;
     }
+  }
+  &:not(:last-child):first-child::after {
     @include desktop-small {
-      display: block;
+      width: 190px;
+      height: 50px;
+      background-image: url(../../images/index-down/Arrow-big-right.svg);
+      top: -25px;
+      left: 95%;
+    }
+  }
+  &:not(:last-child):nth-child(2)::after {
+    @include desktop-small {
+      width: 55px;
+      height: 190px;
+      background-image: url(../../images/index-down/Arrow-big-down.svg);
+      top: 255px;
+      left: 95%;
+    }
+  }
+  &:not(:last-child):nth-child(3)::after {
+    @include desktop-small {
+      width: 190px;
+      height: 50px;
+      background-image: url(../../images/index-down/Arrow-big-left.svg);
+      top: -20px;
+      left: -47%;
+      transform: rotate(-20deg);
     }
   }
 }
