@@ -9,7 +9,7 @@
 
     menuBtnRef.classList.toggle('is-opn');
     menuBtnRef.setAttribute('aria-expanded', !expanded);
-    bodyScroll.classList.toggle('no-scroll');
+    bodyScroll.classList.toggle('no-scroll-menu');
     mobileMenuRef.classList.toggle('is-opn');
   });
 })();
