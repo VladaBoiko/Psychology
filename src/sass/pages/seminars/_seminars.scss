@@ -1,11 +1,16 @@
 .seminars {
   padding: 80px 0;
-  @include desktop {
+  @include tablet {
     padding: 150px 0;
+  }
+  .container {
+    @media screen and (maw-width: 1469.98px) {
+      max-width: 768px;
+    }
   }
 }
 .seminars-list {
-  @media screen and (max-width: 1469.98px) {
+  @media screen and (max-width: 767.98px) {
     width: inherit;
     display: flex;
     flex-direction: column;
@@ -14,14 +19,14 @@
 }
 
 .seminars-item {
-  @media screen and (max-width: 1470.98px) {
+  @media screen and (max-width: 767.98px) {
     max-width: 332px;
   }
   margin-bottom: 30px;
   &:last-child {
     margin-bottom: 0;
   }
-  @include desktop {
+  @include tablet {
     display: flex;
     margin-bottom: 80px;
     &:nth-child(2n + 1) {
@@ -29,26 +34,36 @@
     }
   }
 }
-.seminars-img-wrap {
-  flex-shrink: 0;
-}
+// .seminars-img-wrap {
+//   flex-shrink: 0;
+// }
 .seminars-card {
   background-color: #f9fafb;
   padding: 20px 16px 36px 27px;
-  @include desktop{
+  @include tablet {
+    padding-bottom: 20px
+  }
+  // @include desktop-small {
+  //   padding: 26px 60px 30px 36px;
+  // }
+  @include desktop {
     padding: 39px 172px 49px 70px;
+    padding: 46px 172px 49px 70px;
     flex-grow: 1;
   }
 }
 .seminars-top-text {
-  @include font(null, 14px, calc(55px / 14px));
+  @include font(null, 14px, 1.2);
   text-transform: uppercase;
   color: var(--accent-text);
 
-  margin-bottom: -10px;
+  margin-bottom: 14px;
+  @include tablet {
+    margin-bottom: 5px;
+  }
   @include desktop {
-    @include font(null, 22px, calc(55px / 22px));
-    margin-bottom: -3px;
+    @include font(null, 22px, 1.2);
+    margin-bottom: 15px;
     padding-left: 10px;
   }
 }
@@ -58,8 +73,10 @@
   @include font(null, 18px, calc(22px / 18px));
   text-transform: uppercase;
   color: var(--text);
+  max-width: 300px;
 
-  margin-bottom: 26px;
+  // margin-bottom: 26px;
+  margin-bottom: 15px;
   @include desktop {
     @include font(null, 30px, calc(36px / 30px));
     padding-left: 10px;
@@ -73,6 +90,14 @@
   margin-bottom: 2px;
 
   @include font(null, 16px, calc(20px / 16px));
+  @include tablet {
+    @include font(null, 14px, calc(20px / 14px));
+    // width: 308px;
+    // margin-right: 172px;
+    // margin-right: auto;
+  }
+  
+
   color: var(--accent-text);
   @include desktop {
     @include font(null, 22px, calc(38px / 22px));
@@ -108,7 +133,7 @@
   margin-left: auto;
   margin-right: 18px;
 
-  margin-bottom: 28px;
+  margin-bottom: 15px;
   @include desktop {
     align-items: center;
     margin-bottom: 25px;
@@ -120,6 +145,10 @@
   @include font(700, 18px, calc(22px / 18px));
   color: var(--accent-text);
   margin-right: 5px;
+  @include tablet {
+    @include font(null, 16px, calc(20px / 16px));
+  }
+  
   @include desktop {
     @include font(700, 20px, calc(24px / 20px));
     margin-right: 7px;
@@ -131,12 +160,15 @@
   font-family: 'Arsenal';
   @include font(700, 30px, calc(38px / 30px));
   color: var(--accent-text);
+  @include tablet {
+    @include font(700, 28px, calc(36px / 28px));
+  }
   @include desktop {
     @include font(700, 60px, calc(75px / 60px));
   }
 }
 .seminars-button {
-  min-width: 247px;
+  // min-width: 247px;
   height: 84px;
   padding: 0 74px;
   display: block;
@@ -151,9 +183,15 @@
 
   border-radius: 150px;
   box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  transition: background-color 250ms linear;
   &:hover,
   &:focus {
    background-color: var(--button-bgcolor-accent-hover);
+  }
+  @include tablet {
+    padding: 0 55px;
+    height: inherit;
+    margin: 0;
   }
   @include desktop {
     @include font(null, 30px, calc(55px / 30px));
@@ -162,3 +200,196 @@
     padding: 0px 85px;
   }
 }
+
+
+
+
+
+// .seminars {
+//   padding: 80px 0;
+
+//   @include desktop {
+//     padding: 150px 0;
+//   }
+// }
+
+// .seminars-list {
+//   @media screen and (max-width: 1469.98px) {
+//     width: inherit;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }
+
+// .seminars-item {
+//   @media screen and (max-width: 1470.98px) {
+//     max-width: 332px;
+//   }
+
+//   margin-bottom: 30px;
+
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+
+//   @include desktop {
+//     display: flex;
+//     margin-bottom: 80px;
+
+//     &:nth-child(2n + 1) {
+//       flex-direction: row-reverse;
+//     }
+//   }
+// }
+
+// .seminars-img-wrap {
+//   flex-shrink: 0;
+// }
+
+// .seminars-card {
+//   background-color: #f9fafb;
+//   padding: 20px 16px 36px 27px;
+
+//   @include desktop {
+//     padding: 39px 172px 49px 70px;
+//     flex-grow: 1;
+//   }
+// }
+
+// .seminars-top-text {
+//   @include font(null, 14px, calc(55px / 14px));
+//   text-transform: uppercase;
+//   color: var(--accent-text);
+
+//   margin-bottom: -10px;
+
+//   @include desktop {
+//     @include font(null, 22px, calc(55px / 22px));
+//     margin-bottom: -3px;
+//     padding-left: 10px;
+//   }
+// }
+
+// .seminars-top-title {
+
+//   font-family: 'Cormorant';
+//   @include font(null, 18px, calc(22px / 18px));
+//   text-transform: uppercase;
+//   color: var(--text);
+
+//   margin-bottom: 26px;
+
+//   @include desktop {
+//     @include font(null, 30px, calc(36px / 30px));
+//     padding-left: 10px;
+//     max-width: 485px;
+//     margin-bottom: 42px;
+//   }
+// }
+
+// .seminars-text {
+//   display: flex;
+//   align-items: start;
+//   margin-bottom: 2px;
+
+//   @include font(null, 16px, calc(20px / 16px));
+//   color: var(--accent-text);
+
+//   @include desktop {
+//     @include font(null, 22px, calc(38px / 22px));
+//     padding-left: 10px;
+//     margin-bottom: 25px;
+//     max-width: 485px;
+//   }
+
+//   &::before {
+//     content: '';
+//     display: block;
+//     width: 20px;
+//     height: 2px;
+//     background-color: var(--color-icon);
+
+//     margin-top: 10px;
+//     margin-right: 7px;
+
+//     flex-shrink: 0;
+
+//     @include desktop {
+//       width: 48px;
+//       margin-top: 18px;
+//       margin-right: 16px;
+//       background-color: var(--accent-text);
+//     }
+//   }
+// }
+
+// .seminars-price-list {
+//   display: flex;
+//   align-items: baseline;
+//   justify-content: flex-end;
+
+//   margin-left: auto;
+//   margin-right: 18px;
+
+//   margin-bottom: 28px;
+
+//   @include desktop {
+//     align-items: center;
+//     margin-bottom: 25px;
+//     margin-right: 0;
+
+//   }
+// }
+
+// .seminars-price-text {
+//   @include font(700, 18px, calc(22px / 18px));
+//   color: var(--accent-text);
+//   margin-right: 5px;
+
+//   @include desktop {
+//     @include font(700, 20px, calc(24px / 20px));
+//     margin-right: 7px;
+//     margin-right: 10px;
+//   }
+// }
+
+// .seminars-price-count {
+//   font-family: 'Arsenal';
+//   @include font(700, 30px, calc(38px / 30px));
+//   color: var(--accent-text);
+
+//   @include desktop {
+//     @include font(700, 60px, calc(75px / 60px));
+//   }
+// }
+
+// .seminars-button {
+//   min-width: 247px;
+//   height: 84px;
+//   padding: 0 74px;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   @include font(700, 16px, calc(55px / 16px));
+//   text-transform: uppercase;
+//   font-family: inherit;
+//   color: #ffffff;
+//   background-color: var(--accent-background);
+
+//   border-radius: 150px;
+//   box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+
+//   &:hover,
+//   &:focus {
+//     background-color: var(--button-bgcolor-accent-hover);
+//   }
+
+//   @include desktop {
+//     @include font(null, 30px, calc(55px / 30px));
+//     margin: 0;
+//     height: 98px;
+//     padding: 0px 85px;
+//   }
+// }
