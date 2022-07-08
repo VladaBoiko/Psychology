@@ -139,7 +139,7 @@
   border-radius: 150px;
   transition: all var(--main-transition);
   &:hover {
-    background-color: #e6775e;
+    background-color: var(--button-bgcolor-accent-hover);
   }
   @include desktop {
     @include text($font-family: 'Montserrat', $a: 700, $b: 25px, $c: 55px);
