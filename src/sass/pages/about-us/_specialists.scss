@@ -1,172 +1,208 @@
 .specialists {
   padding-top: 80px;
   padding-bottom: 80px;
+
   @include tablet {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  @include desktop {
+
+  @include desktop-small {
     padding-top: 117px;
     padding-bottom: 150px;
   }
-  // .specialists__container
+
   &__container {
     padding: 0 22px;
   }
-  // .specialists__title
+
   &__title {
     margin-bottom: 40px;
   }
-  // .specialists__list
-  &__list {
-  }
-  // .specialists__item
+
   &__item {
     &:not(:last-child) {
       margin-bottom: 25px;
-      @include desktop {
+
+      @include desktop-small {
         margin-bottom: 40px;
       }
     }
   }
 }
+
 .specialist {
-  // .specialist__content
-  @include desktop {
+  @include tablet {
     display: flex;
   }
+
   &:nth-child(2n) {
     flex-direction: row-reverse;
   }
-  // .specialist__foto
+
   &__foto {
-    // width: 332px;
     border-radius: 400px 0px 0px 0px;
     overflow: hidden;
-    @include desktop {
+
+    @include tablet {
+      flex-basis: 40%;
+      flex-shrink: 0;
+    }
+
+    @include desktop-small {
       flex-basis: 516px;
       flex-shrink: 0;
     }
   }
+
   &:nth-child(2n-1) &__foto {
   }
+
   &:nth-child(2n) &__foto {
-    // transform: matrix(-1, 0, 0, 1, 0, 0);
     transform: scale(-1, 1);
   }
+
   &__content {
     background-color: var(--background);
     padding: 23px 17px 33px;
-    @include desktop {
-      padding: 42px 25px 42px 60px;
+
+    @include desktop-small {
+      padding: 42px 25px;
     }
   }
-  // .specialist__specialisation
+
+  @include tablet {
+    &:nth-child(2n-1) &__content {
+      padding-left: 60px;
+    }
+
+    &:nth-child(2n) &__content {
+      padding-right: 60px;
+    }
+  }
+
   &__specialisation {
     @include text(null, null, 14, 35);
     text-transform: uppercase;
     color: var(--accent-text);
+
     @include tablet {
       @include text(null, null, 20, 50);
     }
-    @include desktop {
+
+    @include desktop-small {
       display: none;
     }
   }
-  // .specialist__name
+
   &__name {
     @include text('Cormorant', 700, 18, 22);
     text-transform: uppercase;
     color: var(--text);
     margin-bottom: 25px;
+
     @include tablet {
       @include text(null, null, 24, 28);
       margin-bottom: 40px;
     }
-    @include desktop {
+
+    @include desktop-small {
       @include text(null, null, 30, 32);
       margin-bottom: 50px;
     }
   }
-  // .specialist__list
+
   &__characteristics {
     margin-bottom: 40px;
-    @include desktop {
+
+    @include desktop-small {
       margin-bottom: 25px;
-      width: 625px;
+      max-width: 625px;
     }
   }
-  // .specialist__descripion
+
   &__descripion {
     margin-bottom: 25px;
-    @include desktop {
+
+    @include desktop-small {
       margin-bottom: 50px;
     }
   }
-  // .specialist__skills
+
   &__skills {
     margin-bottom: 25px;
-    @include desktop {
+
+    @media screen and (max-width: 999px) {
+      justify-content: center;
+    }
+
+    @include desktop-small {
       margin-bottom: 50px;
     }
   }
-  // .specialist__button
+
   &__button {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    @include desktop {
+
+    @include desktop-small {
       margin-left: 0;
     }
   }
 }
+
 .characteristic {
   display: flex;
   gap: 5px;
   justify-content: space-around;
-  margin-left: -15px;
-  margin-right: -15px;
-  // .characteristic__item
+  margin-left: auto;
+  margin-right: auto;
+
   @include desktop {
     justify-content: flex-start;
     margin-left: 0;
     margin-right: 0;
     gap: 35px;
   }
+
   &__item {
     text-align: center;
   }
-  // .characteristic__icon
+
   &__icon {
     fill: var(--color-icon);
     margin-bottom: 5px;
+
     @include tablet {
       width: 40px;
       height: 40px;
       margin-bottom: 8px;
     }
 
-    @include desktop {
+    @include desktop-small {
       width: 50px;
       height: 50px;
       margin-bottom: 12px;
     }
   }
-  // .characteristic__text
+
   &__text {
     @include text(null, null, 16, 20);
     color: var(--accent-text);
-    @include desktop {
+
+    @include desktop-small {
       @include text(null, null, 20, 38);
     }
   }
 }
+
 .skills {
   display: flex;
   flex-wrap: wrap;
   row-gap: 8px;
   column-gap: 4px;
-  // .skills__item
+
   &__item {
     padding: 2px 15px;
     border: 1px solid var(--accent-text);
@@ -175,7 +211,8 @@
     align-items: center;
     text-transform: uppercase;
     color: var(--accent-text);
-    @include desktop {
+
+    @include desktop-small {
       @include text(null, null, 16, 42);
       padding: 6px 15px;
     }
