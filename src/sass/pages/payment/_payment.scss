@@ -1,0 +1,153 @@
+.payment {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include desktop {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+}
+
+.payment-title {
+    font-family: 'Cormorant';
+    @include font (700, 25px, calc(55px / 25px));
+    text-transform: uppercase;
+    color: var(--text);
+
+    margin-bottom: 30px;
+    @include desktop {
+        @include font (700, 60px, calc(55px / 60px));
+
+        margin-bottom: 80px;
+    }
+}
+
+.payment-list {
+    counter-reset: count;
+}
+
+.payment-item {
+    width: inherit;
+    &:not(:last-child) {
+        margin-bottom: 60px;
+        }
+        @include desktop {
+            display: flex;
+            margin-bottom: 80px;
+            &:nth-child(2n + 1) {
+              flex-direction: row-reverse;
+            }
+          }
+    &__photo {
+        max-width: 335px;
+        margin-left: auto;
+        margin-right: auto;
+        @include desktop {
+            max-width: 642px;
+            margin-bottom: 0;
+        }
+    }
+ 
+    &__wrap {
+        @media screen and (max-width: 1469px) {
+        max-width: 335px;
+        background-color: var(--background);
+        margin-bottom: 30px;
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+        }
+        @include desktop {
+            flex-grow: 1;
+        }
+    }
+    &__title {
+       
+        @include font (700, 18px, calc(22px / 18px));
+        color: var(--accent-text);
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 13px;
+        
+        @include desktop {
+            position: relative;
+            @include font (700, 30px, calc(55px / 30px));
+            color: var(--text);
+            margin-bottom: 42px;
+            margin-top: 74px;
+            padding-left: 205px;
+            text-align: left;
+           
+            
+            &::before {
+                position: absolute;
+                left: 0;
+                right: 23px;
+                content: counter(count, decimal-leading-zero)"";
+                counter-increment: count;
+                margin-right: 23px;
+                margin-left: 42px;
+                text-transform: uppercase;
+                @include font (700, 110px, calc(55px / 110px));
+                color: var(--color-icon);
+            }
+        }
+    }
+    &__text {
+        position: relative;
+        max-width: 258px;
+        margin: 0 auto;
+        @include font (null, 16px, calc(20px / 16px));
+        color: var(--accent-text);
+        padding-left: 27px;
+        margin-bottom: 33px;
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--color-icon);
+    }
+        @include desktop {
+            position: relative;
+            max-width: 530px;
+            @include font (null, 20px, calc(38px / 20px));
+            display: block;
+            margin-left: 228px;
+            padding-left: 47px;
+            margin-bottom: 40px;
+            &::before {
+                top: 20px;
+                width: 34px;
+               
+        }
+    }
+}
+    &__button {
+        min-width: 247px;
+        height: 56px;
+        padding: 3px 75px 3px 75px;
+        display: block;
+        margin: 0 auto;
+        @include font (700, 16px, calc(55px / 16px));
+        text-transform: uppercase;
+        color: var(--white);
+        background-color: var(--accent-background);
+        box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+        border-radius: 150px;
+        font-family: inherit;
+        @include desktop {
+            min-width: 354px;
+            height: 98px;
+            padding: 22px 86px 21px 87px;
+            @include font (700, 30px, calc(55px / 30px));
+        }
+        &:hover,
+        &:focus {
+        background-color: var(--button-bgcolor-accent-hover);
+        }
+    }
+}
