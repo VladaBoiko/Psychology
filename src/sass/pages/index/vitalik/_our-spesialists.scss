@@ -7,11 +7,11 @@
     padding: 40px 0;
   }
 
-  .container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
+  // .container {
+  //   width: 100%;
+  //   padding: 0;
+  //   margin: 0;
+  // }
 
   .swiper-wrapper {
     margin: 0 auto;
@@ -33,15 +33,16 @@
     max-width: 294px;
 
     @include desktop {
-      min-width: 467px;
-      &:first-child,
-      &:first-child .spesialists__photo {
-        border-radius: 400px 0px 0px 0px;
-      }
-      &:last-child,
-      &:last-child .spesialists__photo {
-        border-radius: 0px 400px 0px 0px;
-      }
+      min-width: 430px;
+      border-radius: 50px;
+      // &:first-child,
+      // &:first-child .spesialists__photo {
+      //   border-radius: 250px 250px 0px 0px;
+      // }
+      // &:last-child,
+      // &:last-child .spesialists__photo {
+      //   border-radius: 0px 400px 0px 0px;
+      // }
     }
   }
 }
@@ -67,8 +68,9 @@
   width: 298px;
 
   @include desktop {
-    width: 474px;
+    width: 400px;
     margin: 0 auto;
+    border-radius: 30px;
   }
 }
 
