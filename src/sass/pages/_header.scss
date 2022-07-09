@@ -17,7 +17,10 @@ header {
     max-width: 375px;
   }
   @media screen and (min-width: 768px) {
-    min-width: 768px;
+    max-width: 768px;
+  }
+  @media screen and (min-width: 999px) {
+    max-width: 999px;
   }
   @media screen and (min-width: 1470px) {
     max-width: 1470px;
@@ -53,10 +56,10 @@ header {
 
 .header-button {
   background-color: var(--white);
-  display: inline-flex;
+  display: block;
   padding: 0;
   border: none;
-  margin-left: auto;
+
   @media screen and (min-width: 1470px) {
     display: none;
   }
@@ -68,11 +71,23 @@ header {
   @media screen and (min-width: 768px) {
     display: flex;
     padding: 22px 24px;
-    margin-left: 245px;
+    margin-right: 35px;
     @include text('Montserrat', 700, 14px, 15px);
+  }
+  @media screen and (min-width: 999px) {
+    margin-right: 50px;
   }
   @media screen and (min-width: 1470px) {
     display: none;
+  }
+}
+.button-tab-wrap {
+  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    display: flex;
+    align-items: flex-center;
+    justify-content: center;
   }
 }
 
@@ -213,12 +228,15 @@ svg .icon-close {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: var(--white);
   &.is-opn {
     display: block;
   }
   transition: var(--main-transition);
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+  }
 }
 
 .mob-menu.is-opn {
@@ -438,6 +456,13 @@ svg .icon-close {
 
 .button-mob-call-modal {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 1470px) {
+    font-size: 22px;
+    width: 350px;
+    height: 87px;
+  }
 }
 
 .button-mob-call:hover,
@@ -459,7 +484,7 @@ svg .icon-close {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   opacity: 1;
   background-color: var(--price-number-gray);
   transition: opacity var(--main-transition);
@@ -487,7 +512,13 @@ svg .icon-close {
     max-width: 375px;
   }
   @media screen and (min-width: 768px) {
-    max-width: 768px;
+    max-width: 500px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+  }
+  @media screen and (min-width: 1470px) {
+    max-width: 770px;
   }
   transition: transform var(--main-transition);
   transform: translate(-50%, -50%) scale(1);
@@ -517,11 +548,19 @@ svg .icon-close {
   margin-bottom: 15px;
   @include text('Cormorant', 700, 25px, 26px);
   color: var(--text);
+  @media screen and (min-width: 1470px) {
+    font-size: 30px;
+  }
 }
+
 .modal-second-text {
   @include text('Montserrat', 400, 15px, 16px);
   color: var(--accent-text);
   margin-bottom: 25px;
+  @media screen and (min-width: 1470px) {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
 }
 
 .modal-input {
@@ -534,6 +573,10 @@ svg .icon-close {
   caret-color: var(--price-number-gray);
   color: var(--accent-text);
   transition: var(--main-transition);
+  @media screen and (min-width: 1470px) {
+    height: 87px;
+    width: 350px;
+  }
 }
 
 .modal-input:hover,
@@ -545,6 +588,9 @@ input::placeholder,
 textarea::placeholder {
   @include text('Montserrat', 400, 14px, 16px);
   color: var(--color-icon);
+  @media screen and (min-width: 1470px) {
+    font-size: 22px;
+  }
 }
 
 .comment-area {
