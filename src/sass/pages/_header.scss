@@ -1,0 +1,577 @@
+header {
+  border-bottom: 1px solid var(--color-icon);
+  min-height: 100px;
+}
+
+.header-container {
+  position: absolute;
+  background: linear-gradient(to right, #f9fafb 75%, #ffffff 75%, #ffffff 99%);
+  top: -2px;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  min-height: 100px;
+  @media screen and (min-width: 375px) {
+    max-width: 375px;
+  }
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+  }
+  @media screen and (min-width: 1470px) {
+    max-width: 1470px;
+    padding-bottom: 0;
+    padding-top: 28px;
+    position: static;
+    background: linear-gradient(
+      to right,
+      #ffffff 29.65%,
+      #f9fafb 29.65%,
+      #f9fafb 99%,
+      #ffffff 10%
+    );
+  }
+}
+.logo-address-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.address-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrap {
+  display: none;
+  @media screen and (min-width: 1470px) {
+    margin-left: auto;
+    display: flex;
+  }
+}
+
+.header-button {
+  background-color: var(--white);
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  margin-left: auto;
+  @media screen and (min-width: 1470px) {
+    display: none;
+  }
+  transition: var(--main-transition);
+}
+
+.button-call.button-tab {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 22px 24px;
+    margin-left: 245px;
+    @include text('Montserrat', 700, 14px, 15px);
+  }
+  @media screen and (min-width: 1470px) {
+    display: none;
+  }
+}
+
+.button-call:hover,
+.button-call:focus {
+  background-color: var(--accent-background);
+}
+
+.header-button .icon-close {
+  display: none;
+}
+
+.header-button.is-opn .icon-close {
+  display: block;
+}
+
+.header-button.is-opn .icon-burger {
+  display: none;
+}
+
+svg .icon-close {
+  width: 20px;
+  height: 20px;
+}
+
+.header-nav {
+  display: none;
+  @media screen and (min-width: 1470px) {
+    margin-top: 50px;
+    display: block;
+  }
+}
+
+.address-list-desk {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    margin-right: 25px;
+    align-items: center;
+  }
+}
+
+.button-call {
+  display: none;
+  padding: 5px 31px;
+  border-radius: 150px;
+  @include text('Montserrat', 700, 16px, 55px);
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: #98c5eb;
+  margin-left: auto;
+  @media screen and (min-width: 1470px) {
+    display: inline-block;
+    @include text('Montserrat', 700, 18px, 55px);
+    padding: 12px 28px;
+  }
+  transition: background-color var(--main-transition);
+}
+
+.button-call:hover,
+.button-call:focus {
+  background-color: var(--accent-background);
+}
+
+.address-list {
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.nav-item-link {
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 42px;
+  color: var(--text);
+}
+
+.desk-nav {
+  display: none;
+  @media screen and (min-width: 1470px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.nav-item {
+  color: var(--text);
+  @include text('Montserrat', 400, 22px, 27px);
+  transition: color var(--main-transition);
+  &:hover,
+  &:focus {
+    color: var(--accent-background);
+  }
+}
+
+.nav-item + .nav-item {
+  margin-left: 60px;
+}
+
+.nav-item-link-current {
+  position: relative;
+}
+
+.nav-item-link-current::after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-background);
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+}
+
+.icon-burger-close {
+  fill: var(--text);
+  stroke: var(--text);
+}
+
+.icon-burger-close {
+  transition: fill var(--main-transition);
+  transition: stroke var(--main-transition);
+}
+
+.header-button:hover .icon-burger-close {
+  fill: var(--accent-background);
+  stroke: var(--accent-background);
+}
+
+/*---------------------------- Мобильное меню ---------------------*/
+
+.mob-menu {
+  z-index: 1;
+  position: fixed;
+  transform: translateX(100%);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  &.is-opn {
+    display: block;
+  }
+  transition: var(--main-transition);
+}
+
+.mob-menu.is-opn {
+  transform: translateX(0);
+  @media screen and(min-width:768px) {
+    transform: translateX(50%);
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+      0px 2px 1px rgb(0 0 0 / 20%);
+  }
+}
+
+.mob-container {
+  overflow-y: auto;
+  padding: 150px 32px 25px 32px;
+  height: 100%;
+  @media screen and (min-width: 375px) {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    margin: 0;
+    padding-left: 50px;
+  }
+}
+
+.mob-menu-header {
+  display: flex;
+  border-bottom: 1px solid var(--color-icon);
+}
+
+.mob-nav-item {
+  position: relative;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  @include text('Montserrat', 400, 18px, 22px);
+  color: var(--text);
+  @media screen and (min-width: 999px) {
+    @include text('Montserrat', 400, 22px, 27px);
+  }
+}
+
+.mob-nav-item + .mob-nav-item {
+  margin-top: 25px;
+  @media screen and (min-width: 999px) {
+    margin-top: 35px;
+  }
+}
+
+.mob-nav-item--last {
+  @include text('Montserrat', 700, 18px, 22px);
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 999px) {
+    @include text('Montserrat', 700, 22px, 27px);
+    align-items: flex-start;
+  }
+}
+
+.header-mob-link {
+  transform: translateX(0px);
+  transition: var(--main-transition);
+  color: var(--text);
+}
+
+.header-mob-link-last {
+  margin-right: 15px;
+}
+
+.mob-nav-item:hover .header-mob-link {
+  transform: translateX(46px);
+}
+
+.header-mob-link::before {
+  content: '';
+  width: 31px;
+  height: 1px;
+  background-color: var(--accent-background);
+  top: 50%;
+  margin-right: 15px;
+  display: inline-flex;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-46px);
+  transition: opacity var(--main-transition), visibility var(--main-transition);
+}
+
+.mob-nav-item:hover .header-mob-link::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mob-nav {
+  margin-bottom: 55px;
+}
+
+.tel-accent {
+  font-weight: 700;
+}
+
+.address-item {
+  display: flex;
+  font-style: normal;
+  @media screen and (min-width: 999px) {
+    @include text('Montserrat', 400, 22px, 35px);
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+    @media screen and (min-width: 1470px) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+}
+
+.adress-contacts-link {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  & p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    background-color: var(--color-icon);
+    border-radius: 4px;
+    margin-right: 5px;
+    @media screen and (min-width: 999px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.icon-bg {
+  transition: background-color var(--main-transition);
+}
+
+.adress-contacts-link:hover .icon-bg,
+.adress-contacts-link:focus .icon-bg {
+  background-color: var(--accent-background);
+}
+
+.adress-contacts-link:hover .icon-location,
+.adress-contacts-link:focus .icon-location {
+  fill: var(--accent-background);
+}
+
+.icon-location {
+  margin-right: 5px;
+  width: 23;
+  height: 28;
+  fill: var(--color-icon);
+  transition: fill var(--main-transition);
+  @media screen and (min-width: 999px) {
+    width: 35;
+    height: 40;
+  }
+}
+
+.icon-phone {
+  width: 12;
+  height: 12;
+  @media screen and (min-width: 1470px) {
+    width: 23;
+    height: 35;
+  }
+}
+
+.icon-phone-tab {
+  height: 10px;
+  @media screen and (min-width: 999px) {
+    height: 15px;
+  }
+}
+
+.icon-envelope-tab {
+  width: 16;
+  height: 14;
+  @media screen and (min-width: 999px) {
+    width: 28;
+    height: 24;
+  }
+}
+
+.icon-Logo-mob {
+  width: 185;
+  height: 62;
+  @media screen and (min-width: 1470px) {
+    width: 276;
+    height: 93;
+  }
+}
+
+.button-mob-call {
+  display: flex;
+  margin: 0 auto;
+  padding: 28px 31px;
+  border-radius: 150px;
+  @include text('Montserrat', 700, 16px, 17px);
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: #98c5eb;
+  margin-left: auto;
+  transition: background-color var(--main-transition);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.button-mob-call-modal {
+  display: flex;
+}
+
+.button-mob-call:hover,
+.button-mob-call:focus {
+  background-color: var(--accent-background);
+}
+
+.no-scroll-menu {
+  overflow: hidden;
+}
+.no-scroll-mod {
+  overflow: hidden;
+}
+/*----------------------------------MODAL ----------------------------------------------*/
+.backdrop {
+  display: block;
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background-color: var(--price-number-gray);
+  transition: opacity var(--main-transition);
+}
+
+.backdrop.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.hidden .modal {
+  transform: scale(0.25);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 68px 23px 80px 28px;
+  width: 100vw;
+  height: 66vh;
+  background-color: var(--white);
+  overflow-y: auto;
+  @media screen and (min-width: 375px) {
+    max-width: 375px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  transition: transform var(--main-transition);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-close {
+  width: 35px;
+  height: 35px;
+  background-color: var(--accent-text);
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--main-transition);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--accent-background);
+}
+
+.modal-first-text {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  @include text('Cormorant', 700, 25px, 26px);
+  color: var(--text);
+}
+.modal-second-text {
+  @include text('Montserrat', 400, 15px, 16px);
+  color: var(--accent-text);
+  margin-bottom: 25px;
+}
+
+.modal-input {
+  outline: none;
+  border-radius: 150px;
+  border: 1px solid var(--border-color);
+  height: 67px;
+  width: 260px;
+  padding: 25px 30px;
+  caret-color: var(--price-number-gray);
+  color: var(--accent-text);
+  transition: var(--main-transition);
+}
+
+.modal-input:hover,
+.modal-input:focus {
+  border: 2px solid var(--border-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  @include text('Montserrat', 400, 14px, 16px);
+  color: var(--color-icon);
+}
+
+.comment-area {
+  display: block;
+  margin: 0 auto;
+  resize: none;
+  min-height: 67px;
+  overflow: hidden;
+}
+
+.modal-field {
+  margin-bottom: 10px;
+}
+
+.modal-form {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mob-menu.is-opn .mob-container::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-icon);
+  position: absolute;
+  top: 98px;
+  left: 0;
+  z-index: 7;
+}
