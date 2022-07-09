@@ -201,7 +201,7 @@
   padding-left: 40px;
   height: 80px;
   @include font(700, 16px, calc(55px / 16px));
-  color: var(--text);
+  color: var(--accent-text);
 
   border: 1px solid #99c1e2;
   border-radius: 150px;
