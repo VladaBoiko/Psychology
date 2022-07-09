@@ -6,26 +6,28 @@
           <use href="./images/header/sprite.svg#icon-Logo-mob"></use>
         </svg>
       </a>
-      <button type="button" class="button-call button-tab">
-        Вам передзвонити?
-      </button>
-      <button type="button" class="header-button" data-menu-button>
-        <svg
-          class="icon-burger-close"
-          width="29"
-          height="29"
-          aria-label="Перемикач мобільного меню"
-        >
-          <use
-            class="icon-burger"
-            href="./images/header/sprite.svg#icon-burger-menu"
-          ></use>
-          <use
-            class="icon-close"
-            href="./images/header/sprite.svg#icon-close-menu"
-          ></use>
-        </svg>
-      </button>
+      <div class="button-tab-wrap">
+        <button type="button" class="button-call button-tab" data-modal-open>
+          Вам передзвонити?
+        </button>
+        <button type="button" class="header-button" data-menu-button>
+          <svg
+            class="icon-burger-close"
+            width="29"
+            height="29"
+            aria-label="Перемикач мобільного меню"
+          >
+            <use
+              class="icon-burger"
+              href="./images/header/sprite.svg#icon-burger-menu"
+            ></use>
+            <use
+              class="icon-close"
+              href="./images/header/sprite.svg#icon-close-menu"
+            ></use>
+          </svg>
+        </button>
+      </div>
       <div class="header-wrap">
         <address class="address-wrap">
           <ul class="address-list address-list-desk">
@@ -54,7 +56,7 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="button-call" modal-open>
+        <button type="button" class="button-call" data-modal-open>
           Вам передзвонити?
         </button>
       </div>
