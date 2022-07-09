@@ -250,7 +250,7 @@ svg .icon-close {
 
 .mob-container {
   overflow-y: auto;
-  padding: 150px 32px 25px 32px;
+  padding: 130px 32px 25px 32px;
   height: 100%;
   @media screen and (min-width: 375px) {
     max-width: 375px;
@@ -270,27 +270,38 @@ svg .icon-close {
 
 .mob-nav-item {
   position: relative;
-  height: 18px;
-  display: flex;
+  height: 36px;
+
   align-items: center;
-  @include text('Montserrat', 400, 18px, 22px);
+  padding: 10px 0;
+  @include text('Montserrat', 400, 18px, 19px);
   color: var(--text);
+  @media screen and (min-width: 768px) {
+    padding: 12px 0;
+    height: 40px;
+  }
   @media screen and (min-width: 999px) {
     @include text('Montserrat', 400, 22px, 27px);
+    padding: 12px 0;
+    height: 54px;
   }
 }
 
 .mob-nav-item + .mob-nav-item {
-  margin-top: 25px;
+  margin-top: 10px;
   @media screen and (min-width: 999px) {
-    margin-top: 35px;
+    margin-top: 10px;
   }
 }
 
 .mob-nav-item--last {
+  width: 40%;
   @include text('Montserrat', 700, 18px, 22px);
   display: flex;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    width: 20%;
+  }
   @media screen and (min-width: 999px) {
     @include text('Montserrat', 700, 22px, 27px);
     align-items: flex-start;
@@ -298,6 +309,9 @@ svg .icon-close {
 }
 
 .header-mob-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
   transform: translateX(0px);
   transition: var(--main-transition);
   color: var(--text);
@@ -305,6 +319,7 @@ svg .icon-close {
 
 .header-mob-link-last {
   margin-right: 15px;
+  display: flex;
 }
 
 .mob-nav-item:hover .header-mob-link {
@@ -347,6 +362,9 @@ svg .icon-close {
   }
   &:not(:last-child) {
     margin-bottom: 10px;
+    @media screen and (min-width: 999px) {
+      margin-bottom: 15px;
+    }
     @media screen and (min-width: 1470px) {
       margin-bottom: 0;
       margin-right: 30px;
@@ -458,6 +476,9 @@ svg .icon-close {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
+  font-size: 14px;
+  width: 260px;
   @media screen and (min-width: 1470px) {
     font-size: 22px;
     width: 350px;
@@ -467,7 +488,8 @@ svg .icon-close {
 
 .button-mob-call:hover,
 .button-mob-call:focus {
-  background-color: var(--accent-background);
+  background-color: var(--button-send-contacts-hover);
+  box-shadow: 3px 3px 5px #6a372c29;
 }
 
 .no-scroll-menu {
@@ -503,22 +525,23 @@ svg .icon-close {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 68px 23px 80px 28px;
+  padding: 40px 23px 30px 28px;
   width: 100vw;
-  height: 66vh;
+  max-height: 100vh;
   background-color: var(--white);
   overflow-y: auto;
   @media screen and (min-width: 375px) {
     max-width: 375px;
   }
   @media screen and (min-width: 768px) {
-    max-width: 500px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-height: 100vh;
+    max-width: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
   }
   @media screen and (min-width: 1470px) {
-    max-width: 770px;
+    max-width: 600px;
   }
   transition: transform var(--main-transition);
   transform: translate(-50%, -50%) scale(1);
@@ -567,9 +590,9 @@ svg .icon-close {
   outline: none;
   border-radius: 150px;
   border: 1px solid var(--border-color);
-  height: 67px;
+  height: 50px;
   width: 260px;
-  padding: 25px 30px;
+  padding: 20px 20px;
   caret-color: var(--price-number-gray);
   color: var(--accent-text);
   transition: var(--main-transition);
@@ -582,6 +605,7 @@ svg .icon-close {
 .modal-input:hover,
 .modal-input:focus {
   border: 2px solid var(--border-color);
+  box-shadow: 3px 3px 5px #6a372c29;
 }
 
 input::placeholder,
@@ -594,11 +618,12 @@ textarea::placeholder {
 }
 
 .comment-area {
-  display: block;
+  display: flex;
   margin: 0 auto;
   resize: none;
-  min-height: 67px;
+  min-height: 50px;
   overflow: hidden;
+  padding: 15px 20px;
 }
 
 .modal-field {
