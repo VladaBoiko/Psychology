@@ -37,6 +37,8 @@
 .list-recommendation__photo {
   max-width: 200px;
   border-radius: 0px 400px 400px 0px;
+
+  transition: 500ms linear;
   @include tablet {
     max-width: 292px;
     border-radius: 400px 0px 0px 0px;
