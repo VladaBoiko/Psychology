@@ -2,10 +2,13 @@
   <div class="container header-container">
     <div class="logo-address-wrap">
       <a href="">
-        <svg width="185" height="62" class="icon-Logo-mob">
+        <svg class="icon-Logo-mob">
           <use href="./images/header/sprite.svg#icon-Logo-mob"></use>
         </svg>
       </a>
+      <button type="button" class="button-call button-tab">
+        Вам передзвонити?
+      </button>
       <button type="button" class="header-button" data-menu-button>
         <svg
           class="icon-burger-close"
@@ -51,7 +54,7 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="button-call" data-modal-open>
+        <button type="button" class="button-call" modal-open>
           Вам передзвонити?
         </button>
       </div>
@@ -59,17 +62,35 @@
     <nav class="header-nav">
       <ul class="desk-nav">
         <li class="nav-item">
-          <a class="nav-item-link nav-item-link-current">Головна</a>
+          <a href="./index.html" class="nav-item-link nav-item-link-current"
+            >Головна</a
+          >
         </li>
-        <li class="nav-item"><a class="nav-item-link">Про нас</a></li>
-        <li class="nav-item"><a class="nav-item-link">Послуги</a></li>
-        <li class="nav-item"><a class="nav-item-link">Ціни</a></li>
-        <li class="nav-item"><a class="nav-item-link">Психологам</a></li>
-        <li class="nav-item"><a class="nav-item-link">Семінари</a></li>
-        <li class="nav-item"><a class="nav-item-link">Відгуки</a></li>
-        <li class="nav-item"><a class="nav-item-link">Контакти</a></li>
+        <li class="nav-item">
+          <a href="./about-us.html" class="nav-item-link">Про нас</a>
+        </li>
+        <li class="nav-item">
+          <a href="./services.html" class="nav-item-link">Послуги</a>
+        </li>
+        <li class="nav-item">
+          <a href="#price" class="nav-item-link">Ціни</a>
+        </li>
+        <li class="nav-item">
+          <a href="./for-spesialists.html" class="nav-item-link">Психологам</a>
+        </li>
+        <li class="nav-item">
+          <a href="./seminars.html" class="nav-item-link">Семінари</a>
+        </li>
+        <li href="#review" class="nav-item">
+          <a class="nav-item-link">Відгуки</a>
+        </li>
+        <li class="nav-item">
+          <a href="./contacts.html" class="nav-item-link">Контакти</a>
+        </li>
         <li class="nav-item mob-nav-item--last">
-          <a class="header-mob-link-last nav-item-link">Оплата</a>
+          <a href="./payment.html" class="header-mob-link-last nav-item-link"
+            >Оплата</a
+          >
           <svg class="header-mob-link" width="40" height="37">
             <use href="./images/header/sprite.svg#icon-wallet"></use>
           </svg>
@@ -82,21 +103,31 @@
     <div class="mob-container">
       <ul class="mob-nav">
         <li class="mob-nav-item">
-          <a class="header-mob-link">Психологам</a>
+          <a href="./for-spesialists.html" class="header-mob-link"
+            >Психологам</a
+          >
         </li>
         <li class="mob-nav-item">
-          <a class="header-mob-link">Семінари</a>
+          <a href="./seminars.html" class="header-mob-link">Семінари</a>
         </li>
         <li class="mob-nav-item"><a class="header-mob-link">Відгуки</a></li>
         <li class="mob-nav-item">
-          <a class="header-mob-link">Контакти</a>
+          <a href="./contacts.html" class="header-mob-link">Контакти</a>
         </li>
-        <li class="mob-nav-item"><a class="header-mob-link">Головна</a></li>
-        <li class="mob-nav-item"><a class="header-mob-link">Про нас</a></li>
-        <li class="mob-nav-item"><a class="header-mob-link">Послуги</a></li>
+        <li href="./index.html" class="mob-nav-item">
+          <a class="header-mob-link">Головна</a>
+        </li>
+        <li class="mob-nav-item">
+          <a href="./about-us.html" class="header-mob-link">Про нас</a>
+        </li>
+        <li class="mob-nav-item">
+          <a href="./services.html" class="header-mob-link">Послуги</a>
+        </li>
         <li class="mob-nav-item"><a class="header-mob-link">Ціни</a></li>
         <li class="mob-nav-item mob-nav-item--last">
-          <a class="header-mob-link-last header-mob-link">Оплата</a>
+          <a href="./payment.html" class="header-mob-link-last header-mob-link"
+            >Оплата</a
+          >
           <svg class="header-mob-link" width="40" height="37">
             <use href="./images/header/sprite.svg#icon-wallet"></use>
           </svg>
@@ -107,7 +138,7 @@
           <li class="address-item">
             <a href="tel:+380974070110" class="adress-contacts-link link">
               <p class="icon-bg">
-                <svg width="10.5" height="10.7">
+                <svg class="icon-phone-tab">
                   <use href="./images/header/sprite.svg#icon-phone"></use>
                 </svg>
               </p>
@@ -119,7 +150,7 @@
               href="mailto:hello@mgoroshenko.com.ua"
               class="adress-contacts-link link"
               ><p class="icon-bg">
-                <svg width="16" height="14">
+                <svg class="icon-envelope-tab">
                   <use href="./images/header/sprite.svg#icon-message"></use>
                 </svg>
               </p>
@@ -147,48 +178,3 @@
     </div>
   </div>
 </header>
-
-<!--------------------------------------MODAL---------------------------------------------------------->
-
-<div class="backdrop hidden" data-modal>
-  <div class="modal">
-    <button type="button" class="modal-close" data-modal-close>
-      <svg width="20" height="20" class="icon-modal-close">
-        <use href="./images/header/sprite.svg#icon-modal-close"></use>
-      </svg>
-    </button>
-    <p class="modal-first-text">Залиште заявку</p>
-    <p class="modal-second-text">Ми зателефонуємо вам через 5 хвилин</p>
-    <form class="modal-form">
-      <div class="modal-field">
-        <label for="name" class="input-label"></label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          class="modal-input"
-          required
-          placeholder="Марія"
-        />
-      </div>
-      <div class="modal-field">
-        <label for="tel" class="input-label"></label>
-        <input
-          id="tel"
-          type="tel"
-          name="tel"
-          class="modal-input"
-          placeholder="+ 38 (000) 000-00-00"
-        />
-      </div>
-      <div class="modal-field">
-        <textarea
-          placeholder="Що вас турбує?"
-          name="comment"
-          class="modal-input comment-area"
-        ></textarea>
-      </div>
-      <button type="button" class="button-mob-call">зателефонуйте мені</button>
-    </form>
-  </div>
-</div>

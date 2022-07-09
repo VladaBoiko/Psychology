@@ -17,11 +17,13 @@ header {
     max-width: 375px;
   }
   @media screen and (min-width: 768px) {
-    max-width: 768px;
+    min-width: 768px;
   }
-
-  @media screen and (min-width: 999px) {
-    max-width: 999px;
+  @media screen and (min-width: 1470px) {
+    max-width: 1470px;
+    padding-bottom: 0;
+    padding-top: 28px;
+    position: static;
     background: linear-gradient(
       to right,
       #ffffff 29.65%,
@@ -29,12 +31,6 @@ header {
       #f9fafb 99%,
       #ffffff 10%
     );
-    position: static;
-    max-width: 1470px;
-    padding-bottom: 0;
-    padding-top: 28px;
-  }
-  @media screen and (min-width: 1470px) {
   }
 }
 .logo-address-wrap {
@@ -49,7 +45,7 @@ header {
 
 .header-wrap {
   display: none;
-  @media screen and (min-width: 999px) {
+  @media screen and (min-width: 1470px) {
     margin-left: auto;
     display: flex;
   }
@@ -61,10 +57,28 @@ header {
   padding: 0;
   border: none;
   margin-left: auto;
-  @media screen and (min-width: 999px) {
+  @media screen and (min-width: 1470px) {
     display: none;
   }
   transition: var(--main-transition);
+}
+
+.button-call.button-tab {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 22px 24px;
+    margin-left: 245px;
+    @include text('Montserrat', 700, 14px, 15px);
+  }
+  @media screen and (min-width: 1470px) {
+    display: none;
+  }
+}
+
+.button-call:hover,
+.button-call:focus {
+  background-color: var(--accent-background);
 }
 
 .header-button .icon-close {
@@ -86,7 +100,7 @@ svg .icon-close {
 
 .header-nav {
   display: none;
-  @media screen and (min-width: 999px) {
+  @media screen and (min-width: 1470px) {
     margin-top: 50px;
     display: block;
   }
@@ -94,7 +108,7 @@ svg .icon-close {
 
 .address-list-desk {
   display: none;
-  @media screen and (min-width: 999px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     margin-right: 25px;
     align-items: center;
@@ -110,7 +124,7 @@ svg .icon-close {
   text-transform: uppercase;
   background-color: #98c5eb;
   margin-left: auto;
-  @media screen and (min-width: 999px) {
+  @media screen and (min-width: 1470px) {
     display: inline-block;
     @include text('Montserrat', 700, 18px, 55px);
     padding: 12px 28px;
@@ -125,7 +139,7 @@ svg .icon-close {
 
 .address-list {
   margin-bottom: 30px;
-  @media screen and (min-width: 999px) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 0;
   }
 }
@@ -134,11 +148,12 @@ svg .icon-close {
   display: block;
   padding-top: 9px;
   padding-bottom: 42px;
+  color: var(--text);
 }
 
 .desk-nav {
   display: none;
-  @media screen and (min-width: 999px) {
+  @media screen and (min-width: 1470px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,7 +214,6 @@ svg .icon-close {
   left: 0;
   width: 100vw;
   height: 100vh;
-
   background-color: var(--white);
   &.is-opn {
     display: block;
@@ -209,6 +223,11 @@ svg .icon-close {
 
 .mob-menu.is-opn {
   transform: translateX(0);
+  @media screen and(min-width:768px) {
+    transform: translateX(50%);
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+      0px 2px 1px rgb(0 0 0 / 20%);
+  }
 }
 
 .mob-container {
@@ -221,6 +240,8 @@ svg .icon-close {
   }
   @media screen and (min-width: 768px) {
     max-width: 768px;
+    margin: 0;
+    padding-left: 50px;
   }
 }
 
@@ -237,12 +258,15 @@ svg .icon-close {
   @include text('Montserrat', 400, 18px, 22px);
   color: var(--text);
   @media screen and (min-width: 999px) {
-    @include text('Montserrat', 400, 18px, 55px);
+    @include text('Montserrat', 400, 22px, 27px);
   }
 }
 
 .mob-nav-item + .mob-nav-item {
   margin-top: 25px;
+  @media screen and (min-width: 999px) {
+    margin-top: 35px;
+  }
 }
 
 .mob-nav-item--last {
@@ -258,6 +282,7 @@ svg .icon-close {
 .header-mob-link {
   transform: translateX(0px);
   transition: var(--main-transition);
+  color: var(--text);
 }
 
 .header-mob-link-last {
@@ -304,7 +329,7 @@ svg .icon-close {
   }
   &:not(:last-child) {
     margin-bottom: 10px;
-    @media screen and (min-width: 999px) {
+    @media screen and (min-width: 1470px) {
       margin-bottom: 0;
       margin-right: 30px;
     }
@@ -328,6 +353,10 @@ svg .icon-close {
       width: 40px;
       height: 40px;
     }
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }
 
@@ -358,18 +387,34 @@ svg .icon-close {
 }
 
 .icon-phone {
-  width: 10.5;
-  height: 10.7;
-  @media screen and (min-width: 999) {
-    width: 19;
-    height: 23;
+  width: 12;
+  height: 12;
+  @media screen and (min-width: 1470px) {
+    width: 23;
+    height: 35;
+  }
+}
+
+.icon-phone-tab {
+  height: 10px;
+  @media screen and (min-width: 999px) {
+    height: 15px;
+  }
+}
+
+.icon-envelope-tab {
+  width: 16;
+  height: 14;
+  @media screen and (min-width: 999px) {
+    width: 28;
+    height: 24;
   }
 }
 
 .icon-Logo-mob {
   width: 185;
   height: 62;
-  @media screen and (min-width: 999px) {
+  @media screen and (min-width: 1470px) {
     width: 276;
     height: 93;
   }
@@ -386,6 +431,13 @@ svg .icon-close {
   background-color: #98c5eb;
   margin-left: auto;
   transition: background-color var(--main-transition);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.button-mob-call-modal {
+  display: flex;
 }
 
 .button-mob-call:hover,
