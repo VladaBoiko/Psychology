@@ -1,0 +1,230 @@
+.consult {
+  padding-top: 80px;
+  @include desktop-small {
+    padding-top: 138px;
+  }
+}
+.consult-title {
+  @include text($font-family: 'Cormorant', $a: 700, $b: 25px, $c: 30px);
+  color: var(--text);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 100px;
+    @include text($font-family: 'Cormorant', $a: 700, $b: 40px, $c: 45px);
+  }
+  @include desktop-small {
+    margin-bottom: 130px;
+    @include text($font-family: 'Cormorant', $a: 700, $b: 60px, $c: 55px);
+  }
+}
+.consult-list {
+  counter-reset: my-counter;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.consult-item {
+  position: relative;
+  text-align: center;
+  background-color: var(--background);
+  display: block;
+  width: 305px;
+  padding: 44px 18px 23px;
+
+  &:nth-child(2n - 1) {
+    margin-left: auto;
+    @include tablet {
+      margin-right: auto;
+    }
+  }
+  &:nth-child(2n) {
+    margin-right: auto;
+    @include tablet {
+      margin-left: auto;
+    }
+  }
+  &:not(:last-child) {
+    @media screen and (max-width: 767.9px) {
+      margin-bottom: 58px;
+    }
+  }
+  &:nth-child(-n + 2) {
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+  @include desktop-small {
+    width: 400px;
+    &:nth-child(3) {
+      order: 4;
+    }
+    &:nth-child(2) {
+      margin-bottom: 90px;
+      margin-top: 80px;
+    }
+    &:nth-child(4) {
+      margin-top: 50px;
+    }
+    &:nth-child(1) {
+      margin-bottom: 120px;
+    }
+  }
+  @include desktop {
+    width: 500px;
+    &:nth-child(1) {
+      margin-left: 150px;
+    }
+    &:nth-child(3) {
+      margin-right: 150px;
+    }
+  }
+  &::before {
+    content: counter(my-counter, decimal-leading-zero) '';
+    counter-increment: my-counter;
+    position: absolute;
+    text-transform: uppercase;
+    @include text($font-family: 'Montserrat', $a: 700, $b: 70px, $c: 55px);
+    color: var(--color-icon);
+  }
+  &:nth-child(2n - 1)::before {
+    top: -28px;
+    left: -32px;
+    @include tablet {
+      left: -50%;
+      right: 0;
+    }
+  }
+  &:nth-child(2n)::before {
+    top: -28px;
+    right: -32px;
+    @include tablet {
+      left: -50%;
+      right: 0;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 60px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include tablet {
+      display: none;
+    }
+    @include desktop-small {
+      display: block;
+    }
+  }
+
+  &:not(:last-child):nth-child(2n-1)::after {
+    bottom: -55px;
+    left: -55px;
+    background-image: url(../../images/index-down/Arrow-mobile-left.svg);
+    @media screen and (min-width: 768) and (max-width: 999.9) {
+      display: none;
+    }
+  }
+  &:not(:last-child):nth-child(2n)::after {
+    background-image: url(../../images/index-down/Arrow-mobile-right.svg);
+    bottom: -55px;
+    right: -55px;
+    @media screen and (min-width: 768) and (max-width: 999.9) {
+      display: none;
+    }
+  }
+  &:not(:last-child):first-child::after {
+    @include desktop-small {
+      width: 190px;
+      height: 50px;
+      background-image: url(../../images/index-down/Arrow-big-right.svg);
+      top: -25px;
+      left: 95%;
+    }
+    @include desktop {
+      width: 190px;
+      height: 50px;
+      background-image: url(../../images/index-down/Arrow-big-right.svg);
+      top: 25px;
+      left: 102%;
+      transform: rotate(10deg);
+    }
+  }
+  &:not(:last-child):nth-child(2)::after {
+    @include desktop-small {
+      width: 55px;
+      height: 190px;
+      background-image: url(../../images/index-down/Arrow-big-down.svg);
+      top: 255px;
+      left: 95%;
+    }
+  }
+  &:not(:last-child):nth-child(3)::after {
+    @include desktop-small {
+      width: 190px;
+      height: 50px;
+      background-image: url(../../images/index-down/Arrow-big-left.svg);
+      top: -20px;
+      left: -47%;
+      transform: rotate(-20deg);
+    }
+    @include desktop {
+      width: 190px;
+      height: 50px;
+      background-image: url(../../images/index-down/Arrow-big-right.svg);
+      transform: rotate(2deg) scale(-1, 1);
+    }
+  }
+}
+
+.consult-item-title {
+  @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: var(--accent-text);
+
+  @include tablet {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 23px, $c: 35px);
+    margin-bottom: 20px;
+  }
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 30px, $c: 37px);
+    margin-bottom: 25px;
+  }
+}
+.consult-item-text {
+  @include text($font-family: 'Montserrat', $a: 400, $b: 16px, $c: 20px);
+  margin-bottom: 30px;
+  color: var(--accent-text);
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 400, $b: 22px, $c: 32px);
+    margin-bottom: 25px;
+  }
+}
+.consult-button {
+  border-radius: 150px;
+  background-color: var(--accent-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 20px 60px;
+  margin-left: auto;
+  margin-right: auto;
+  @include text($font-family: 'Montserrat', $a: 700, $b: 16px, $c: 27px);
+  transition: all var(--main-transition);
+
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 25px, $c: 25px);
+    padding: 32px 60px;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--button-bgcolor-accent-hover);
+  }
+}

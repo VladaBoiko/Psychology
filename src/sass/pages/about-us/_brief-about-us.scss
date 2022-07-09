@@ -1,15 +1,17 @@
 .brief-about-us {
   padding-top: 175px;
+
   @include desktop {
     padding-top: 430px;
   }
 
-  // .brief-about-us__container
   &__container {
     position: relative;
+
     @include desktop {
       width: 1455px;
     }
+
     &::before {
       content: '';
       position: absolute;
@@ -24,12 +26,19 @@
         display: none;
       }
 
-      @media screen and (max-width: 1469px) {
+      @media screen and (max-width: 999px) {
         left: 0;
       }
 
       @include tablet {
         width: 35%;
+      }
+
+      @include desktop-small {
+        height: 1150px;
+        width: 70%;
+        top: -430px;
+        right: 0;
       }
 
       @include desktop {
@@ -40,42 +49,55 @@
       }
     }
   }
+
   &__content {
+    @include desktop-small {
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: 30px;
+    }
+
     @include desktop {
       max-width: 735px;
       margin-left: auto;
       margin-right: 95px;
     }
   }
-  // .brief-about-us__title
+
   &__title {
     margin-bottom: 40px;
+
     @include desktop {
       margin-bottom: 50px;
     }
   }
-  // .brief-about-us__image
+
   &__image {
     overflow: hidden;
-    @media screen and (max-width: 1469px) {
+
+    @media screen and (max-width: 1000px) {
       max-width: 335px;
       margin-bottom: 25px;
       border-radius: 400px 400px 0px 0px;
     }
-    @include desktop {
+
+    @include desktop-small {
       position: absolute;
-      top: -80px;
+      top: 0;
       left: 0;
+      width: 380px;
       border-radius: 400px 0px 0px 0px;
+    }
+
+    @include desktop {
+      top: -80px;
       width: 542px;
     }
-  }
-  // .brief-about-us__text
-  &__text {
   }
 
   &__text:not(:last-child) {
     margin-bottom: 20px;
+
     @include desktop {
       margin-bottom: 40px;
     }
