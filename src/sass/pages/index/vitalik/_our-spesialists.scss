@@ -1,7 +1,18 @@
 @import '../../../../../node_modules/swiper/swiper-bundle.css   ';
 
 #spesialists {
-  padding: 40px 0;
+  padding: 75px 0;
+  overflow: hidden;
+
+  @include desktop {
+    padding: 40px 0;
+  }
+
+  // .container {
+  //   width: 100%;
+  //   padding: 0;
+  //   margin: 0;
+  // }
 
   .swiper-wrapper {
     margin: 0 auto;
@@ -12,41 +23,85 @@
     transition-property: transform;
     display: flex;
     position: relative;
+
+    @include desktop {
+      margin: 0;
+    }
   }
 
   .swiper-wrapper .swiper-slide {
     background-color: var(--background);
     max-width: 294px;
+
+    @include desktop {
+      min-width: 430px;
+      border-radius: 50px;
+      // &:first-child,
+      // &:first-child .spesialists__photo {
+      //   border-radius: 250px 250px 0px 0px;
+      // }
+      // &:last-child,
+      // &:last-child .spesialists__photo {
+      //   border-radius: 0px 400px 0px 0px;
+      // }
+    }
   }
 }
 
 .spesialists__header {
   @include text('Cormorant', 700, 25px, 30px);
   color: var(--text);
+
+  @include desktop {
+    @include text(null, null, 60px, 55px);
+  }
 }
 
 .swiper.mySwiperSpesialists {
   margin-top: 40px;
+
+  @include desktop {
+    margin-top: 150px;
+  }
 }
 
 .spesialists__photo {
   width: 298px;
+
+  @include desktop {
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 30px;
+  }
 }
 
 .spesialists__wrapper-card {
   padding: 27px 12px 40px 11px;
+
+  @include desktop {
+    padding: 30px 26px 60px 26px;
+  }
 }
 
 .spesialists__profil {
   @include text('Montserrat', 400, 14px, 55px);
   text-transform: uppercase;
   color: var(--accent-text);
+
+  @include desktop {
+    font-size: 22px;
+    line-height: 2.5;
+  }
 }
 
 .spesialists__name {
   @include text('Cormorant', 700, 18px, 22px);
   text-transform: uppercase;
   color: var(--text);
+
+  @include desktop {
+    @include text(null, null, 30px, 55px);
+  }
 }
 
 .list-features {
@@ -62,6 +117,10 @@
   display: flex;
   align-items: center;
 
+  @include desktop {
+    @include text(null, null, 28px, 38px);
+  }
+
   &::before {
     content: '';
     margin-right: 15px;
@@ -70,6 +129,10 @@
     height: 40px;
     display: flex;
     flex-shrink: 0;
+
+    @include desktop {
+      margin-right: 25px;
+    }
   }
 }
 
@@ -102,10 +165,20 @@
   @include text('Montserrat', 600, 14px, 55px);
   text-transform: uppercase;
   color: var(--accent-text);
+
+  @include desktop {
+    @include text(null, 700, 16px, 55px);
+    padding: 0 26px;
+  }
 }
 
 .spesialists__button {
   margin-top: 15px;
   @include text('Montserrat', 700, 16px, 55px);
   text-transform: uppercase;
+
+  @include desktop {
+    margin-top: 50px;
+    @include text('Montserrat', null, 30px, 55px);
+  }
 }
