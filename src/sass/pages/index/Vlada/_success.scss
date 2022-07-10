@@ -1,0 +1,131 @@
+.clients-success {
+  padding-top: 85px;
+  @include desktop-small {
+    padding-top: 164px;
+  }
+}
+.success-main-title {
+  @include text($font-family: 'Cormorant', $a: 700, $b: 25px, $c: 30px);
+  text-transform: uppercase;
+  color: var(--text);
+  @include desktop-small {
+    @include text($font-family: 'Cormorant', $a: 700, $b: 60px, $c: 55px);
+  }
+}
+.success-list {
+  @media screen and (min-width: 768px) and (max-width: 999.99px) {
+    display: flex;
+  }
+}
+.success-item {
+  @include desktop-small {
+    display: flex;
+  }
+}
+.success-image {
+  img {
+    min-width: 334px;
+    @include desktop-small {
+      width: 415px;
+      height: 466px;
+    }
+  }
+}
+.success-text-wrap {
+  padding: 38px 44px 49px 20px;
+  background-color: var(--background);
+  @include desktop-small {
+    padding: 36px 251px 37px 87px;
+  }
+}
+.name {
+  @include text($font-family: 'Montserrat', $a: 700, $b: 20px, $c: 24px);
+  color: rgba(83, 103, 121, 0.75);
+  margin-bottom: 23px;
+  @include desktop-small {
+    margin-bottom: 15px;
+  }
+}
+// .success-text-list {
+//   @include tablet {
+//   }
+
+//   @include desktop-small {
+//   }
+//   @include desktop {
+//   }
+// }
+.success-text-item {
+  position: relative;
+  @include tablet {
+  }
+
+  @include desktop-small {
+  }
+  @include desktop {
+  }
+}
+.success-first.location-icons {
+  position: absolute;
+  @include tablet {
+  }
+
+  @include desktop-small {
+  }
+  @include desktop {
+  }
+}
+.success-title {
+  @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
+  text-transform: uppercase;
+  margin-bottom: 21px;
+  color: var(--text);
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 30px, $c: 37px);
+    margin-bottom: 25px;
+  }
+  .decoration {
+    color: var(--accent-background);
+  }
+}
+.success-text {
+  @include text($font-family: 'Montserrat', $a: 400, $b: 16px, $c: 20px);
+  &.first {
+    margin-bottom: 15px;
+  }
+
+  color: var(--text);
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 400, $b: 20px, $c: 24px);
+    &.first {
+      margin-bottom: 50px;
+    }
+  }
+}
+// .success-first {
+//   @include tablet {
+//   }
+
+//   @include desktop-small {
+//   }
+//   @include desktop {
+//   }
+// }
+// .location-icons {
+//   @include tablet {
+//   }
+
+//   @include desktop-small {
+//   }
+//   @include desktop {
+//   }
+// }
+// .second {
+//   @include tablet {
+//   }
+
+//   @include desktop-small {
+//   }
+//   @include desktop {
+//   }
+// }
