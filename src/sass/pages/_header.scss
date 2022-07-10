@@ -1,15 +1,21 @@
 header {
   border-bottom: 1px solid var(--color-icon);
   min-height: 100px;
+
+  /*background: linear-gradient(to right, #f9fafb 24%, #ffffff 30%, #ffffff 99%);
+  @media screen and (min-width: 1470px) {
+    background: var(--white);
+  }*/
 }
 
 .header-container {
   position: absolute;
-  background: linear-gradient(to right, #f9fafb 75%, #ffffff 75%, #ffffff 99%);
+  background-color: var(--white);
+  /*background: linear-gradient(to right, #f9fafb 75%, #ffffff 75%, #ffffff 99%);*/
   top: -2px;
   left: 0;
   right: 0;
-  z-index: 4;
+  z-index: 5;
   padding-top: 17px;
   padding-bottom: 17px;
   min-height: 100px;
@@ -27,13 +33,13 @@ header {
     padding-bottom: 0;
     padding-top: 28px;
     position: static;
-    background: linear-gradient(
+    /*background: linear-gradient(
       to right,
       #ffffff 29.65%,
       #f9fafb 29.65%,
       #f9fafb 99%,
       #ffffff 10%
-    );
+    );*/
   }
 }
 .logo-address-wrap {
@@ -160,10 +166,16 @@ svg .icon-close {
 }
 
 .nav-item-link {
-  display: block;
-  padding-top: 9px;
-  padding-bottom: 42px;
+  padding-bottom: 36px;
+  padding-top: 16px;
   color: var(--text);
+}
+
+.nav-item-link.header-mob-link-last {
+  padding-bottom: 33px;
+  padding-top: 9px;
+  display: flex;
+  align-items: center;
 }
 
 .desk-nav {
@@ -176,6 +188,10 @@ svg .icon-close {
 }
 
 .nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
   color: var(--text);
   @include text('Montserrat', 400, 22px, 27px);
   transition: color var(--main-transition);
@@ -183,10 +199,6 @@ svg .icon-close {
   &:focus {
     color: var(--accent-background);
   }
-}
-
-.nav-item + .nav-item {
-  margin-left: 60px;
 }
 
 .nav-item-link-current {
@@ -222,7 +234,7 @@ svg .icon-close {
 /*---------------------------- Мобильное меню ---------------------*/
 
 .mob-menu {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   transform: translateX(100%);
   top: 0;
@@ -236,6 +248,9 @@ svg .icon-close {
   transition: var(--main-transition);
   @media screen and (min-width: 768px) {
     height: 100vh;
+  }
+  @media screen and(min-width:768px) {
+    background-color: var(--white);
   }
 }
 
@@ -257,6 +272,7 @@ svg .icon-close {
     margin: 0 auto;
   }
   @media screen and (min-width: 768px) {
+    background-color: var(--white);
     max-width: 768px;
     margin: 0;
     padding-left: 50px;
@@ -295,31 +311,30 @@ svg .icon-close {
 }
 
 .mob-nav-item--last {
-  width: 40%;
   @include text('Montserrat', 700, 18px, 22px);
   display: flex;
   align-items: center;
   @media screen and (min-width: 768px) {
-    width: 20%;
   }
   @media screen and (min-width: 999px) {
+    display: block;
     @include text('Montserrat', 700, 22px, 27px);
     align-items: flex-start;
   }
 }
 
 .header-mob-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+
   width: 100%;
   transform: translateX(0px);
   transition: var(--main-transition);
   color: var(--text);
 }
 
-.header-mob-link-last {
-  margin-right: 15px;
-  display: flex;
+.icon-wallet {
+  margin-left: 10px;
 }
 
 .mob-nav-item:hover .header-mob-link {
@@ -645,4 +660,10 @@ textarea::placeholder {
   top: 98px;
   left: 0;
   z-index: 7;
+}
+
+.icon-wallet-mob {
+  margin-left: 10px;
+  width: 40px;
+  height: 37px;
 }
