@@ -1,2 +1,2 @@
 var refs={openModalBtn:document.querySelectorAll("[data-modal-open]"),closeModalBtn:document.querySelector("[data-modal-close]"),modal:document.querySelector("[data-modal]"),body:document.querySelector("body")};function toggleModal(){refs.modal.classList.toggle("hidden"),refs.body.classList.toggle("no-scroll-mod")}refs.openModalBtn[0].addEventListener("click",toggleModal),refs.openModalBtn[1].addEventListener("click",toggleModal),refs.openModalBtn[2].addEventListener("click",toggleModal),refs.closeModalBtn.addEventListener("click",toggleModal);
-//# sourceMappingURL=index.7aa8d048.js.map
+//# sourceMappingURL=payment.396feb7f.js.map
