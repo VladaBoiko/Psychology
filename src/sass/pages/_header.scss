@@ -160,10 +160,16 @@ svg .icon-close {
 }
 
 .nav-item-link {
-  display: block;
-  padding-top: 9px;
-  padding-bottom: 42px;
+  padding-bottom: 39px;
+  padding-top: 16px;
   color: var(--text);
+}
+
+.nav-item-link.header-mob-link-last {
+  padding-bottom: 33px;
+  padding-top: 9px;
+  display: flex;
+  align-items: center;
 }
 
 .desk-nav {
@@ -176,6 +182,10 @@ svg .icon-close {
 }
 
 .nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
   color: var(--text);
   @include text('Montserrat', 400, 22px, 27px);
   transition: color var(--main-transition);
@@ -183,10 +193,6 @@ svg .icon-close {
   &:focus {
     color: var(--accent-background);
   }
-}
-
-.nav-item + .nav-item {
-  margin-left: 60px;
 }
 
 .nav-item-link-current {
@@ -295,31 +301,26 @@ svg .icon-close {
 }
 
 .mob-nav-item--last {
-  width: 40%;
   @include text('Montserrat', 700, 18px, 22px);
   display: flex;
   align-items: center;
   @media screen and (min-width: 768px) {
-    width: 20%;
   }
   @media screen and (min-width: 999px) {
+    display: block;
     @include text('Montserrat', 700, 22px, 27px);
     align-items: flex-start;
   }
 }
 
 .header-mob-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  margin-left: 10px;
   width: 100%;
   transform: translateX(0px);
   transition: var(--main-transition);
   color: var(--text);
-}
-
-.header-mob-link-last {
-  margin-right: 15px;
-  display: flex;
 }
 
 .mob-nav-item:hover .header-mob-link {
