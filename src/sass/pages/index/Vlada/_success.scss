@@ -1,0 +1,316 @@
+.clients-success {
+  padding-top: 85px;
+  @include desktop-small {
+    padding-top: 164px;
+  }
+}
+.success-main-title {
+  @include text($font-family: 'Cormorant', $a: 700, $b: 25px, $c: 30px);
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 40px;
+  @media screen and (max-width: 425px) {
+    width: 210px;
+  }
+  @include desktop-small {
+    @include text($font-family: 'Cormorant', $a: 700, $b: 60px, $c: 55px);
+    margin-bottom: 80px;
+  }
+}
+.success-list {
+  @media screen and (min-width: 768px) and (max-width: 999.99px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.success-item {
+  display: flex;
+  flex-wrap: wrap;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &:first-child {
+      width: 333px;
+    }
+    &:last-child {
+      width: 339px;
+    }
+  }
+  @include desktop-small {
+    flex-wrap: nowrap;
+    &:first-child {
+      width: 100%;
+    }
+    &:last-child {
+      width: 100%;
+    }
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &.second {
+      flex-direction: row-reverse;
+    }
+  }
+}
+.success-image {
+  @media screen and (max-width: 767.99px) {
+    width: 100%;
+  }
+
+  &.first {
+    img {
+      min-width: 334px;
+
+      @include tablet {
+        width: 333px;
+      }
+      @include desktop-small {
+        width: 415px;
+        height: 466px;
+      }
+    }
+  }
+  &.second {
+    img {
+      min-width: 334px;
+
+      @include tablet {
+        width: 339px;
+      }
+      @include desktop-small {
+        width: 415px;
+        height: 466px;
+      }
+    }
+  }
+  img {
+    min-width: 334px;
+    @include desktop-small {
+      width: 415px;
+      height: 466px;
+    }
+  }
+}
+.success-text-wrap {
+  width: 100%;
+  padding: 38px 44px 49px 20px;
+  background-color: var(--background);
+  @include desktop-small {
+    padding: 36px 31px 37px 37px;
+  }
+  @include desktop {
+    padding: 36px 251px 37px 87px;
+  }
+}
+.name {
+  @include text($font-family: 'Montserrat', $a: 700, $b: 20px, $c: 24px);
+  color: rgba(83, 103, 121, 0.75);
+  margin-bottom: 23px;
+  @include desktop-small {
+    margin-bottom: 15px;
+  }
+}
+.success-text-item {
+  position: relative;
+  @media screen and (max-width: 767.99px) {
+    width: 350px;
+  }
+  @media screen and (max-width: 450px) {
+    width: 264px;
+  }
+}
+.location-icon {
+  position: absolute;
+  width: 25px;
+  height: 30px;
+  @include desktop-small {
+    width: 42px;
+    height: 54px;
+  }
+  &.first {
+    @media screen and (max-width: 767.99px) {
+      top: 50%;
+      right: -10px;
+    }
+    @media screen and (max-width: 450px) {
+      top: 50%;
+      right: 15px;
+    }
+
+    &.girl {
+      @media screen and (max-width: 767.99px) {
+        top: 120px;
+        right: 54px;
+      }
+      @media screen and (max-width: 450px) {
+        top: 110%;
+        right: 87px;
+      }
+    }
+    @include tablet {
+      &.girl {
+        top: 110%;
+        right: 87px;
+      }
+      top: 2%;
+      right: 15px;
+    }
+
+    @include desktop-small {
+      display: none;
+    }
+    @include desktop {
+      display: block;
+      &.girl {
+        top: 47%;
+        right: -40px;
+      }
+      top: 40%;
+      right: -25px;
+    }
+  }
+  &.second {
+    @media screen and (max-width: 767.99px) {
+      &.boy {
+        top: 30px;
+        right: -15px;
+      }
+      top: 165px;
+      right: 40px;
+    }
+    @media screen and (max-width: 450px) {
+      &.boy {
+        top: 30px;
+        right: 25px;
+      }
+      top: -85%;
+      right: 90px;
+    }
+
+    @include tablet {
+      &.boy {
+        top: -20px;
+        right: 25px;
+      }
+      top: -85%;
+      right: 90px;
+    }
+
+    @include desktop-small {
+      display: none;
+    }
+    @include desktop {
+      display: block;
+      &.boy {
+        top: 5%;
+        right: -20px;
+      }
+      top: 30%;
+      right: -45px;
+    }
+  }
+  &-line {
+    position: absolute;
+    @media screen and (max-width: 767.99px) {
+      width: 250px;
+      height: 130px;
+      top: -55%;
+      right: -50%;
+    }
+    @media screen and (max-width: 450px) {
+      width: 200px;
+      height: 150px;
+      top: -55%;
+      right: -45%;
+    }
+
+    @include tablet {
+      width: 247px;
+      height: 188px;
+      top: -110%;
+      right: -60%;
+    }
+
+    @include desktop-small {
+      display: none;
+    }
+    @include desktop {
+      display: block;
+      width: 247px;
+      height: 168px;
+      top: -80%;
+      right: -30%;
+    }
+    &.second {
+      width: 270px;
+      height: 180px;
+      @media screen and (max-width: 767.99px) {
+        top: 15%;
+        right: -157px;
+      }
+      @media screen and (max-width: 450px) {
+        top: -70%;
+        right: -40%;
+      }
+
+      @include tablet {
+        width: 270px;
+        height: 180px;
+        top: -70%;
+        right: -40%;
+      }
+      @include desktop {
+        width: 270px;
+        height: 180px;
+        top: -35%;
+        right: -35%;
+      }
+    }
+  }
+}
+.success-title {
+  @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
+  text-transform: uppercase;
+  margin-bottom: 21px;
+  color: var(--text);
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 30px, $c: 37px);
+    margin-bottom: 15px;
+  }
+  @include desktop {
+    margin-bottom: 25px;
+  }
+  .decoration {
+    color: var(--accent-background);
+  }
+}
+.success-text {
+  @include text($font-family: 'Montserrat', $a: 400, $b: 16px, $c: 20px);
+  &.first {
+    margin-bottom: 15px;
+    // width: 617px;
+  }
+
+  color: var(--text);
+  @include desktop-small {
+    @include text($font-family: 'Montserrat', $a: 400, $b: 20px, $c: 24px);
+    &.first {
+      margin-bottom: 30px;
+    }
+    &.second {
+      max-width: 590px;
+    }
+  }
+  @include desktop {
+    &.first {
+      margin-bottom: 39px;
+    }
+    &.second {
+      max-width: 590px;
+    }
+  }
+}
