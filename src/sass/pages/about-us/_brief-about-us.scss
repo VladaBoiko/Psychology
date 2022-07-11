@@ -3,8 +3,8 @@
   padding-top: 80px;
 
   @include desktop {
-    // padding-top: 430px;
-    padding-top: 205px;
+    padding-top: 430px;
+    // padding-top: 205px;
   }
 
   &__container {
@@ -48,8 +48,9 @@
       }
 
       @include desktop {
-        // height: 1060px;
-        height: 835px;
+        top: -430px;
+        height: 1060px;
+        // height: 835px;
       }
     }
   }
