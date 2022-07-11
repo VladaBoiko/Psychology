@@ -1,5 +1,5 @@
 .footer {
-  border: 2px solid var(--color-icon);
+  border-top: 2px solid var(--color-icon);
 }
 
 .footer .container {
@@ -369,7 +369,7 @@
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 768) and (max-width: 999px) {
+  @media screen and (min-width: 768px) and (max-width: 999px) {
     width: 240px;
   }
 
