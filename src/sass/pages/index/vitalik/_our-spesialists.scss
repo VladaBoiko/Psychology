@@ -135,7 +135,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: -80px;
+    bottom: -40px;
+
+    @include tablet {
+      bottom: -60px;
+    }
+    @include desktop {
+      bottom: -80px;
+    }
 
     & .swiper-pagination-bullet {
       background: radial-gradient(
