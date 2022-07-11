@@ -1,5 +1,8 @@
 .hero {
   overflow: hidden;
+  @include desktop {
+    padding-top: 241px;
+  }
 }
 
 .hero-box {
