@@ -2,6 +2,10 @@ header {
   border-bottom: 1px solid var(--color-icon);
   min-height: 100px;
 
+  @include desktop {
+    position: absolute;
+    width: 100%;
+  }
   /*background: linear-gradient(to right, #f9fafb 24%, #ffffff 30%, #ffffff 99%);
   @media screen and (min-width: 1470px) {
     background: var(--white);
@@ -33,6 +37,7 @@ header {
     padding-bottom: 0;
     padding-top: 28px;
     position: static;
+    background-color: transparent;
     /*background: linear-gradient(
       to right,
       #ffffff 29.65%,
