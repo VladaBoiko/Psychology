@@ -119,6 +119,11 @@
 
 .adress-soc-link {
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: var(--button-bgcolor-accent-hover);
+  }
 }
 
 .map-wrap {
