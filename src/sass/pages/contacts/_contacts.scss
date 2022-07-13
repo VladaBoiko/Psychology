@@ -12,6 +12,7 @@
   }
   @media screen and (min-width: 1470px) {
     max-width: 1470px;
+    padding-top: 388px;
   }
 }
 
@@ -20,15 +21,27 @@
   text-transform: uppercase;
   color: var(--text);
   margin-bottom: 26px;
+  @include desktop {
+    @include text('Cormorant', 700, 60px, 65px);
+    margin-bottom: 80px;
+  }
 }
 
 .contacts-link-mob.adress-contacts-link {
   color: var(--accent-text);
+  @include desktop {
+    font-size: 22px;
+  }
 }
 
 .contacts-wrap {
   background-color: var(--background);
   padding: 29px;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .soc-list-contacts {
@@ -38,20 +51,32 @@
 
   @include tablet {
     display: block;
+    margin-left: 150px;
   }
 }
 
-.soc-item-contacts:last-child {
-  margin-top: 35px;
-}
+.soc-item-contacts {
+  & .contacts-text {
+    @include desktop {
+      margin-bottom: 21px;
+    }
+  }
 
-.soc-item-contacts:first-child {
-  margin-right: 50px;
+  &:last-child {
+    margin-top: 35px;
+  }
+
+  &:first-child {
+    margin-right: 50px;
+  }
 }
 
 .contacts-text {
   @include text('Montserrat', 700, 18px, 20px);
   color: var(--accent-text);
+  @include desktop {
+    @include text('Montserrat', 700, 22px, 25px);
+  }
 }
 
 .adress-contacts-link {
@@ -83,12 +108,31 @@
   & + & {
     margin-top: 35px;
   }
+  & .contacts-text {
+    @include desktop {
+      margin-bottom: 21px;
+    }
+  }
+  &:not(:last-child) {
+    @include desktop {
+      margin-right: 50px;
+    }
+  }
+}
+
+.tab-address-item-contacts.address-item-contacts {
+  @include tablet {
+    margin-top: 0;
+  }
 }
 
 .tab-contacts-item {
   display: none;
   @include tablet {
     display: block;
+    &.soc-item-contacts {
+      margin-top: 35px;
+    }
   }
 }
 
@@ -100,6 +144,9 @@
 
 .contacts-address-list {
   margin-bottom: 45px;
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .icon-phone-tab.viber-icon {
@@ -107,9 +154,16 @@
   height: 15px;
   fill: var(--white);
 
-  @include desktop {
-    width: 30px;
-    height: 30px;
+  @include desktop-small {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.icon-phone-tab {
+  @include desktop-small {
+    width: 23px;
+    height: 25px;
   }
 }
 
@@ -144,6 +198,12 @@
   position: absolute;
   right: 110px;
   top: 3px;
+  @include tablet {
+    right: 165px;
+  }
+  @include desktop-small {
+    right: 255px;
+  }
 }
 
 .contacts-map {
@@ -159,18 +219,27 @@
   @include tablet {
     border-radius: 0px 0px 0px 400px;
     margin-bottom: 0;
+    width: 400px;
+    height: 335px;
+  }
+  @include desktop-small {
+    height: 370px;
+    width: 489px;
   }
 }
 
 .map-form-wrap {
+  margin-top: 10px;
   @include tablet {
     display: flex;
-    margin-top: 25px;
+    justify-content: space-between;
+    margin-top: 40px;
   }
 }
 
 .contacts-text-form {
-  @include text('Montserrat', 400, 16px, 18px);
+  width: 313px;
+  @include text('Montserrat', 400, 16px, 22px);
   color: var(--accent-text);
   margin-bottom: 30px;
 }
@@ -186,10 +255,25 @@
   }
 }
 
+.contacts-psychologists__form {
+  @include desktop-small {
+    display: block;
+  }
+}
+
 .psychologists__input.contacts-input {
   @include tablet {
     width: 240px;
     margin: 0 auto;
+    margin-bottom: 10px;
+    padding-left: 40px;
+  }
+  @include desktop-small {
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-left: 45px;
+    height: 70px;
   }
 }
 .psychologists__input {
@@ -261,11 +345,18 @@
     margin-bottom: 0;
   }
 }
-.contasts-button-tab.psychologists__btn {
+
+.contacts-button-tab.psychologists__btn {
   @include tablet {
     width: 240px;
+    margin: 0 auto;
+  }
+  @include desktop-small {
+    width: 350px;
+    height: 70px;
   }
 }
+
 .psychologists__btn {
   @include text('Montserrat', 700, 16px, 55px);
   @include flexCenter;
@@ -305,12 +396,29 @@
 
 .input-contacts-wrap {
   display: block;
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .contacts-form {
   @include tablet {
     text-align: center;
-    width: 40%;
     margin-left: auto;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.contacts-psychologists__form {
+  @include tablet {
+    display: block;
+  }
+}
+
+.contacts-map-wrap {
+  @include desktop {
+    display: flex;
   }
 }
