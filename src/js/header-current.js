@@ -12,3 +12,7 @@ link.forEach(x => {
     return;
   }
 });
+
+if (url === '/') {
+  link[0].classList.add(CLASS);
+}
