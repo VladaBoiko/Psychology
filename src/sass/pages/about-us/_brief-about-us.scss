@@ -1,8 +1,10 @@
 .brief-about-us {
-  padding-top: 175px;
+  // padding-top: 175px;
+  padding-top: 80px;
 
   @include desktop {
     padding-top: 430px;
+    // padding-top: 205px;
   }
 
   &__container {
@@ -17,9 +19,11 @@
       position: absolute;
       z-index: -1;
       display: block;
-      top: -175px;
+      // top: -175px;
+      top: -80px;
       width: 270px;
-      height: 566px;
+      // height: 566px;
+      height: 471px;
       background-color: var(--background);
 
       @media screen and (max-width: 374px) {
@@ -36,16 +40,17 @@
 
       @include desktop-small {
         height: 1150px;
+        height: 950px;
         width: 70%;
-        top: -430px;
+        // top: -430px;
+        top: -205px;
         right: 0;
       }
 
       @include desktop {
-        height: 1060px;
-        width: 70%;
         top: -430px;
-        right: 0;
+        height: 1060px;
+        // height: 835px;
       }
     }
   }

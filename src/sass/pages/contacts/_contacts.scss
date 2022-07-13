@@ -1,0 +1,424 @@
+.contacts-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @media screen and (min-width: 375px) {
+    max-width: 375px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 999px) {
+    max-width: 999px;
+  }
+  @media screen and (min-width: 1470px) {
+    max-width: 1470px;
+    padding-top: 388px;
+  }
+}
+
+.contacts-title {
+  @include text('Cormorant', 700, 25px, 27px);
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 26px;
+  @include desktop {
+    @include text('Cormorant', 700, 60px, 65px);
+    margin-bottom: 80px;
+  }
+}
+
+.contacts-link-mob.adress-contacts-link {
+  color: var(--accent-text);
+  @include desktop {
+    font-size: 22px;
+  }
+}
+
+.contacts-wrap {
+  background-color: var(--background);
+  padding: 29px;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.soc-list-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include tablet {
+    display: block;
+    margin-left: 150px;
+  }
+}
+
+.soc-item-contacts {
+  & .contacts-text {
+    @include desktop {
+      margin-bottom: 21px;
+    }
+  }
+
+  &:last-child {
+    margin-top: 35px;
+  }
+
+  &:first-child {
+    margin-right: 50px;
+  }
+}
+
+.contacts-text {
+  @include text('Montserrat', 700, 18px, 20px);
+  color: var(--accent-text);
+  @include desktop {
+    @include text('Montserrat', 700, 22px, 25px);
+  }
+}
+
+.adress-contacts-link {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  & p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    background-color: var(--color-icon);
+    border-radius: 4px;
+    margin-right: 5px;
+    @media screen and (min-width: 999px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.address-item-contacts {
+  display: block;
+  & + & {
+    margin-top: 35px;
+  }
+  & .contacts-text {
+    @include desktop {
+      margin-bottom: 21px;
+    }
+  }
+  &:not(:last-child) {
+    @include desktop {
+      margin-right: 50px;
+    }
+  }
+}
+
+.tab-address-item-contacts.address-item-contacts {
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.tab-contacts-item {
+  display: none;
+  @include tablet {
+    display: block;
+    &.soc-item-contacts {
+      margin-top: 35px;
+    }
+  }
+}
+
+.mob-address-contact {
+  @include tablet {
+    display: none;
+  }
+}
+
+.contacts-address-list {
+  margin-bottom: 45px;
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.icon-phone-tab.viber-icon {
+  width: 15px;
+  height: 15px;
+  fill: var(--white);
+
+  @include desktop-small {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.icon-phone-tab {
+  @include desktop-small {
+    width: 23px;
+    height: 25px;
+  }
+}
+
+.contacts-text {
+  margin-bottom: 10px;
+}
+
+.adress-soc-link {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: var(--button-bgcolor-accent-hover);
+  }
+}
+
+.map-wrap {
+  margin-top: 38px;
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.map-text {
+  position: relative;
+  margin-bottom: 15px;
+  @include text('Montserrat', 400, 16px, 18px);
+  color: var(--accent-text);
+}
+
+.map-arrow {
+  position: absolute;
+  right: 110px;
+  top: 3px;
+  @include tablet {
+    right: 165px;
+  }
+  @include desktop-small {
+    right: 255px;
+  }
+}
+
+.contacts-map {
+  height: 100%;
+  width: 100%;
+}
+
+.frame-wrap {
+  height: 229px;
+  border-radius: 0px 0px 400px 0px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  @include tablet {
+    border-radius: 0px 0px 0px 400px;
+    margin-bottom: 0;
+    width: 400px;
+    height: 335px;
+  }
+  @include desktop-small {
+    height: 370px;
+    width: 489px;
+  }
+}
+
+.map-form-wrap {
+  margin-top: 10px;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+}
+
+.contacts-text-form {
+  width: 313px;
+  @include text('Montserrat', 400, 16px, 22px);
+  color: var(--accent-text);
+  margin-bottom: 30px;
+}
+
+.psychologists__form {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-small {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contacts-psychologists__form {
+  @include desktop-small {
+    display: block;
+  }
+}
+
+.psychologists__input.contacts-input {
+  @include tablet {
+    width: 240px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-left: 40px;
+  }
+  @include desktop-small {
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-left: 45px;
+    height: 70px;
+  }
+}
+.psychologists__input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  height: 80px;
+  @include font(700, 16px, calc(55px / 16px));
+  color: var(--accent-text);
+
+  border: 1px solid #99c1e2;
+  border-radius: 150px;
+  outline: none;
+  transition: border var(--main-transition);
+
+  &::placeholder {
+    color: var(--color-icon);
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid #366187;
+    box-shadow: 3px 3px 5px #6a372c29;
+  }
+
+  &:not(:last-child) {
+    @include desktop {
+      margin-right: 40px;
+    }
+  }
+
+  @include tablet {
+    width: 320px;
+    height: 60px;
+    font-size: 14px;
+    padding-left: 60px;
+    margin-bottom: 0;
+  }
+
+  @include desktop-small {
+    width: 250px;
+    height: 80px;
+    font-size: 16px;
+    padding-left: 40px;
+    margin-right: 40px;
+  }
+
+  @include desktop {
+    width: 320px;
+    @include font(700, 18px, calc(55px / 18px));
+    padding-left: 60px;
+  }
+}
+
+.psychologists__input-text {
+  text-transform: uppercase;
+}
+
+.psychologists__inputwrap {
+  @include tablet {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+
+  @include desktop-small {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-button-tab.psychologists__btn {
+  @include tablet {
+    width: 240px;
+    margin: 0 auto;
+  }
+  @include desktop-small {
+    width: 350px;
+    height: 70px;
+  }
+}
+
+.psychologists__btn {
+  @include text('Montserrat', 700, 16px, 55px);
+  @include flexCenter;
+  height: 80px;
+  text-transform: uppercase;
+  color: var(--white);
+
+  background: var(--gradient);
+  border-radius: 150px;
+
+  transition: background-color var(--main-transition),
+    box-shadow var(--main-transition);
+
+  &:hover,
+  &:focus {
+    box-shadow: 3px 3px 5px #6a372c29;
+    background-color: #366187;
+  }
+
+  @include tablet {
+    width: 320px;
+    height: 60px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  @include desktop-small {
+    width: 250px;
+    height: 80px;
+  }
+
+  @include desktop {
+    width: 320px;
+    font-size: 18px;
+  }
+}
+
+.input-contacts-wrap {
+  display: block;
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-form {
+  @include tablet {
+    text-align: center;
+    margin-left: auto;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.contacts-psychologists__form {
+  @include tablet {
+    display: block;
+  }
+}
+
+.contacts-map-wrap {
+  @include desktop {
+    display: flex;
+  }
+}

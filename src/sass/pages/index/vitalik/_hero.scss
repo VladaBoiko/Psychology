@@ -1,5 +1,8 @@
 .hero {
   overflow: hidden;
+  @include desktop {
+    padding-top: 241px;
+  }
 }
 
 .hero-box {
@@ -204,6 +207,22 @@
   }
 }
 
+.button__hero.two {
+  @include desktop {
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -50%;
+      right: -110px;
+      width: 90px;
+      height: 58px;
+      background-image: url(../../images/hero/Arrow.svg);
+    }
+  }
+}
+
 .hero-contaoner__price {
   margin-top: 25px;
   @include desktop {
@@ -214,64 +233,8 @@
   }
 }
 
-.arrow-box {
-  position: absolute;
-  left: 943px;
-  top: 507px;
-}
-
-.arrow {
-  position: relative;
-  margin: 0 auto;
-  width: 100px;
-  transform: rotate(130deg);
-}
-
-.arrow .curve {
-  border: 2px solid var(--accent-background);
-  border-color: transparent transparent transparent var(--accent-background);
-  height: 198px;
-  width: 1200px;
-  border-radius: 230px 0 0 150px;
-}
-
-.arrow .point {
-  position: absolute;
-  right: inherit;
-  right: 67px;
-  bottom: 183px;
-}
-
-.arrow .point:before,
-.arrow .point:after {
-  content: '';
-  border: 1px solid var(--accent-background);
-  height: 25px;
-
-  position: absolute;
-}
-
-.arrow .point:before {
-  top: 8px;
-  left: -11px;
-  transform: rotate(85deg);
-}
-
-.arrow .point:after {
-  top: 18px;
-  left: 1px;
-  transform: rotate(191deg);
-}
-
-@media screen and (min-width: 400px) and (max-width: 1469.9px) {
-  .hero .container {
-    width: 370px;
-  }
-}
-
 @media screen and (max-width: 1469.9px) {
-  .two,
-  .hero .arrow-box {
+  .arrow-box {
     display: none;
   }
 }

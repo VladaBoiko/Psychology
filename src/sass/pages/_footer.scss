@@ -1,13 +1,28 @@
+.footer {
+  border-top: 2px solid var(--color-icon);
+}
+
 .footer .container {
   padding-top: 30px;
   padding-bottom: 30px;
 
-  @include desktop {
-    height: 480px;
+  @include tablet {
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1469px) {
+    justify-content: space-between;
+  }
+
+  @include desktop-small {
+    height: 440px;
+  }
+
+  @include desktop {
+    height: 480px;
   }
 }
 
@@ -16,14 +31,25 @@
   height: 63px;
   margin-bottom: 30px;
 
-  @include desktop {
+  @include desktop-small {
     width: 276px;
     height: 93px;
+  }
+
+  @include desktop {
     margin-right: 215px;
   }
 }
 
 .footer__wrap-top {
+  @include tablet {
+    padding-top: 23px;
+  }
+
+  @include desktop-small {
+    padding-top: 45px;
+  }
+
   @include desktop {
     padding-top: 30px;
     margin-right: 80px;
@@ -31,12 +57,21 @@
 }
 
 .footer__wrap-bottom {
-  @include desktop {
+  @media screen and (min-width: 768px) and (max-width: 999px) {
+    position: absolute;
+    bottom: 50px;
+    right: 120px;
+  }
+
+  @include desktop-small {
     display: flex;
     flex-direction: column-reverse;
-    padding-top: 30px;
     justify-content: flex-end;
-    align-items: center;
+    padding-top: 45px;
+  }
+
+  @include desktop {
+    padding-top: 30px;
   }
 }
 
@@ -48,6 +83,18 @@
   height: 165px;
   width: 255px;
   margin-right: -65px;
+
+  @include tablet {
+    height: 110px;
+    width: 210px;
+    margin-right: -20px;
+  }
+
+  @include desktop-small {
+    height: 133px;
+    width: 235px;
+    margin-right: -35px;
+  }
 
   @include desktop {
     height: 185px;
@@ -63,12 +110,24 @@
   &:nth-child(4n) {
     margin-bottom: 0px;
   }
+
+  @include tablet {
+    margin-bottom: 10px;
+    margin-right: 25px;
+  }
+
+  @include desktop-small {
+    margin-right: 35px;
+    margin-bottom: 15px;
+  }
+
   @include desktop {
     margin-right: 40px;
+    margin-bottom: 25px;
   }
 }
 
-@include desktop {
+@include tablet {
   .footer__menu--first {
     order: 1;
   }
@@ -86,11 +145,29 @@
   }
 }
 
+.footer__link {
+  @include text(null, null, 18px, 22px);
+  display: inline-block;
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include desktop-small {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    @include text(null, null, 22px, 27px);
+  }
+}
+
 .footer__link--payment {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-top: 15px;
+  justify-content: center;
+  margin-top: 25px;
   margin-bottom: 25px;
   font-weight: 700;
   color: var(--accent-text);
@@ -111,9 +188,18 @@
     transform: scale(1.2);
   }
 
-  @include desktop {
+  @include tablet {
+    margin-top: 15px;
     margin-bottom: 0;
+  }
+
+  @include desktop-small {
+    margin-left: 150px;
+  }
+
+  @include desktop {
     margin-left: 180px;
+    margin-top: 25px;
   }
 }
 
@@ -128,23 +214,20 @@
   background-color: transparent;
   transition: background-color var(--main-transition);
 
-  @include desktop {
+  @include desktop-small {
     width: 60%;
   }
 }
 
 .footer__link-icon {
+  width: 40px;
+  height: 37px;
   margin-left: 15px;
   fill: currentColor;
   transition: transform var(--main-transition);
-}
 
-.footer__link {
-  @include text(null, null, 18px, 22px);
-  display: inline-block;
-
-  @include desktop {
-    @include text(null, null, 22px, 27px);
+  @include tablet {
+    width: 30px;
   }
 }
 
@@ -164,6 +247,10 @@
 .footer__network {
   display: flex;
   margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .footer__network-link {
@@ -182,6 +269,16 @@
     background-color: #366187;
   }
 
+  @include tablet {
+    width: 35px;
+    height: 35px;
+  }
+
+  @include desktop-small {
+    width: 45px;
+    height: 45px;
+  }
+
   @include desktop {
     width: 60px;
     height: 60px;
@@ -191,6 +288,14 @@
 .footer__network-item {
   & + & {
     margin-left: 25px;
+
+    @include tablet {
+      margin-left: 15px;
+    }
+
+    @include desktop {
+      margin-left: 25px;
+    }
   }
 }
 
@@ -198,6 +303,11 @@
   width: 20px;
   height: 20px;
   fill: var(--white);
+
+  @include desktop-small {
+    width: 25px;
+    height: 25px;
+  }
 
   @include desktop {
     width: 30px;
@@ -217,18 +327,34 @@
     text-decoration-thickness: 3px;
   }
 
+  @include desktop-small {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
   @include desktop {
     font-size: 20px;
-    line-height: 1.25;
   }
 }
 
 .footer__service-list {
   margin-bottom: 25px;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop-small {
+    display: block;
+  }
 }
 
 .footer__service-item + .footer__service-item {
   margin-top: 25px;
+
+  @include tablet {
+    margin-top: 15px;
+  }
 
   @include desktop {
     margin-top: 30px;
@@ -238,12 +364,34 @@
 .footer__address {
   margin-bottom: 35px;
 
-  @include desktop {
+  @include tablet {
+    padding-top: 20px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 999px) {
+    width: 240px;
+  }
+
+  @include desktop-small {
+    padding-top: 0;
     position: absolute;
     left: 15px;
     top: 170px;
   }
+
+  // @include desktop {
+
+  //   left: 15px;
+  //   top: 170px;
+  // }
 }
+
+// .footer__contacts {
+//   @include tablet {
+//     margin-left: 15px;
+//   }
+// }
 
 .footer__contacts-link {
   display: flex;
@@ -256,6 +404,15 @@
   &:focus {
     color: #366187;
     font-weight: 700;
+  }
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  @include desktop-small {
+    font-size: 18px;
   }
 
   @include desktop {
@@ -288,6 +445,16 @@
   background-position: center;
   margin-right: 5px;
 
+  @include tablet {
+    width: 25px;
+    margin-right: 5px;
+  }
+
+  @include desktop-small {
+    width: 30px;
+    margin-right: 10px;
+  }
+
   @include desktop {
     width: 40px;
     margin-right: 20px;
@@ -302,9 +469,18 @@
   border-radius: 5px;
   transition: background-color var(--main-transition);
 
+  @include tablet {
+    height: 25px;
+  }
+
+  @include desktop-small {
+    height: 30px;
+    background-image: url('../../images/footer/icon-tel-desktop.svg');
+    background-size: 15px 14px;
+  }
+
   @include desktop {
     height: 40px;
-    background-image: url('../../images/footer/icon-tel-desktop.svg');
     background-size: 16px 17.5px;
   }
 }
@@ -318,9 +494,18 @@
   transition: background-color var(--main-transition),
     transform var(--main-transition);
 
+  @include tablet {
+    height: 25px;
+  }
+
+  @include desktop-small {
+    height: 30px;
+    background-image: url('../../images/footer/icon-mail-desktop.svg');
+    background-size: 17px 13px;
+  }
+
   @include desktop {
     height: 40px;
-    background-image: url('../../images/footer/icon-mail-desktop.svg');
     background-size: 20px 16px;
   }
 }
@@ -340,6 +525,14 @@
   background-size: contain;
   transition: background-image var(--main-transition),
     transform var(--main-transition);
+
+  @include tablet {
+    height: 26px;
+  }
+
+  @include desktop-small {
+    height: 35px;
+  }
 
   @include desktop {
     width: 36px;
@@ -374,11 +567,20 @@
     background-color: #366187;
   }
 
-  @include desktop {
+  @include tablet {
     position: absolute;
-    width: 275px;
-    font-size: 18px;
+    width: 185px;
+    font-size: 12px;
     left: 15px;
-    top: 360px;
+    bottom: 50px;
+  }
+
+  @include desktop-small {
+    width: 275px;
+    font-size: 16px;
+  }
+
+  @include desktop {
+    font-size: 18px;
   }
 }
