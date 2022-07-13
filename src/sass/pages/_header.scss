@@ -5,6 +5,7 @@ header {
   @include desktop {
     position: absolute;
     width: 100%;
+    z-index: 2;
   }
   /*background: linear-gradient(to right, #f9fafb 24%, #ffffff 30%, #ffffff 99%);
   @media screen and (min-width: 1470px) {
