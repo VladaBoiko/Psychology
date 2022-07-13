@@ -1,4 +1,4 @@
-.recommendation{
+.recommendation {
   overflow: hidden;
 }
 .recommendation-box {
@@ -146,6 +146,7 @@
 }
 
 .recommendation__prompting-text {
+  position: relative;
   margin: 0 auto;
   margin-top: 55px;
   max-width: 335px;
@@ -154,6 +155,28 @@
   text-align: center;
   color: var(--text);
   background-color: var(--background);
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -16px;
+    right: 110px;
+    width: 16px;
+    height: 40px;
+    background-image: url(../../images/our-services/Arrow-two.svg);
+
+    @include tablet {
+      background-image: url(../../images/our-services/Arrow.svg);
+      width: 61px;
+      height: 109px;
+      top: -85px;
+    }
+
+    @include desktop {
+      top: -150px;
+    }
+  }
 
   @include tablet {
     margin-top: 88px;
@@ -178,72 +201,4 @@
   @include desktop {
     margin-top: 45px;
   }
-}
-
-.arrow-box {
-  position: absolute;
-  left: 260px;
-  top: 2200px;
-
-  @include tablet {
-    left: 500px;
-    top: 1500px;
-  }
-
-  @include desktop {
-    left: 850px;
-    top: 1956px;
-  }
-}
-
-.arrow {
-  position: relative;
-  margin: 0 auto;
-  width: 100px;
-  transform: rotate(160deg);
-}
-
-.arrow .curve {
-  border: 2px solid var(--accent-background);
-  border-color: transparent transparent transparent var(--accent-background);
-  height: 96px;
-  width: 1200px;
-  border-radius: 230px 0 0 150px;
-
-  @include tablet {
-    height: 200px;
-  }
-}
-
-.arrow .point {
-  position: absolute;
-  right: inherit;
-  right: 86px;
-  bottom: 98px;
-  @include tablet {
-    right: 68px;
-    bottom: 184px;
-  }
-}
-
-.arrow .point:before,
-.arrow .point:after {
-  content: '';
-  border: 1px solid var(--accent-background);
-  height: 25px;
-  background-color: var(--accent-background);
-
-  position: absolute;
-}
-
-.arrow .point:before {
-  top: 8px;
-  left: -11px;
-  transform: rotate(85deg);
-}
-
-.arrow .point:after {
-  top: 18px;
-  left: 1px;
-  transform: rotate(191deg);
 }
