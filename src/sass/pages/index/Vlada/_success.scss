@@ -292,7 +292,6 @@
   @include text($font-family: 'Montserrat', $a: 400, $b: 16px, $c: 20px);
   &.first {
     margin-bottom: 15px;
-    // width: 617px;
   }
 
   color: var(--text);
