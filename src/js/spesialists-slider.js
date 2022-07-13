@@ -16,7 +16,8 @@ const swiper = new Swiper('.mySwiperSpesialists', {
     stopOnLastSlide: false,
     disableOnIteration: false,
   },
-  speed: 1000,
+  loop: true,
+  initialSlide: 1,
   breakpoints: {
     370: {
       slidesPerView: 1,
@@ -25,15 +26,13 @@ const swiper = new Swiper('.mySwiperSpesialists', {
     },
     768: {
       slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 30,
-      loop: true,
+      slidesPerGroup: 1,
+      spaceBetween: 50,
     },
     1000: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 50,
-      loop: true,
     },
     1469: {
       slidesPerView: 3,
