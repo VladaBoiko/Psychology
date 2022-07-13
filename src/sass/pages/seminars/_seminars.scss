@@ -1,7 +1,7 @@
 .seminars {
   padding: 80px 0;
   @include desktop {
-    padding: 150px 0;
+    padding: 391px 0 150px;
   }
 }
 .seminars-list {
@@ -34,10 +34,10 @@
   background-color: #f9fafb;
   padding: 20px 16px 36px 27px;
   @include tablet {
-    padding: 20px 16px 36px 27px;
+    padding: 30px 56px 30px 30px;
   }
   @include desktop-small {
-    padding: 40px 40px 36px 46px;
+    padding: 38px 40px 38px 46px;
   }
   @include desktop {
     padding: 46px 172px 49px 70px;
@@ -134,8 +134,8 @@
   margin-right: 18px;
   margin-bottom: 15px;
 
-  @include desktop-small {
-    margin-bottom: 26px;
+  @include tablet {
+    margin-bottom: 20px;
   }
 
   @include desktop {
