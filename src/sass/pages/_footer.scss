@@ -1,0 +1,384 @@
+.footer .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include desktop {
+    height: 480px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+  }
+}
+
+.logo__footer {
+  width: 185px;
+  height: 63px;
+  margin-bottom: 30px;
+
+  @include desktop {
+    width: 276px;
+    height: 93px;
+    margin-right: 215px;
+  }
+}
+
+.footer__wrap-top {
+  @include desktop {
+    padding-top: 30px;
+    margin-right: 80px;
+  }
+}
+
+.footer__wrap-bottom {
+  @include desktop {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 30px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  height: 165px;
+  width: 255px;
+  margin-right: -65px;
+
+  @include desktop {
+    height: 185px;
+    width: 275px;
+    margin-right: -40px;
+  }
+}
+
+.footer__menu-item {
+  margin-right: 65px;
+  margin-bottom: 25px;
+
+  &:nth-child(4n) {
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    margin-right: 40px;
+  }
+}
+
+@include desktop {
+  .footer__menu--first {
+    order: 1;
+  }
+
+  .footer__menu--second {
+    order: 2;
+  }
+
+  .footer__menu--third {
+    order: 3;
+  }
+
+  .footer__menu--fourth {
+    order: 4;
+  }
+}
+
+.footer__link--payment {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: var(--accent-text);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--text);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: var(--text);
+  }
+
+  &:hover .footer__link-icon,
+  &:focus .footer__link-icon {
+    transform: scale(1.2);
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    margin-left: 180px;
+  }
+}
+
+.footer__link--payment::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 55%;
+  height: 3px;
+  border-radius: 50px;
+  background-color: transparent;
+  transition: background-color var(--main-transition);
+
+  @include desktop {
+    width: 60%;
+  }
+}
+
+.footer__link-icon {
+  margin-left: 15px;
+  fill: currentColor;
+  transition: transform var(--main-transition);
+}
+
+.footer__link {
+  @include text(null, null, 18px, 22px);
+  display: inline-block;
+
+  @include desktop {
+    @include text(null, null, 22px, 27px);
+  }
+}
+
+.footer__link--menu {
+  color: var(--text);
+
+  transition: text-decoration-line var(--main-transition),
+    text-decoration-thickness var(--main-transition);
+
+  &:hover,
+  &:focus {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+.footer__network {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.footer__network-link {
+  @include flexCenter;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-icon);
+  border-radius: 5px;
+  transition: transform var(--main-transition),
+    border-radius var(--main-transition),
+    background-color var(--main-transition);
+
+  &:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
+    background-color: #366187;
+  }
+
+  @include desktop {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.footer__network-item {
+  & + & {
+    margin-left: 25px;
+  }
+}
+
+.footer__network-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+
+  @include desktop {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.footer__link--service {
+  color: var(--text);
+  font-weight: 700;
+  transition: text-decoration-line var(--main-transition),
+    text-decoration-thickness var(--main-transition);
+
+  &:hover,
+  &:focus {
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+}
+
+.footer__service-list {
+  margin-bottom: 25px;
+}
+
+.footer__service-item + .footer__service-item {
+  margin-top: 25px;
+
+  @include desktop {
+    margin-top: 30px;
+  }
+}
+
+.footer__address {
+  margin-bottom: 35px;
+
+  @include desktop {
+    position: absolute;
+    left: 15px;
+    top: 170px;
+  }
+}
+
+.footer__contacts-link {
+  display: flex;
+  align-items: center;
+  @include text('Montserrat', 300, 16px, 35px);
+  color: var(--accent-text);
+  transition: color var(--main-transition), font-weight var(--main-transition);
+
+  &:hover,
+  &:focus {
+    color: #366187;
+    font-weight: 700;
+  }
+
+  @include desktop {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+}
+
+.footer__contacts-highlight {
+  font-weight: 700;
+}
+
+.footer__contacts-item {
+  & + & {
+    margin-top: 10px;
+
+    @include desktop {
+      margin-top: 15px;
+    }
+  }
+}
+
+.footer__contacts--tel::before,
+.footer__contacts--mail::before,
+.footer__contacts--map::before {
+  @include flexCenter;
+  content: '';
+  width: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+
+  @include desktop {
+    width: 40px;
+    margin-right: 20px;
+  }
+}
+
+.footer__contacts--tel::before {
+  height: 23px;
+  background-color: var(--color-icon);
+  background-image: url('../../images/footer/icon-tel-mobile.svg');
+  background-size: 11px 10px;
+  border-radius: 5px;
+  transition: background-color var(--main-transition);
+
+  @include desktop {
+    height: 40px;
+    background-image: url('../../images/footer/icon-tel-desktop.svg');
+    background-size: 16px 17.5px;
+  }
+}
+
+.footer__contacts--mail::before {
+  height: 23px;
+  background-color: var(--color-icon);
+  background-image: url('../../images/footer/icon-mail-mobile.svg');
+  background-size: 15px 13px;
+  border-radius: 5px;
+  transition: background-color var(--main-transition),
+    transform var(--main-transition);
+
+  @include desktop {
+    height: 40px;
+    background-image: url('../../images/footer/icon-mail-desktop.svg');
+    background-size: 20px 16px;
+  }
+}
+
+.footer__contacts--tel:hover::before,
+.footer__contacts--tel:focus::before,
+.footer__contacts--mail:hover::before,
+.footer__contacts--mail:focus::before {
+  background-color: #366187;
+  transform: scale(1.2);
+}
+
+.footer__contacts--map::before {
+  height: 28px;
+  background-color: transparent;
+  background-image: url('../../images/footer/icon-map.svg');
+  background-size: contain;
+  transition: background-image var(--main-transition),
+    transform var(--main-transition);
+
+  @include desktop {
+    width: 36px;
+    height: 50px;
+  }
+}
+
+.footer__contacts--map:hover::before,
+.footer__contacts--map:focus::before {
+  background-image: url('../../images/footer/icon-map-2.svg');
+  transform: scale(1.15);
+}
+
+.footer__button {
+  @include flexCenter;
+  width: 260px;
+  padding: 6px 0;
+  margin-left: auto;
+  margin-right: auto;
+  @include font(700, null, calc(55px / 16px));
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--gradient);
+  border-radius: 150px;
+
+  transition: background-color var(--main-transition),
+    box-shadow var(--main-transition);
+
+  &:hover,
+  &:focus {
+    box-shadow: 3px 3px 5px #6a372c29;
+    background-color: #366187;
+  }
+
+  @include desktop {
+    position: absolute;
+    width: 275px;
+    font-size: 18px;
+    left: 15px;
+    top: 360px;
+  }
+}

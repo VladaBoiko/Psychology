@@ -1,33 +1,63 @@
 @import '../../../node_modules/swiper/swiper-bundle.min.css';
 .price {
   padding-top: 80px;
-  padding-bottom: 80px;
   overflow: hidden;
+  @include desktop {
+    padding-top: 94px;
+  }
+}
+.price .container {
+  overflow: hidden;
+  padding-left: 25px;
 }
 .price-title {
   @include text($font-family: 'Cormorant', $a: 700, $b: 25px, $c: 30px);
   text-transform: uppercase;
   color: var(--text);
   margin-bottom: 40px;
+  @include desktop {
+    @include text($font-family: 'Cormorant', $a: 700, $b: 60px, $c: 55px);
+    margin-bottom: 80px;
+  }
 }
 
-// .price-swiper {
-// }
 .price-swiper__wrap {
   display: flex;
 }
-.price-slid {
+.price-slid.swiper-slide {
   background-color: var(--background);
   padding: 31px 23px 33px 28px;
-  min-height: 505px;
+  height: 530px;
   margin-bottom: 25px;
   width: 100%;
+  @include tablet {
+    height: 570px;
+  }
+  @include desktop {
+    padding: 70px 37px 41px 36px;
+    height: 730px;
+    min-width: 440px;
+    max-width: 441px;
+    background: rgba(211, 221, 230, 0.4);
+    margin-bottom: 60px;
+    transition: all var(--main-transition);
+    &:hover {
+      transform: scale(1.075);
+      background-color: var(--background);
+      z-index: 2;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
 }
 .slid-title {
   @include text($font-family: 'Montserrat', $a: 700, $b: 18px, $c: 22px);
   text-transform: uppercase;
   color: var(--accent-text);
   margin-bottom: 25px;
+  @include desktop {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 30px, $c: 37px);
+    margin-bottom: 50px;
+  }
   &__design--first {
     display: block;
   }
@@ -36,19 +66,20 @@
     color: var(--color-icon);
   }
 }
-// .price-slid.swiper-slide {
-//   width: 100%;
-// }
-// .slid-text {
-// }
 .slid-text__item {
   display: flex;
   align-items: center;
   &:not(:last-child) {
     margin-bottom: 15px;
+    @include desktop {
+      margin-bottom: 25px;
+    }
   }
   &:last-child {
-    margin-bottom: 4px;
+    margin-bottom: 20px;
+    @include desktop {
+      margin-bottom: 30px;
+    }
   }
 
   &::before {
@@ -65,6 +96,9 @@
 .slid-text__text {
   @include text($font-family: 'Montserrat', $a: 400, $b: 18px, $c: 22px);
   color: var(--accent-text);
+  @include desktop {
+    @include text($font-family: 'Montserrat', $a: 400, $b: 20px, $c: 38px);
+  }
 }
 .prices {
   display: flex;
@@ -95,7 +129,6 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
   width: 243px;
   height: 67px;
   background-color: var(--accent-background);
@@ -104,13 +137,22 @@
 
   box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
   border-radius: 150px;
+  transition: all var(--main-transition);
+  &:hover {
+    background-color: var(--button-bgcolor-accent-hover);
+  }
+  @include desktop {
+    @include text($font-family: 'Montserrat', $a: 700, $b: 25px, $c: 55px);
+    width: 270px;
+    height: 70px;
+  }
 }
 .price-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.swiper-pagination-bullet {
+.price-pagination .swiper-pagination-bullet {
   background: radial-gradient(
       50% 50% at 50% 50%,
       rgba(247, 151, 129, 0.2) 0%,
@@ -124,7 +166,7 @@
     margin-right: 5px;
   }
 }
-.swiper-pagination-bullet-active {
+.price-pagination .swiper-pagination-bullet-active {
   width: 20px;
   height: 20px;
 }

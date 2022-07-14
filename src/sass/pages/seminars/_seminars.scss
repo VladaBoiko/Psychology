@@ -5,7 +5,7 @@
   }
 }
 .seminars-list {
-  @media screen and (max-width: 1469.98px) {
+  @media screen and (max-width: 767.98px) {
     width: inherit;
     display: flex;
     flex-direction: column;
@@ -14,14 +14,14 @@
 }
 
 .seminars-item {
-  @media screen and (max-width: 1470.98px) {
+  @media screen and (max-width: 767.98px) {
     max-width: 332px;
   }
   margin-bottom: 30px;
   &:last-child {
     margin-bottom: 0;
   }
-  @include desktop {
+  @include tablet {
     display: flex;
     margin-bottom: 80px;
     &:nth-child(2n + 1) {
@@ -29,42 +29,54 @@
     }
   }
 }
-.seminars-img-wrap {
-  flex-shrink: 0;
-}
+
 .seminars-card {
   background-color: #f9fafb;
   padding: 20px 16px 36px 27px;
-  @include desktop{
-    padding: 39px 172px 49px 70px;
+  @include tablet {
+    padding: 20px 16px 36px 27px;
+  }
+  @include desktop-small {
+    padding: 40px 40px 36px 46px;
+  }
+  @include desktop {
+    padding: 46px 172px 49px 70px;
     flex-grow: 1;
   }
 }
+
 .seminars-top-text {
-  @include font(null, 14px, calc(55px / 14px));
+  @include font(null, 14px, 1.2);
   text-transform: uppercase;
   color: var(--accent-text);
 
-  margin-bottom: -10px;
+  margin-bottom: 15px;
+
   @include desktop {
-    @include font(null, 22px, calc(55px / 22px));
-    margin-bottom: -3px;
+
+    @include font(null, 22px, 1.2);
+    margin-bottom: 15px;
     padding-left: 10px;
   }
 }
 .seminars-top-title {
-
   font-family: 'Cormorant';
   @include font(null, 18px, calc(22px / 18px));
   text-transform: uppercase;
-  color: var(--text);
 
-  margin-bottom: 26px;
+  color: var(--text);
+  max-width: 300px;
+
+  margin-bottom: 15px;
+  @include desktop-small {
+    font-size: 23px;
+
+    max-width: 485px;
+    margin-bottom: 42px;
+  }
   @include desktop {
     @include font(null, 30px, calc(36px / 30px));
     padding-left: 10px;
-    max-width: 485px;
-    margin-bottom: 42px;
   }
 }
 .seminars-text {
@@ -73,12 +85,22 @@
   margin-bottom: 2px;
 
   @include font(null, 16px, calc(20px / 16px));
+  
   color: var(--accent-text);
+
+  @include tablet {
+    @include font(null, 14px, calc(20px / 14px));
+    width: 308px;
+  }
+  @include desktop-small {
+    @include font(null, 16px, calc(20px / 16px));
+    width: 485px;
+    margin-bottom: 25px;
+  }
+  
   @include desktop {
     @include font(null, 22px, calc(38px / 22px));
     padding-left: 10px;
-    margin-bottom: 25px; 
-    max-width: 485px;
   }
   &::before {
     content: '';
@@ -91,11 +113,14 @@
     margin-right: 7px;
 
     flex-shrink: 0;
+
+    @include desktop-small {
+      background-color: var(--accent-text);
+    }
     @include desktop {
       width: 48px;
       margin-top: 18px;
       margin-right: 16px;
-      background-color: var(--accent-text);
     }
   }
 }
@@ -107,22 +132,33 @@
 
   margin-left: auto;
   margin-right: 18px;
+  margin-bottom: 15px;
 
-  margin-bottom: 28px;
+  @include desktop-small {
+    margin-bottom: 26px;
+  }
+
   @include desktop {
     align-items: center;
-    margin-bottom: 25px;
     margin-right: 0;
-    
   }
 }
+
 .seminars-price-text {
   @include font(700, 18px, calc(22px / 18px));
   color: var(--accent-text);
   margin-right: 5px;
+
+  @include tablet {
+    @include font(null, 16px, calc(20px / 16px));
+  }
+
+  @include desktop-small {
+    @include font(null, 18px, calc(22px / 18px));
+  }
+
   @include desktop {
-    @include font(700, 20px, calc(24px / 20px));
-    margin-right: 7px;
+    @include font(null, 20px, calc(24px / 20px));
     margin-right: 10px;
   }
 }
@@ -131,12 +167,20 @@
   font-family: 'Arsenal';
   @include font(700, 30px, calc(38px / 30px));
   color: var(--accent-text);
+
+  @include tablet {
+    @include font(null, 28px, calc(36px / 28px));
+  }
+
+  @include desktop-small {
+    @include font(null, 30px, calc(38px / 30px));
+  }
+  
   @include desktop {
-    @include font(700, 60px, calc(75px / 60px));
+    @include font(null, 60px, calc(75px / 60px));
   }
 }
 .seminars-button {
-  min-width: 247px;
   height: 84px;
   padding: 0 74px;
   display: block;
@@ -151,9 +195,15 @@
 
   border-radius: 150px;
   box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  transition: background-color var(--main-transition);
   &:hover,
   &:focus {
    background-color: var(--button-bgcolor-accent-hover);
+  }
+  @include tablet {
+    padding: 0 55px;
+    height: inherit;
+    margin: 0;
   }
   @include desktop {
     @include font(null, 30px, calc(55px / 30px));

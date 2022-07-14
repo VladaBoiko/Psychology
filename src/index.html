@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="ukr">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <link
+      rel="shortcut icon"
+      href="./images/index-down/favicon.svg"
+      type="image/x-icon"
+    />
+    <title>Центр практичної психології</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,11 +18,8 @@
     <link rel="stylesheet" href="./sass/component/index.scss" />
   </head>
   <body>
-    <div style="overflow: hidden">
-      <include src="./partials/Vlada/navigation.html"></include>
-    </div>
-
-    <!-- тут має бути хедер. коли його напишуть -->
+    <include src="./partials/Vika/header.html"></include>
+    <include src="./partials/Vika/header-modal.html"></include>
     <include src="./partials/Vitalik/hero.html"></include>
     <include src="./partials/Vitalik/when.html"></include>
     <include src="./partials/Vitalik/why.html"></include>
@@ -31,6 +33,10 @@
     <include src="./partials/Vlada/review.html"></include>
     <!-- тут має бути контактс коли його напишуть -->
     <!-- тут має бути футер коли його напишуть -->
+    <include src="./partials/Inna/footer.html"></include>
+    <script src="./js/header-button-2.js"></script>
+    <script src="./js/header-modal.js"></script>
+    <script src="./js/spesialists-slider.js" type="module"></script>
     <script src="./js/price-slider.js" type="module"></script>
   </body>
 </html>
