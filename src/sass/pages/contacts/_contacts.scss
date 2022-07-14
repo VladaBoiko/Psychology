@@ -37,10 +37,22 @@
 .contacts-wrap {
   background-color: var(--background);
   padding: 29px;
+
   @include tablet {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 35px 100px;
+  }
+
+  @include desktop-small {
+    padding: 50px 180px;
+  }
+
+  @include desktop {
+    padding: 50px 58px 50px 50px;
+    width: 739px;
+    margin-right: 73px;
   }
 }
 
@@ -51,7 +63,6 @@
 
   @include tablet {
     display: block;
-    margin-left: 150px;
   }
 }
 
@@ -64,6 +75,9 @@
 
   &:last-child {
     margin-top: 35px;
+    @include desktop {
+      margin-top: 50px;
+    }
   }
 
   &:first-child {
@@ -92,9 +106,13 @@
     background-color: var(--color-icon);
     border-radius: 4px;
     margin-right: 5px;
-    @media screen and (min-width: 999px) {
+    @include desktop-small {
       width: 40px;
       height: 40px;
+    }
+
+    @include desktop {
+      margin-right: 12px;
     }
   }
   &:hover,
@@ -107,16 +125,20 @@
   display: block;
   & + & {
     margin-top: 35px;
+    @include desktop {
+      margin-top: 50px;
+    }
   }
   & .contacts-text {
     @include desktop {
       margin-bottom: 21px;
     }
   }
-  &:not(:last-child) {
-    @include desktop {
-      margin-right: 50px;
-    }
+}
+
+.icon-location-contacts {
+  @include desktop {
+    margin-right: 12px;
   }
 }
 
@@ -132,6 +154,9 @@
     display: block;
     &.soc-item-contacts {
       margin-top: 35px;
+      @include desktop {
+        margin-top: 50px;
+      }
     }
   }
 }
@@ -192,17 +217,41 @@
   margin-bottom: 15px;
   @include text('Montserrat', 400, 16px, 18px);
   color: var(--accent-text);
+  @include desktop {
+    @include text('Montserrat', 400, 20px, 25px);
+    margin-bottom: 20px;
+  }
 }
 
 .map-arrow {
   position: absolute;
   right: 110px;
   top: 3px;
+  width: 55px;
+  height: 61px;
+
   @include tablet {
     right: 165px;
   }
+
   @include desktop-small {
     right: 255px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.map-arrow-desk {
+  display: none;
+  @include desktop {
+    display: block;
+    position: absolute;
+    right: 267px;
+    top: 10px;
+    width: 137px;
+    height: 95px;
   }
 }
 
@@ -226,6 +275,11 @@
     height: 370px;
     width: 489px;
   }
+  @include desktop {
+    border-radius: 0px 0px 400px 0px;
+    height: 415px;
+    width: 628px;
+  }
 }
 
 .map-form-wrap {
@@ -235,6 +289,9 @@
     justify-content: space-between;
     margin-top: 40px;
   }
+  @include desktop {
+    margin-top: 0;
+  }
 }
 
 .contacts-text-form {
@@ -242,6 +299,11 @@
   @include text('Montserrat', 400, 16px, 22px);
   color: var(--accent-text);
   margin-bottom: 30px;
+  @include desktop {
+    width: 511px;
+    @include text('Montserrat', 400, 22px, 35px);
+    margin-bottom: 40px;
+  }
 }
 
 .psychologists__form {
@@ -351,6 +413,7 @@
     width: 240px;
     margin: 0 auto;
   }
+
   @include desktop-small {
     width: 350px;
     height: 70px;
@@ -420,5 +483,31 @@
 .contacts-map-wrap {
   @include desktop {
     display: flex;
+    margin-bottom: 80px;
+  }
+}
+
+.contacts-form-desktop {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+
+  & .input-contacts-wrap,
+  & .contacts-psychologists__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & .contacts-input,
+  & .contacts-button-tab {
+    margin: 0;
+    height: 80px;
+    width: 320px;
+  }
+
+  & .contacts-input:not(:last-child) {
+    margin-right: 53px;
   }
 }
