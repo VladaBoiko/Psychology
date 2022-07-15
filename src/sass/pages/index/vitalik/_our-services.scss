@@ -1,0 +1,194 @@
+.our-services {
+  padding: 40px 0;
+
+  @include desktop {
+    padding: 75px 0;
+  }
+}
+
+.our__header {
+  @include text('Cormorant', 700, 25px, 30px);
+  text-transform: uppercase;
+  color: var(--text);
+
+  @include desktop {
+    @include text(null, null, 60px, 55px);
+  }
+}
+
+.our-list {
+  margin-top: 24px;
+
+  @include desktop {
+    margin-top: 104px;
+    position: relative;
+  }
+}
+
+.our-list__elements {
+  padding: 32px 17px;
+  background-color: var(--background);
+  border: 3px solid #d3dde6;
+
+  @include desktop {
+    padding: 40px 50px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 3px solid #d3dde6;
+    border-left: 3px solid #d3dde6;
+  }
+}
+
+.button-our {
+  background-color: transparent;
+  @include text('Montserrat', 700, 18px, 55px);
+
+  @include desktop {
+    @include text(null, null, 30px, 55px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -3px;
+      width: 6px;
+      height: 143px;
+      background-color: var(--accent-background);
+    }
+  }
+}
+
+.our-list__elements {
+  margin: 0 auto;
+  position: relative;
+
+  height: 376px;
+  transition: height 500ms linear;
+
+  @media screen and (max-width: 767.9px) {
+    max-width: 346px;
+  }
+
+  @include desktop {
+    width: 837px;
+    margin: 0;
+  }
+}
+
+.is-no-activ {
+  height: 125px;
+
+  @include desktop {
+    height: 143px;
+  }
+
+  .button-our {
+    @include desktop {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.our-list__box {
+  position: absolute;
+  transform: translateY(120%);
+  opacity: 0;
+
+  transition: transform 500ms linear, opacity 500ms linear;
+}
+
+.our-list__box--activ {
+  position: relative;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.our-list__text {
+  margin-top: 20px;
+  @include text('Montserrat', 400, 16px, 22px);
+  color: var(--accent-text);
+  display: flex;
+
+  @media screen and (max-width: 1469.9px) {
+    &:before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background-color: var(--color-icon);
+      flex-shrink: 0;
+      margin-top: 15px;
+      margin-right: 8px;
+      display: block;
+    }
+  }
+
+  @include desktop {
+    display: block;
+    @include text(null, null, 22px, 35px);
+  }
+}
+
+.our-list__price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 17px;
+  margin-left: 31px;
+  @include text('Arsenal', 400, 20px, 25px);
+  color: var(--accent-text);
+
+  @include desktop {
+    margin-left: 0;
+  }
+
+  &--strong {
+    font-weight: 700;
+
+    @include desktop {
+      @include text('Montserrat', null, 30px, 35px);
+    }
+  }
+
+  &--big {
+    @include text(null, 700, 30px, 38px);
+    text-transform: uppercase;
+
+    @include desktop {
+      @include text(null, null, 60px, 75px);
+    }
+  }
+}
+
+.our-list__box-tablet {
+  @include tablet {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.our-list__photo {
+  display: none;
+  @include tablet {
+    display: block;
+    height: 257px;
+    width: auto;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 605px;
+    height: auto;
+    border-radius: 0px 400px 0px 0px;
+  }
+}
+
+.our-list__elements:nth-child(2) .our-list__photo {
+  top: -143px;
+}
+.our-list__elements:nth-child(3) .our-list__photo {
+  top: -286px;
+}
