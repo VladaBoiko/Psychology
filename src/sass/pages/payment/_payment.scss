@@ -1,6 +1,14 @@
 .payment {
     padding-top: 80px;
     padding-bottom: 80px;
+    @include tablet {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+    @include desktop-small {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
     @include desktop {
         padding-top: 150px;
         padding-bottom: 150px;
@@ -12,11 +20,18 @@
     @include font (700, 25px, calc(55px / 25px));
     text-transform: uppercase;
     color: var(--text);
-
     margin-bottom: 30px;
+    @include tablet {
+        @include font (700, 40px, calc(55px / 40px));
+        margin-bottom: 60px;
+    }
+    @include desktop-small {
+        @include font (700, 50px, calc(55px / 50px));
+        margin-bottom: 70px;
+    }
     @include desktop {
         @include font (700, 60px, calc(55px / 60px));
-
+        padding-top: 388px;
         margin-bottom: 80px;
     }
 }
@@ -30,26 +45,26 @@
     &:not(:last-child) {
         margin-bottom: 60px;
         }
-        @include desktop {
+        @include tablet {
             display: flex;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             &:nth-child(2n + 1) {
               flex-direction: row-reverse;
             }
           }
+        @include desktop {
+            margin-bottom: 80px;
+          }
     &__photo {
-        
         margin-left: auto;
         margin-right: auto;
-        @include desktop {
-           
+        @include tablet {
             margin-bottom: 0;
         }
     }
  
     &__wrap {
         @media screen and (max-width: 1469px) {
-        max-width: 335px;
         background-color: var(--background);
         display: block;
         padding-top: 15px;
@@ -57,42 +72,68 @@
         margin-left: auto;
         margin-right: auto;
         }
-        @include desktop {
+        @include tablet  {
             flex-grow: 1;
+            min-width: 368px;
            background-color: var(--background);
+        }
+        @include desktop-small  {
+            min-width: 510px;
         }
     }
     &__title {
-       
         @include font (700, 18px, calc(22px / 18px));
         color: var(--accent-text);
         text-align: center;
         margin-bottom: 13px;
         
-        @include desktop {
+        @include tablet {
             position: relative;
-            @include font (700, 30px, calc(55px / 30px));
+            @include font (700, 24px, calc(55px / 24px));
             color: var(--text);
-            margin-bottom: 42px;
-            margin-top: 74px;
-            padding-left: 205px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            padding-left: 110px;
             text-align: left;
-           
             
             &::before {
                 position: absolute;
-                left: 0;
-                right: 23px;
+                left: 10px;
                 content: counter(count, decimal-leading-zero)"";
                 counter-increment: count;
-                margin-right: 23px;
-                margin-left: 42px;
+                margin-right: 15px;
+                margin-left: 15px;
                 text-transform: uppercase;
-                @include font (700, 110px, calc(55px / 110px));
+                @include font (700, 54px, calc(55px / 54px));
                 color: var(--color-icon);
+                
             }
         }
+        @include desktop-small {
+            @include font (700, 28px, calc(55px / 28px));
+            margin-bottom: 16px;
+            margin-top: 18px;
+            padding-left: 170px;
+            &::before {
+                margin-right: 25px;
+                margin-left: 25px;
+                @include font (700, 78px, calc(55px / 78px));
+            }
+        }
+        @include desktop  {
+            @include font (700, 30px, calc(55px / 30px));
+            margin-bottom: 42px;
+            margin-top: 74px;
+            padding-left: 205px;
+            &::before {
+                left: 0;
+                right: 23px;
+                margin-right: 23px;
+                margin-left: 42px;
+                @include font (700, 110px, calc(55px / 110px));
+        }
     }
+}
     &__text {
         position: relative;
         max-width: 258px;
@@ -111,18 +152,29 @@
             height: 2px;
             background-color: var(--color-icon);
     }
+    @include tablet {
+        max-width: 320px;
+        margin-bottom: 15px;
+    }
+    @include desktop-small {
+        max-width: 380px;
+        margin-bottom: 25px;
+        padding-left: 42px;
+        @include font (null, 16px, calc(38px / 18px));
+        &::before {
+            top: 15px;
+            width: 32px;
+    }
+}
         @include desktop {
-            position: relative;
             max-width: 530px;
             @include font (null, 20px, calc(38px / 20px));
-            display: block;
             margin-left: 228px;
             padding-left: 47px;
             margin-bottom: 40px;
             &::before {
                 top: 20px;
                 width: 34px;
-               
         }
     }
 }
