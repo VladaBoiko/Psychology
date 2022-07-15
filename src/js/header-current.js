@@ -13,6 +13,6 @@ link.forEach(x => {
   }
 });
 
-if (url === '/') {
+if (url === '/Psychology/') {
   link[0].classList.add(CLASS);
 }
