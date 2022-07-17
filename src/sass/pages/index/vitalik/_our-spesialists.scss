@@ -4,6 +4,10 @@
   padding: 75px 0;
   overflow: hidden;
 
+  .container {
+    overflow: hidden;
+  }
+
   @include desktop {
     padding: 80px 0;
   }
@@ -28,13 +32,8 @@
   }
 
   .swiper-wrapper .swiper-slide {
-    @media screen and (max-width: 767.9px) {
-      min-width: 100%;
-      height: auto;
-    }
-    @media screen and (max-width: 1469.9px) {
-      // min-width: 50%;
-    }
+    min-width: 100%;
+    height: auto;
   }
 
   .swiper-wrapper:hover .swiper-slide:not(:hover) {
