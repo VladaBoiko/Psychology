@@ -2,21 +2,13 @@ header {
   border-bottom: 1px solid var(--color-icon);
   min-height: 100px;
 
-  @include desktop {
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-  }
-  /*background: linear-gradient(to right, #f9fafb 24%, #ffffff 30%, #ffffff 99%);
-  @media screen and (min-width: 1470px) {
-    background: var(--white);
-  }*/
+  position: absolute;
+  width: 100%;
 }
 
 .header-container {
   position: absolute;
-  background-color: var(--white);
-  /*background: linear-gradient(to right, #f9fafb 75%, #ffffff 75%, #ffffff 99%);*/
+  background-color: transparent;
   top: -2px;
   left: 0;
   right: 0;
@@ -48,6 +40,23 @@ header {
     );*/
   }
 }
+
+.no-scroll-menu .header-container {
+  @media screen and (max-width: 767.9px) {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1469.9px) {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+}
+
 .logo-address-wrap {
   display: flex;
   align-items: center;
@@ -278,7 +287,6 @@ svg .icon-close {
     margin: 0 auto;
   }
   @media screen and (min-width: 768px) {
-    background-color: var(--white);
     max-width: 768px;
     margin: 0;
     padding-left: 50px;
