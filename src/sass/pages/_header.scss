@@ -32,13 +32,6 @@ header {
     padding-top: 28px;
     position: static;
     background-color: transparent;
-    /*background: linear-gradient(
-      to right,
-      #ffffff 29.65%,
-      #f9fafb 29.65%,
-      #f9fafb 99%,
-      #ffffff 10%
-    );*/
   }
 }
 
@@ -185,6 +178,11 @@ svg .icon-close {
   padding-bottom: 36px;
   padding-top: 16px;
   color: var(--text);
+  transition: all var(--main-transition);
+  &:hover,
+  &:focus {
+    color: var(--button-bgcolor-accent-hover);
+  }
 }
 
 .nav-item-link.header-mob-link-last {
