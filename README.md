@@ -1,6 +1,8 @@
 Макет:
 https://www.figma.com/file/6htKTHZHeScWe6ibdEwEDZ/Психологія-(Copy)?node-id=0%3A1
 
+Готовий сайт: https://vladaboiko.github.io/Psychology/index.html
+
 Команда BRAINSTORM
 
 1. Владислава (team-lead, index-down)
