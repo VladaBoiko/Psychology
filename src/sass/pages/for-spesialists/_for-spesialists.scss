@@ -1,11 +1,7 @@
-.psychologists .container {
-  padding-top: 75px;
+.psychologists {
+  padding-top: 175px;
   padding-bottom: 80px;
   position: relative;
-
-  @include tablet {
-    padding-top: 80px;
-  }
 
   @include desktop {
     padding-top: 387px;

@@ -1,8 +1,7 @@
 .payment {
-  padding-top: 80px;
+  padding-top: 175px;
   padding-bottom: 80px;
   @include tablet {
-    padding-top: 110px;
     padding-bottom: 110px;
   }
   @include desktop-small {
