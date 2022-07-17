@@ -8,6 +8,27 @@
 .hero-box {
   padding: 80px 0 40px 0;
 
+  @media screen and (max-width: 1469.9px) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: -95px;
+      left: -103px;
+      z-index: -1;
+      width: 337px;
+      height: 598px;
+      background-color: var(--background);
+    }
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 75px;
+    position: relative;
+    width: 100%;
+  }
   @include desktop {
     display: grid;
     grid-template-columns: 542px 1fr;
@@ -162,7 +183,7 @@
 .hero__photo {
   width: 335px;
 
-  @media screen and (max-width: 1469.9px) {
+  @media screen and (max-width: 767.9px) {
     position: relative;
     right: -65px;
     bottom: 89px;

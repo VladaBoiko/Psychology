@@ -186,9 +186,11 @@
   }
 }
 
-.our-list__elements:nth-child(2) .our-list__photo {
-  top: -143px;
-}
-.our-list__elements:nth-child(3) .our-list__photo {
-  top: -286px;
+@include desktop {
+  .our-list__elements:nth-child(2) .our-list__photo {
+    top: -143px;
+  }
+  .our-list__elements:nth-child(3) .our-list__photo {
+    top: -286px;
+  }
 }
