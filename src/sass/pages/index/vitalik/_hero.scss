@@ -1,5 +1,6 @@
 .hero {
   overflow: hidden;
+  padding-top: 100px;
   @include desktop {
     padding-top: 241px;
   }
