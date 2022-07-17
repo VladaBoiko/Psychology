@@ -16,7 +16,13 @@
     padding-top: 388px;
   }
 }
-
+.index-page .contacts-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @media screen and (min-width: 1000px) {
+    padding-top: 145px;
+  }
+}
 .contacts-title {
   @include text('Cormorant', 700, 25px, 27px);
   text-transform: uppercase;
