@@ -8,15 +8,17 @@
 .hero-box {
   padding: 80px 0 40px 0;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: -95px;
-    left: -103px;
-    z-index: -1;
-    width: 337px;
-    height: 598px;
-    background-color: var(--background);
+  @media screen and (max-width: 1469.9px) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: -95px;
+      left: -103px;
+      z-index: -1;
+      width: 337px;
+      height: 598px;
+      background-color: var(--background);
+    }
   }
 
   @include tablet {
